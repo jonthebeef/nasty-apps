@@ -1,17 +1,18 @@
 name: Jellyfin
 slug: jellyfin
 type: docker
-description: Free media streaming server. Stream your movies, TV shows, and music to any device on your network or remotely via Tailscale.
-tagline: Stream your media collection to any device
+description: Jellyfin application imported from CasaOS catalog
+tagline: Jellyfin application imported from CasaOS catalog
 category: media
 developer:
-  name: Jellyfin Contributors
-  website: https://jellyfin.org
-icon: https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-transparent.svg
+  name: CasaOS Team
+  website: ''
+icon: icon.png
 screenshots: []
-arch: [arm64, amd64]
+arch:
+  - amd64
+  - arm64
 attribution: CasaOS App Store
-
 resources:
   min_ram: 512
   profiles:
@@ -20,36 +21,51 @@ resources:
       cpu: 0.5
     standard:
       ram: 512
-      cpu: 1.0
+      cpu: 1
     performance:
       ram: 1024
-      cpu: 2.0
-
+      cpu: 2
 ports:
   - container: 8096
-    host: 8096
-    description: Web interface
+    host: 8097
+    description: Service port 8096
     protocol: tcp
-
+  - container: 8920
+    host: 8921
+    description: Service port 8920
+    protocol: tcp
+  - container: 7359
+    host: 7359
+    description: Service port 7359
+    protocol: tcp
+  - container: 1900
+    host: 1901
+    description: Service port 1900
+    protocol: tcp
 volumes:
   - container: /config
     description: App configuration
     required: true
-  - container: /media
-    description: Where are your media files?
+  - container: /Media
+    description: Media library
     required: true
     hint: Path to your movies, TV shows, and music
-
+  - container: /opt/vc/lib
+    description: Mount for /opt/vc/lib
+    required: false
 env:
-  - name: PUID
-    default: "1000"
-    description: User ID for file permissions
-    advanced: true
   - name: PGID
-    default: "1000"
-    description: Group ID for file permissions
+    default: $PGID
+    description: PGID environment variable
     advanced: true
-
+  - name: PUID
+    default: $PUID
+    description: PUID environment variable
+    advanced: true
+  - name: TZ
+    default: $TZ
+    description: TZ environment variable
+    advanced: true
 web_ui:
-  port: 8096
+  port: 8097
   path: /

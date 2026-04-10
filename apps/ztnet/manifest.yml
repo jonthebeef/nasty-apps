@@ -1,0 +1,76 @@
+name: Ztnet
+slug: ztnet
+type: docker
+description: Ztnet application imported from CasaOS catalog
+tagline: Ztnet application imported from CasaOS catalog
+category: network-and-dns
+developer:
+  name: sinamics
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 3000
+    host: 3050
+    description: Service port 3000
+    protocol: tcp
+volumes:
+  - container: /var/lib/zerotier-one
+    description: Mount for /var/lib/zerotier-one
+    required: false
+env:
+  - name: ZT_ADDR
+    default: http://172.17.0.1:9993
+    description: ZT_ADDR environment variable
+    advanced: true
+  - name: POSTGRES_HOST
+    default: ztnet-postgres
+    description: POSTGRES_HOST environment variable
+    advanced: true
+  - name: POSTGRES_PORT
+    default: '5432'
+    description: POSTGRES_PORT environment variable
+    advanced: true
+  - name: POSTGRES_USER
+    default: ztnet
+    description: POSTGRES_USER environment variable
+    advanced: true
+  - name: POSTGRES_PASSWORD
+    default: ztnetbl5hbv98wl89x9v
+    description: POSTGRES_PASSWORD environment variable
+    advanced: true
+  - name: POSTGRES_DB
+    default: ztnet
+    description: POSTGRES_DB environment variable
+    advanced: true
+  - name: NEXTAUTH_URL
+    default: http://0.0.0.0:3050
+    description: NEXTAUTH_URL environment variable
+    advanced: true
+  - name: NEXTAUTH_SECRET
+    default: mn6vor005ncgnu9iuqxn8bg
+    description: NEXTAUTH_SECRET environment variable
+    advanced: true
+  - name: NEXTAUTH_URL_INTERNAL
+    default: http://ztnet:3000
+    description: NEXTAUTH_URL_INTERNAL environment variable
+    advanced: true
+web_ui:
+  port: 3050
+  path: /

@@ -1,0 +1,52 @@
+name: Prowlarr
+slug: prowlarr
+type: docker
+description: Prowlarr application imported from CasaOS catalog
+tagline: Prowlarr application imported from CasaOS catalog
+category: tools
+developer:
+  name: CasaOS Team
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 9696
+    host: 9696
+    description: Service port 9696
+    protocol: tcp
+volumes:
+  - container: /config
+    description: App configuration
+    required: true
+env:
+  - name: PGID
+    default: '1000'
+    description: PGID environment variable
+    advanced: true
+  - name: PUID
+    default: '1000'
+    description: PUID environment variable
+    advanced: true
+  - name: TZ
+    default: Europe/London
+    description: TZ environment variable
+    advanced: true
+web_ui:
+  port: 9696
+  path: /

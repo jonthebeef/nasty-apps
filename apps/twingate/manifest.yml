@@ -1,0 +1,47 @@
+name: Twingate
+slug: twingate
+type: docker
+description: Twingate application imported from CasaOS catalog
+tagline: Twingate application imported from CasaOS catalog
+category: network-and-dns
+developer:
+  name: Shubhankar Trivedi
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+  - arm
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports: []
+volumes: []
+env:
+  - name: TWINGATE_NETWORK
+    default: ''
+    description: TWINGATE_NETWORK environment variable
+    advanced: true
+  - name: TWINGATE_ACCESS_TOKEN
+    default: ''
+    description: TWINGATE_ACCESS_TOKEN environment variable
+    advanced: true
+  - name: TWINGATE_REFRESH_TOKEN
+    default: ''
+    description: TWINGATE_REFRESH_TOKEN environment variable
+    advanced: true
+  - name: TWINGATE_LABEL_HOSTNAME
+    default: ${HOSTNAME}
+    description: TWINGATE_LABEL_HOSTNAME environment variable
+    advanced: true

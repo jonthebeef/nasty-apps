@@ -1,0 +1,84 @@
+name: Unifi Network Application
+slug: unifi-network-application
+type: docker
+description: Unifi Network Application application imported from CasaOS catalog
+tagline: Unifi Network Application application imported from CasaOS catalog
+category: network-and-dns
+developer:
+  name: Giuseppe Galilei
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 8443
+    host: 8443
+    description: Service port 8443
+    protocol: tcp
+  - container: 3478
+    host: 3478
+    description: Service port 3478
+    protocol: udp
+  - container: 10001
+    host: 10001
+    description: Service port 10001
+    protocol: udp
+  - container: 8080
+    host: 8080
+    description: Service port 8080
+    protocol: tcp
+volumes:
+  - container: /config
+    description: App configuration
+    required: true
+env:
+  - name: MONGO_DBNAME
+    default: unifi-db
+    description: MONGO_DBNAME environment variable
+    advanced: true
+  - name: MONGO_HOST
+    default: unifi-db
+    description: MONGO_HOST environment variable
+    advanced: true
+  - name: MONGO_PASS
+    default: pass
+    description: MONGO_PASS environment variable
+    advanced: true
+  - name: MONGO_PORT
+    default: '27017'
+    description: MONGO_PORT environment variable
+    advanced: true
+  - name: MONGO_USER
+    default: unifi
+    description: MONGO_USER environment variable
+    advanced: true
+  - name: PGID
+    default: $PGID
+    description: PGID environment variable
+    advanced: true
+  - name: PUID
+    default: $PUID
+    description: PUID environment variable
+    advanced: true
+  - name: TZ
+    default: $TZ
+    description: TZ environment variable
+    advanced: true
+web_ui:
+  port: 8443
+  path: /

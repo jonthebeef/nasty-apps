@@ -1,0 +1,53 @@
+name: NetBird
+slug: netbird
+type: docker
+description: NetBird application imported from CasaOS catalog
+tagline: NetBird application imported from CasaOS catalog
+category: network-and-dns
+developer:
+  name: NetBird Team
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports: []
+volumes:
+  - container: /var/lib/netbird
+    description: Mount for /var/lib/netbird
+    required: false
+env:
+  - name: NB_SETUP_KEY
+    default: ''
+    description: NB_SETUP_KEY environment variable
+    advanced: true
+  - name: NB_MANAGEMENT_URL
+    default: ''
+    description: NB_MANAGEMENT_URL environment variable
+    advanced: true
+  - name: NB_HOSTNAME
+    default: Zima
+    description: NB_HOSTNAME environment variable
+    advanced: true
+  - name: NB_ENABLE_SSH_ROOT
+    default: 'true'
+    description: NB_ENABLE_SSH_ROOT environment variable
+    advanced: true
+  - name: NB_ALLOW_SERVER_SSH
+    default: 'true'
+    description: NB_ALLOW_SERVER_SSH environment variable
+    advanced: true

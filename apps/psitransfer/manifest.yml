@@ -1,0 +1,44 @@
+name: PsiTransfer
+slug: psitransfer
+type: docker
+description: PsiTransfer application imported from CasaOS catalog
+tagline: PsiTransfer application imported from CasaOS catalog
+category: tools
+developer:
+  name: psitrax
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 3000
+    host: 13001
+    description: Service port 3000
+    protocol: tcp
+volumes:
+  - container: /data
+    description: App data storage
+    required: true
+env:
+  - name: PSITRANSFER_ADMIN_PASS
+    default: secret
+    description: PSITRANSFER_ADMIN_PASS environment variable
+    advanced: true
+web_ui:
+  port: 13001
+  path: /

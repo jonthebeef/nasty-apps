@@ -1,0 +1,30 @@
+name: Playit Agent
+slug: playit-agent
+type: docker
+description: Playit Agent application imported from CasaOS catalog
+tagline: Playit Agent application imported from CasaOS catalog
+category: tools
+developer:
+  name: mafen
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports: []
+volumes: []
+env: []

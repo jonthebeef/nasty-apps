@@ -1,0 +1,64 @@
+name: Teable
+slug: teable
+type: docker
+description: Teable application imported from CasaOS catalog
+tagline: Teable application imported from CasaOS catalog
+category: tools
+developer:
+  name: teableio
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 3000
+    host: 3200
+    description: Service port 3000
+    protocol: tcp
+volumes:
+  - container: /app/.assets
+    description: Mount for /app/.assets
+    required: false
+env:
+  - name: TZ
+    default: $TZ
+    description: TZ environment variable
+    advanced: true
+  - name: NEXT_ENV_IMAGES_ALL_REMOTE
+    default: 'true'
+    description: NEXT_ENV_IMAGES_ALL_REMOTE environment variable
+    advanced: true
+  - name: PUBLIC_ORIGIN
+    default: http://127.0.0.1:3000
+    description: PUBLIC_ORIGIN environment variable
+    advanced: true
+  - name: PRISMA_DATABASE_URL
+    default: postgresql://example:example@teable-db:5432/teable-db
+    description: PRISMA_DATABASE_URL environment variable
+    advanced: true
+  - name: BACKEND_CACHE_PROVIDER
+    default: redis
+    description: BACKEND_CACHE_PROVIDER environment variable
+    advanced: true
+  - name: BACKEND_CACHE_REDIS_URI
+    default: redis://default:password@teable-cache:6379/0
+    description: BACKEND_CACHE_REDIS_URI environment variable
+    advanced: true
+web_ui:
+  port: 3200
+  path: /

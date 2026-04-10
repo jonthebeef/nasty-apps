@@ -1,0 +1,93 @@
+name: RomM
+slug: romm
+type: docker
+description: RomM application imported from CasaOS catalog
+tagline: RomM application imported from CasaOS catalog
+category: tools
+developer:
+  name: rommapp
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 8080
+    host: 8285
+    description: Service port 8080
+    protocol: tcp
+volumes:
+  - container: /romm/resources
+    description: Mount for /romm/resources
+    required: false
+  - container: /redis-data
+    description: App data storage
+    required: true
+  - container: /romm/library
+    description: Mount for /romm/library
+    required: false
+  - container: /romm/assets
+    description: Mount for /romm/assets
+    required: false
+  - container: /romm/config
+    description: App configuration
+    required: true
+env:
+  - name: DB_HOST
+    default: romm-db
+    description: DB_HOST environment variable
+    advanced: true
+  - name: DB_NAME
+    default: romm
+    description: DB_NAME environment variable
+    advanced: true
+  - name: DB_USER
+    default: romm-user
+    description: DB_USER environment variable
+    advanced: true
+  - name: DB_PASSWD
+    default: casaos
+    description: DB_PASSWD environment variable
+    advanced: true
+  - name: ROMM_AUTH_SECRET_KEY
+    default: '""'
+    description: ROMM_AUTH_SECRET_KEY environment variable
+    advanced: true
+  - name: IGDB_CLIENT_ID
+    default: '""'
+    description: IGDB_CLIENT_ID environment variable
+    advanced: true
+  - name: IGDB_CLIENT_SECRET
+    default: '""'
+    description: IGDB_CLIENT_SECRET environment variable
+    advanced: true
+  - name: SCREENSCRAPER_USER
+    default: '""'
+    description: SCREENSCRAPER_USER environment variable
+    advanced: true
+  - name: SCREENSCRAPER_PASSWORD
+    default: '""'
+    description: SCREENSCRAPER_PASSWORD environment variable
+    advanced: true
+  - name: STEAMGRIDDB_API_KEY
+    default: '""'
+    description: STEAMGRIDDB_API_KEY environment variable
+    advanced: true
+web_ui:
+  port: 8285
+  path: /

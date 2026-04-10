@@ -1,0 +1,63 @@
+name: WebDav
+slug: webdav
+type: docker
+description: WebDav application imported from CasaOS catalog
+tagline: WebDav application imported from CasaOS catalog
+category: tools
+developer:
+  name: CasaOS Team
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - '386'
+  - arm64
+  - arm
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 80
+    host: 5005
+    description: Web interface
+    protocol: tcp
+volumes:
+  - container: /media
+    description: Media library
+    required: true
+    hint: Path to your movies, TV shows, and music
+env:
+  - name: GID
+    default: '1000'
+    description: GID environment variable
+    advanced: true
+  - name: PASSWORD
+    default: casaos
+    description: PASSWORD environment variable
+    advanced: true
+  - name: TZ
+    default: Europe/Madrid
+    description: TZ environment variable
+    advanced: true
+  - name: UDI
+    default: '1000'
+    description: UDI environment variable
+    advanced: true
+  - name: USERNAME
+    default: casaos
+    description: USERNAME environment variable
+    advanced: true
+web_ui:
+  port: 5005
+  path: /

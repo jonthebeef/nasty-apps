@@ -1,0 +1,40 @@
+name: Ollama Nvidia
+slug: ollama-nvidia
+type: docker
+description: Ollama Nvidia application imported from CasaOS catalog
+tagline: Ollama Nvidia application imported from CasaOS catalog
+category: tools
+developer:
+  name: ollama
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 11434
+    host: 11434
+    description: Service port 11434
+    protocol: tcp
+volumes:
+  - container: /root/.ollama
+    description: Mount for /root/.ollama
+    required: false
+env: []
+web_ui:
+  port: 11434
+  path: /

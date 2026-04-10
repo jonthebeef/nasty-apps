@@ -1,0 +1,40 @@
+name: Databag
+slug: databag
+type: docker
+description: Databag application imported from CasaOS catalog
+tagline: Databag application imported from CasaOS catalog
+category: tools
+developer:
+  name: Pierre Balzack
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 7000
+    host: 7000
+    description: Service port 7000
+    protocol: tcp
+volumes:
+  - container: /var/lib/databag
+    description: App data storage
+    required: true
+env: []
+web_ui:
+  port: 7000
+  path: /

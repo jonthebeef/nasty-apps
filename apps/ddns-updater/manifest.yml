@@ -1,0 +1,110 @@
+name: DDNS Updater
+slug: ddns-updater
+type: docker
+description: DDNS Updater application imported from CasaOS catalog
+tagline: DDNS Updater application imported from CasaOS catalog
+category: network-and-dns
+developer:
+  name: rstuhlmuller
+  website: ''
+icon: icon.png
+screenshots:
+  - screenshots/1.png
+arch:
+  - amd64
+  - arm
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 8000
+    host: 8000
+    description: Service port 8000
+    protocol: tcp
+volumes:
+  - container: /updater/data
+    description: App data storage
+    required: true
+env:
+  - name: BACKUP_DIRECTORY
+    default: /updater/data
+    description: BACKUP_DIRECTORY environment variable
+    advanced: true
+  - name: BACKUP_PERIOD
+    default: '0'
+    description: BACKUP_PERIOD environment variable
+    advanced: true
+  - name: CONFIG
+    default: ''
+    description: CONFIG environment variable
+    advanced: true
+  - name: HTTP_TIMEOUT
+    default: 10s
+    description: HTTP_TIMEOUT environment variable
+    advanced: true
+  - name: LISTENING_ADDRESS
+    default: ':8000'
+    description: LISTENING_ADDRESS environment variable
+    advanced: true
+  - name: LOG_CALLER
+    default: hidden
+    description: LOG_CALLER environment variable
+    advanced: true
+  - name: LOG_LEVEL
+    default: info
+    description: LOG_LEVEL environment variable
+    advanced: true
+  - name: PERIOD
+    default: 5m
+    description: PERIOD environment variable
+    advanced: true
+  - name: PUBLICIP_DNS_PROVIDERS
+    default: all
+    description: PUBLICIP_DNS_PROVIDERS environment variable
+    advanced: true
+  - name: PUBLICIP_DNS_TIMEOUT
+    default: 3s
+    description: PUBLICIP_DNS_TIMEOUT environment variable
+    advanced: true
+  - name: PUBLICIP_FETCHERS
+    default: all
+    description: PUBLICIP_FETCHERS environment variable
+    advanced: true
+  - name: PUBLICIP_HTTP_PROVIDERS
+    default: all
+    description: PUBLICIP_HTTP_PROVIDERS environment variable
+    advanced: true
+  - name: PUBLICIPV4_HTTP_PROVIDERS
+    default: all
+    description: PUBLICIPV4_HTTP_PROVIDERS environment variable
+    advanced: true
+  - name: PUBLICIPV6_HTTP_PROVIDERS
+    default: all
+    description: PUBLICIPV6_HTTP_PROVIDERS environment variable
+    advanced: true
+  - name: ROOT_URL
+    default: /
+    description: ROOT_URL environment variable
+    advanced: true
+  - name: SHOUTRRR_ADDRESSES
+    default: ''
+    description: SHOUTRRR_ADDRESSES environment variable
+    advanced: true
+  - name: UPDATE_COOLDOWN_PERIOD
+    default: 5m
+    description: UPDATE_COOLDOWN_PERIOD environment variable
+    advanced: true
+web_ui:
+  port: 8000
+  path: /

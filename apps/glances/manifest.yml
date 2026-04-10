@@ -1,0 +1,51 @@
+name: Glances
+slug: glances
+type: docker
+description: Glances application imported from CasaOS catalog
+tagline: Glances application imported from CasaOS catalog
+category: tools
+developer:
+  name: joaobosconff
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 61208
+    host: 61208
+    description: Service port 61208
+    protocol: tcp
+  - container: 61209
+    host: 61209
+    description: Service port 61209
+    protocol: tcp
+volumes:
+  - container: /var/run/docker.sock
+    description: Mount for /var/run/docker.sock
+    required: false
+  - container: /mnt
+    description: Mount for /mnt
+    required: false
+env:
+  - name: GLANCES_OPT
+    default: '-w'
+    description: GLANCES_OPT environment variable
+    advanced: true
+web_ui:
+  port: 61208
+  path: /

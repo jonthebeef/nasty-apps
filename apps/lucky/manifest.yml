@@ -1,0 +1,38 @@
+name: Lucky
+slug: lucky
+type: docker
+description: Lucky application imported from CasaOS catalog
+tagline: Lucky application imported from CasaOS catalog
+category: network-and-dns
+developer:
+  name: IceWhaleTech
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports: []
+volumes:
+  - container: /goodluck
+    description: Mount for /goodluck
+    required: false
+env:
+  - name: TZ
+    default: $TZ
+    description: TZ environment variable
+    advanced: true

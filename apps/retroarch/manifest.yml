@@ -1,0 +1,41 @@
+name: RetroArch
+slug: retroarch
+type: docker
+description: RetroArch application imported from CasaOS catalog
+tagline: RetroArch application imported from CasaOS catalog
+category: tools
+developer:
+  name: inglebard
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 80
+    host: 8183
+    description: Web interface
+    protocol: tcp
+volumes: []
+env:
+  - name: ROOT_WWW_PATH
+    default: '"/var/www/html"'
+    description: ROOT_WWW_PATH environment variable
+    advanced: true
+web_ui:
+  port: 8183
+  path: /

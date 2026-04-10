@@ -1,16 +1,18 @@
 name: Plex
 slug: plex
 type: docker
-description: Organise and stream your personal media collection. Movies, TV shows, music, photos — beautifully presented and available on every device.
-tagline: Organise and stream your media
+description: Plex application imported from CasaOS catalog
+tagline: Plex application imported from CasaOS catalog
 category: media
 developer:
-  name: Plex Inc.
-  website: https://plex.tv
-icon: https://www.plex.tv/wp-content/themes/flavor/assets/img/plex-logo.svg
+  name: CasaOS Team
+  website: ''
+icon: icon.png
 screenshots: []
-arch: [arm64, amd64]
-
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
 resources:
   min_ram: 512
   profiles:
@@ -19,40 +21,29 @@ resources:
       cpu: 0.5
     standard:
       ram: 512
-      cpu: 1.0
+      cpu: 1
     performance:
-      ram: 2048
-      cpu: 4.0
-
-ports:
-  - container: 32400
-    host: 32400
-    description: Plex Media Server
-    protocol: tcp
-
+      ram: 1024
+      cpu: 2
+ports: []
 volumes:
   - container: /config
-    description: Plex configuration and metadata
+    description: App configuration
     required: true
-  - container: /media
-    description: Where are your media files?
+  - container: /Media
+    description: Media library
     required: true
     hint: Path to your movies, TV shows, and music
-
 env:
-  - name: PLEX_CLAIM
-    default: ""
-    description: Claim token from plex.tv/claim
-    advanced: false
-  - name: PUID
-    default: "1000"
-    description: User ID for file permissions
-    advanced: true
   - name: PGID
-    default: "1000"
-    description: Group ID for file permissions
+    default: $PGID
+    description: PGID environment variable
     advanced: true
-
-web_ui:
-  port: 32400
-  path: /web
+  - name: PUID
+    default: $PUID
+    description: PUID environment variable
+    advanced: true
+  - name: VERSION
+    default: docker
+    description: VERSION environment variable
+    advanced: true

@@ -1,54 +1,66 @@
-name: Pi-hole
+name: Pihole
 slug: pihole
 type: docker
-description: Network-wide ad blocking. Pi-hole acts as a DNS sinkhole that protects your devices from unwanted content without installing client-side software.
-tagline: Network-wide ad blocking
-category: network
+description: Pihole application imported from CasaOS catalog
+tagline: Pihole application imported from CasaOS catalog
+category: network-and-dns
 developer:
-  name: Pi-hole
-  website: https://pi-hole.net
-icon: https://wp-cdn.pi-hole.net/wp-content/uploads/2016/12/Vortex-R.png
+  name: CasaOS Team
+  website: ''
+icon: icon.png
 screenshots: []
-arch: [arm64, amd64]
+arch:
+  - amd64
+  - arm64
+  - '386'
+  - arm
 attribution: CasaOS App Store
-
 resources:
-  min_ram: 128
+  min_ram: 512
   profiles:
     light:
-      ram: 128
-      cpu: 0.25
-    standard:
       ram: 256
       cpu: 0.5
-    performance:
+    standard:
       ram: 512
-      cpu: 1.0
-
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
 ports:
   - container: 80
-    host: 8080
-    description: Web admin interface
+    host: 8800
+    description: Web interface
     protocol: tcp
   - container: 53
     host: 53
-    description: DNS
+    description: DNS service
+    protocol: tcp
+  - container: 53
+    host: 53
+    description: DNS service
     protocol: udp
-
+  - container: 443
+    host: 8443
+    description: Web interface
+    protocol: tcp
 volumes:
   - container: /etc/pihole
-    description: Pi-hole configuration
-    required: true
-  - container: /etc/dnsmasq.d
-    description: DNS configuration
-    required: true
-
+    description: Mount for /etc/pihole
+    required: false
 env:
-  - name: WEBPASSWORD
-    default: ""
-    description: Admin panel password
-    advanced: false
-
+  - name: TZ
+    default: $TZ
+    description: TZ environment variable
+    advanced: true
+  - name: FTLCONF_webserver_api_password
+    default: casaos
+    description: FTLCONF_webserver_api_password environment variable
+    advanced: true
+  - name: FTLCONF_dns_listeningMode
+    default: all
+    description: FTLCONF_dns_listeningMode environment variable
+    advanced: true
 web_ui:
-  port: 8080
-  path: /admin
+  port: 8800
+  path: /

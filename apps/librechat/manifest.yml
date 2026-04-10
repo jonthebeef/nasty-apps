@@ -1,0 +1,285 @@
+name: LibreChat
+slug: librechat
+type: docker
+description: LibreChat application imported from CasaOS catalog
+tagline: LibreChat application imported from CasaOS catalog
+category: tools
+developer:
+  name: LibreChat
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 3080
+    host: 3080
+    description: Service port 3080
+    protocol: tcp
+volumes:
+  - container: /app/client/public/images
+    description: Mount for /app/client/public/images
+    required: false
+  - container: /app/uploads
+    description: Mount for /app/uploads
+    required: false
+  - container: /app/api/logs
+    description: Mount for /app/api/logs
+    required: false
+env:
+  - name: ASSISTANTS_API_KEY
+    default: user_provided
+    description: ASSISTANTS_API_KEY environment variable
+    advanced: true
+  - name: OPENAI_API_KEY
+    default: user_provided
+    description: OPENAI_API_KEY environment variable
+    advanced: true
+  - name: GOOGLE_KEY
+    default: user_provided
+    description: GOOGLE_KEY environment variable
+    advanced: true
+  - name: ANTHROPIC_API_KEY
+    default: user_provided
+    description: ANTHROPIC_API_KEY environment variable
+    advanced: true
+  - name: HOST
+    default: 0.0.0.0
+    description: HOST environment variable
+    advanced: true
+  - name: PORT
+    default: '3080'
+    description: PORT environment variable
+    advanced: true
+  - name: DOMAIN_CLIENT
+    default: http://0.0.0.0:3080
+    description: DOMAIN_CLIENT environment variable
+    advanced: true
+  - name: DOMAIN_SERVER
+    default: http://0.0.0.0:3080
+    description: DOMAIN_SERVER environment variable
+    advanced: true
+  - name: NO_INDEX
+    default: 'true'
+    description: NO_INDEX environment variable
+    advanced: true
+  - name: TRUST_PROXY
+    default: '1'
+    description: TRUST_PROXY environment variable
+    advanced: true
+  - name: CONSOLE_JSON
+    default: 'false'
+    description: CONSOLE_JSON environment variable
+    advanced: true
+  - name: DEBUG_LOGGING
+    default: 'true'
+    description: DEBUG_LOGGING environment variable
+    advanced: true
+  - name: DEBUG_CONSOLE
+    default: 'false'
+    description: DEBUG_CONSOLE environment variable
+    advanced: true
+  - name: MONGO_URI
+    default: mongodb://librechat-mongodb:27017/LibreChat
+    description: MONGO_URI environment variable
+    advanced: true
+  - name: MEILI_HOST
+    default: http://librechat-meilisearch:7700
+    description: MEILI_HOST environment variable
+    advanced: true
+  - name: RAG_PORT
+    default: '8000'
+    description: RAG_PORT environment variable
+    advanced: true
+  - name: RAG_API_URL
+    default: http://librechat-rag-api:8000
+    description: RAG_API_URL environment variable
+    advanced: true
+  - name: SEARCH
+    default: 'true'
+    description: SEARCH environment variable
+    advanced: true
+  - name: MEILI_NO_ANALYTICS
+    default: 'true'
+    description: MEILI_NO_ANALYTICS environment variable
+    advanced: true
+  - name: OPENAI_MODERATION
+    default: 'false'
+    description: OPENAI_MODERATION environment variable
+    advanced: true
+  - name: BAN_VIOLATIONS
+    default: 'true'
+    description: BAN_VIOLATIONS environment variable
+    advanced: true
+  - name: BAN_DURATION
+    default: 1000 * 60 * 60 * 2
+    description: BAN_DURATION environment variable
+    advanced: true
+  - name: BAN_INTERVAL
+    default: '20'
+    description: BAN_INTERVAL environment variable
+    advanced: true
+  - name: LOGIN_VIOLATION_SCORE
+    default: '1'
+    description: LOGIN_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: REGISTRATION_VIOLATION_SCORE
+    default: '1'
+    description: REGISTRATION_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: CONCURRENT_VIOLATION_SCORE
+    default: '1'
+    description: CONCURRENT_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: MESSAGE_VIOLATION_SCORE
+    default: '1'
+    description: MESSAGE_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: NON_BROWSER_VIOLATION_SCORE
+    default: '20'
+    description: NON_BROWSER_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: TTS_VIOLATION_SCORE
+    default: '0'
+    description: TTS_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: STT_VIOLATION_SCORE
+    default: '0'
+    description: STT_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: FORK_VIOLATION_SCORE
+    default: '0'
+    description: FORK_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: IMPORT_VIOLATION_SCORE
+    default: '0'
+    description: IMPORT_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: FILE_UPLOAD_VIOLATION_SCORE
+    default: '0'
+    description: FILE_UPLOAD_VIOLATION_SCORE environment variable
+    advanced: true
+  - name: LOGIN_MAX
+    default: '7'
+    description: LOGIN_MAX environment variable
+    advanced: true
+  - name: LOGIN_WINDOW
+    default: '5'
+    description: LOGIN_WINDOW environment variable
+    advanced: true
+  - name: REGISTER_MAX
+    default: '5'
+    description: REGISTER_MAX environment variable
+    advanced: true
+  - name: REGISTER_WINDOW
+    default: '60'
+    description: REGISTER_WINDOW environment variable
+    advanced: true
+  - name: LIMIT_CONCURRENT_MESSAGES
+    default: 'true'
+    description: LIMIT_CONCURRENT_MESSAGES environment variable
+    advanced: true
+  - name: CONCURRENT_MESSAGE_MAX
+    default: '2'
+    description: CONCURRENT_MESSAGE_MAX environment variable
+    advanced: true
+  - name: LIMIT_MESSAGE_IP
+    default: 'true'
+    description: LIMIT_MESSAGE_IP environment variable
+    advanced: true
+  - name: MESSAGE_IP_MAX
+    default: '40'
+    description: MESSAGE_IP_MAX environment variable
+    advanced: true
+  - name: MESSAGE_IP_WINDOW
+    default: '1'
+    description: MESSAGE_IP_WINDOW environment variable
+    advanced: true
+  - name: LIMIT_MESSAGE_USER
+    default: 'false'
+    description: LIMIT_MESSAGE_USER environment variable
+    advanced: true
+  - name: MESSAGE_USER_MAX
+    default: '40'
+    description: MESSAGE_USER_MAX environment variable
+    advanced: true
+  - name: MESSAGE_USER_WINDOW
+    default: '1'
+    description: MESSAGE_USER_WINDOW environment variable
+    advanced: true
+  - name: ILLEGAL_MODEL_REQ_SCORE
+    default: '5'
+    description: ILLEGAL_MODEL_REQ_SCORE environment variable
+    advanced: true
+  - name: ALLOW_EMAIL_LOGIN
+    default: 'true'
+    description: ALLOW_EMAIL_LOGIN environment variable
+    advanced: true
+  - name: ALLOW_REGISTRATION
+    default: 'true'
+    description: ALLOW_REGISTRATION environment variable
+    advanced: true
+  - name: ALLOW_SOCIAL_LOGIN
+    default: 'false'
+    description: ALLOW_SOCIAL_LOGIN environment variable
+    advanced: true
+  - name: ALLOW_SOCIAL_REGISTRATION
+    default: 'false'
+    description: ALLOW_SOCIAL_REGISTRATION environment variable
+    advanced: true
+  - name: ALLOW_PASSWORD_RESET
+    default: 'false'
+    description: ALLOW_PASSWORD_RESET environment variable
+    advanced: true
+  - name: ALLOW_UNVERIFIED_EMAIL_LOGIN
+    default: 'true'
+    description: ALLOW_UNVERIFIED_EMAIL_LOGIN environment variable
+    advanced: true
+  - name: SESSION_EXPIRY
+    default: 1000 * 60 * 15
+    description: SESSION_EXPIRY environment variable
+    advanced: true
+  - name: REFRESH_TOKEN_EXPIRY
+    default: (1000 * 60 * 60 * 24) * 7
+    description: REFRESH_TOKEN_EXPIRY environment variable
+    advanced: true
+  - name: JWT_SECRET
+    default: 16f8c0ef4a5d391b26034086c628469d3f9f497f08163ab9b40137092f2909ef
+    description: JWT_SECRET environment variable
+    advanced: true
+  - name: JWT_REFRESH_SECRET
+    default: eaa5191f2914e30b9387fd84e254e4ba6fc51b4654968a9b0803b456a54b8418
+    description: JWT_REFRESH_SECRET environment variable
+    advanced: true
+  - name: CREDS_KEY
+    default: f34be427ebb29de8d88c107a71546019685ed8b241d8f2ed00c3df97ad2566f0
+    description: CREDS_KEY environment variable
+    advanced: true
+  - name: CREDS_IV
+    default: e2341419ec3dd3d19b13a1a87fafcbfb
+    description: CREDS_IV environment variable
+    advanced: true
+  - name: DEBUG_PLUGINS
+    default: 'true'
+    description: DEBUG_PLUGINS environment variable
+    advanced: true
+  - name: DEBUG_OPENAI
+    default: 'false'
+    description: DEBUG_OPENAI environment variable
+    advanced: true
+web_ui:
+  port: 3080
+  path: /

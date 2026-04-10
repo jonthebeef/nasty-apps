@@ -1,17 +1,23 @@
 name: Nextcloud
 slug: nextcloud
 type: docker
-description: Self-hosted cloud storage and collaboration platform. A safe home for all your data — access and share your files, calendars, contacts, and more.
-tagline: Your own cloud storage
-category: cloud
+description: Nextcloud application imported from CasaOS catalog
+tagline: Nextcloud application imported from CasaOS catalog
+category: cloud-and-files
 developer:
-  name: Nextcloud GmbH
-  website: https://nextcloud.com
-icon: https://upload.wikimedia.org/wikipedia/commons/6/60/Nextcloud_Logo.svg
+  name: CasaOS Team
+  website: ''
+icon: icon.png
 screenshots: []
-arch: [arm64, amd64]
+arch:
+  - amd64
+  - arm
+  - arm64
+  - '386'
+  - mips64le
+  - ppc64le
+  - s390x
 attribution: CasaOS App Store
-
 resources:
   min_ram: 512
   profiles:
@@ -20,40 +26,24 @@ resources:
       cpu: 0.5
     standard:
       ram: 512
-      cpu: 1.0
+      cpu: 1
     performance:
       ram: 1024
-      cpu: 2.0
-
+      cpu: 2
 ports:
   - container: 80
-    host: 8081
+    host: 10081
     description: Web interface
     protocol: tcp
-
+  - container: 443
+    host: 10443
+    description: Web interface
+    protocol: tcp
 volumes:
   - container: /var/www/html
-    description: Nextcloud data and configuration
-    required: true
-  - container: /var/www/html/data
-    description: Where should your files be stored?
-    required: true
-    hint: Path for user uploads and synced files
-
-env:
-  - name: MYSQL_HOST
-    default: ""
-    description: Database host (leave empty for SQLite)
-    advanced: true
-  - name: NEXTCLOUD_ADMIN_USER
-    default: "admin"
-    description: Admin username
-    advanced: false
-  - name: NEXTCLOUD_ADMIN_PASSWORD
-    default: ""
-    description: Admin password
-    advanced: false
-
+    description: Mount for /var/www/html
+    required: false
+env: []
 web_ui:
-  port: 8081
+  port: 10081
   path: /

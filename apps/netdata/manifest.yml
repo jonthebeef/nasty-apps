@@ -1,0 +1,65 @@
+name: Netdata
+slug: netdata
+type: docker
+description: Netdata application imported from CasaOS catalog
+tagline: Netdata application imported from CasaOS catalog
+category: tools
+developer:
+  name: f4bio
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+  - arm
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 19999
+    host: 19999
+    description: Service port 19999
+    protocol: tcp
+volumes:
+  - container: /etc/netdata
+    description: App data storage
+    required: true
+  - container: /var/lib/netdata
+    description: App data storage
+    required: true
+  - container: /var/cache/netdata
+    description: App data storage
+    required: true
+  - container: /host/etc/passwd
+    description: Mount for /host/etc/passwd
+    required: false
+  - container: /host/etc/group
+    description: Mount for /host/etc/group
+    required: false
+  - container: /host/proc
+    description: Mount for /host/proc
+    required: false
+  - container: /host/sys
+    description: Mount for /host/sys
+    required: false
+  - container: /host/etc/os-release
+    description: Mount for /host/etc/os-release
+    required: false
+  - container: /var/run/docker.sock
+    description: Mount for /var/run/docker.sock
+    required: false
+env: []
+web_ui:
+  port: 19999
+  path: /

@@ -1,0 +1,55 @@
+name: Immich
+slug: immich
+type: docker
+description: Immich application imported from CasaOS catalog
+tagline: Immich application imported from CasaOS catalog
+category: tools
+developer:
+  name: Cp0204
+  website: ''
+icon: icon.png
+screenshots: []
+arch:
+  - amd64
+  - arm64
+attribution: CasaOS App Store
+resources:
+  min_ram: 512
+  profiles:
+    light:
+      ram: 256
+      cpu: 0.5
+    standard:
+      ram: 512
+      cpu: 1
+    performance:
+      ram: 1024
+      cpu: 2
+ports:
+  - container: 2283
+    host: 2283
+    description: Service port 2283
+    protocol: tcp
+volumes:
+  - container: /usr/src/app/upload
+    description: Mount for /usr/src/app/upload
+    required: false
+  - container: /etc/localtime
+    description: Mount for /etc/localtime
+    required: false
+env:
+  - name: DB_DATABASE_NAME
+    default: immich
+    description: DB_DATABASE_NAME environment variable
+    advanced: true
+  - name: DB_PASSWORD
+    default: postgres
+    description: DB_PASSWORD environment variable
+    advanced: true
+  - name: DB_USERNAME
+    default: postgres
+    description: DB_USERNAME environment variable
+    advanced: true
+web_ui:
+  port: 2283
+  path: /

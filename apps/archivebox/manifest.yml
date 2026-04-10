@@ -1,8 +1,8 @@
 name: ArchiveBox
 slug: archivebox
 type: docker
-description: ArchiveBox application imported from CasaOS catalog
-tagline: ArchiveBox application imported from CasaOS catalog
+description: Save web pages, PDFs, and media for offline access
+tagline: Self-hosted web archiver
 category: tools
 developer:
   name: ArchiveBox
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,55 +24,55 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8000
-    host: 18010
-    description: Service port 8000
-    protocol: tcp
+- container: 8000
+  host: 18010
+  description: Service port 8000
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
+- container: /data
+  description: App data storage
+  required: true
 env:
-  - name: ADMIN_USERNAME
-    default: casaos
-    description: ADMIN_USERNAME environment variable
-    advanced: true
-  - name: ADMIN_PASSWORD
-    default: casaos
-    description: ADMIN_PASSWORD environment variable
-    advanced: true
-  - name: ALLOWED_HOSTS
-    default: '*'
-    description: ALLOWED_HOSTS environment variable
-    advanced: true
-  - name: CSRF_TRUSTED_ORIGINS
-    default: '*'
-    description: CSRF_TRUSTED_ORIGINS environment variable
-    advanced: true
-  - name: PUBLIC_INDEX
-    default: 'True'
-    description: PUBLIC_INDEX environment variable
-    advanced: true
-  - name: PUBLIC_SNAPSHOTS
-    default: 'True'
-    description: PUBLIC_SNAPSHOTS environment variable
-    advanced: true
-  - name: PUBLIC_ADD_VIEW
-    default: 'False'
-    description: PUBLIC_ADD_VIEW environment variable
-    advanced: true
-  - name: SEARCH_BACKEND_ENGINE
-    default: sonic
-    description: SEARCH_BACKEND_ENGINE environment variable
-    advanced: true
-  - name: SEARCH_BACKEND_HOST_NAME
-    default: archivebox_sonic
-    description: SEARCH_BACKEND_HOST_NAME environment variable
-    advanced: true
-  - name: SEARCH_BACKEND_PASSWORD
-    default: SomeSecretPassword
-    description: SEARCH_BACKEND_PASSWORD environment variable
-    advanced: true
+- name: ADMIN_USERNAME
+  default: casaos
+  description: ADMIN_USERNAME environment variable
+  advanced: true
+- name: ADMIN_PASSWORD
+  default: casaos
+  description: ADMIN_PASSWORD environment variable
+  advanced: true
+- name: ALLOWED_HOSTS
+  default: '*'
+  description: ALLOWED_HOSTS environment variable
+  advanced: true
+- name: CSRF_TRUSTED_ORIGINS
+  default: '*'
+  description: CSRF_TRUSTED_ORIGINS environment variable
+  advanced: true
+- name: PUBLIC_INDEX
+  default: 'True'
+  description: PUBLIC_INDEX environment variable
+  advanced: true
+- name: PUBLIC_SNAPSHOTS
+  default: 'True'
+  description: PUBLIC_SNAPSHOTS environment variable
+  advanced: true
+- name: PUBLIC_ADD_VIEW
+  default: 'False'
+  description: PUBLIC_ADD_VIEW environment variable
+  advanced: true
+- name: SEARCH_BACKEND_ENGINE
+  default: sonic
+  description: SEARCH_BACKEND_ENGINE environment variable
+  advanced: true
+- name: SEARCH_BACKEND_HOST_NAME
+  default: archivebox_sonic
+  description: SEARCH_BACKEND_HOST_NAME environment variable
+  advanced: true
+- name: SEARCH_BACKEND_PASSWORD
+  default: SomeSecretPassword
+  description: SEARCH_BACKEND_PASSWORD environment variable
+  advanced: true
 web_ui:
   port: 18010
   path: /

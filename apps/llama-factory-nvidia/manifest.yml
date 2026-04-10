@@ -1,8 +1,8 @@
 name: LLaMA Factory Nvidia
 slug: llama-factory-nvidia
 type: docker
-description: LLaMA Factory Nvidia application imported from CasaOS catalog
-tagline: LLaMA Factory Nvidia application imported from CasaOS catalog
+description: Fine-tune large language models on Nvidia GPUs
+tagline: LLM fine-tuning toolkit
 category: tools
 developer:
   name: hiyouga
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,10 +24,10 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 7860
-    host: 18877
-    description: Service port 7860
-    protocol: tcp
+- container: 7860
+  host: 18877
+  description: Service port 7860
+  protocol: tcp
 volumes: []
 env: []
 web_ui:

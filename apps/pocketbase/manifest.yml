@@ -1,17 +1,16 @@
 name: PocketBase
 slug: pocketbase
 type: docker
-description: PocketBase application imported from CasaOS catalog
-tagline: PocketBase application imported from CasaOS catalog
+description: SQLite database with REST API, auth, and file storage
+tagline: Backend in a single binary
 category: tools
 developer:
-  name: CasaOS Team
+  name: PocketBase Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,14 +24,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8090
-    host: 8090
-    description: Service port 8090
-    protocol: tcp
+- container: 8090
+  host: 8090
+  description: Service port 8090
+  protocol: tcp
 volumes:
-  - container: /pb_data
-    description: App data storage
-    required: true
+- container: /pb_data
+  description: App data storage
+  required: true
 env: []
 web_ui:
   port: 8090

@@ -1,8 +1,8 @@
 name: Motioneye
 slug: motioneye
 type: docker
-description: Motioneye application imported from CasaOS catalog
-tagline: Motioneye application imported from CasaOS catalog
+description: Monitor security cameras with motion detection
+tagline: Video surveillance system
 category: tools
 developer:
   name: f4bio
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,17 +24,17 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8765
-    host: 8765
-    description: Service port 8765
-    protocol: tcp
+- container: 8765
+  host: 8765
+  description: Service port 8765
+  protocol: tcp
 volumes:
-  - container: /etc/motioneye
-    description: Mount for /etc/motioneye
-    required: false
-  - container: /var/lib/motioneye
-    description: Mount for /var/lib/motioneye
-    required: false
+- container: /etc/motioneye
+  description: Mount for /etc/motioneye
+  required: false
+- container: /var/lib/motioneye
+  description: Mount for /var/lib/motioneye
+  required: false
 env: []
 web_ui:
   port: 8765

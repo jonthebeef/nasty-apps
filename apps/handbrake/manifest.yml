@@ -1,8 +1,8 @@
 name: Handbrake
 slug: handbrake
 type: docker
-description: Handbrake application imported from CasaOS catalog
-tagline: Handbrake application imported from CasaOS catalog
+description: Convert video files between formats with a web interface
+tagline: Video transcoder
 category: media
 developer:
   name: self
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,23 +24,23 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5800
-    host: 5800
-    description: Service port 5800
-    protocol: tcp
+- container: 5800
+  host: 5800
+  description: Service port 5800
+  protocol: tcp
 volumes:
-  - container: /storage
-    description: Mount for /storage
-    required: false
-  - container: /watch
-    description: Mount for /watch
-    required: false
-  - container: /output
-    description: Mount for /output
-    required: false
-  - container: /config
-    description: App configuration
-    required: true
+- container: /storage
+  description: Mount for /storage
+  required: false
+- container: /watch
+  description: Mount for /watch
+  required: false
+- container: /output
+  description: Mount for /output
+  required: false
+- container: /config
+  description: App configuration
+  required: true
 env: []
 web_ui:
   port: 5800

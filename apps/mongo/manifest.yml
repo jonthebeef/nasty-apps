@@ -1,8 +1,8 @@
 name: Mongo
 slug: mongo
 type: docker
-description: Mongo application imported from CasaOS catalog
-tagline: Mongo application imported from CasaOS catalog
+description: Flexible database for modern applications
+tagline: NoSQL document database
 category: tools
 developer:
   name: WisdomSky
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,30 +25,30 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 27017
-    host: 27017
-    description: Service port 27017
-    protocol: tcp
+- container: 27017
+  host: 27017
+  description: Service port 27017
+  protocol: tcp
 volumes:
-  - container: /data/configdb
-    description: App configuration
-    required: true
-  - container: /data/db
-    description: App data storage
-    required: true
+- container: /data/configdb
+  description: App configuration
+  required: true
+- container: /data/db
+  description: App data storage
+  required: true
 env:
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 27017
   path: /

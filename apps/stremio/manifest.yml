@@ -1,8 +1,8 @@
 name: Stremio
 slug: stremio
 type: docker
-description: Stremio application imported from CasaOS catalog
-tagline: Stremio application imported from CasaOS catalog
+description: Stream movies and TV from multiple sources in one app
+tagline: Media streaming aggregator
 category: media
 developer:
   name: joaobosconff
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,27 +25,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 11470
-    host: 11470
-    description: Service port 11470
-    protocol: tcp
-  - container: 8080
-    host: 8100
-    description: Service port 8080
-    protocol: tcp
+- container: 11470
+  host: 11470
+  description: Service port 11470
+  protocol: tcp
+- container: 8080
+  host: 8100
+  description: Service port 8080
+  protocol: tcp
 volumes:
-  - container: /root/.stremio-server
-    description: Mount for /root/.stremio-server
-    required: false
+- container: /root/.stremio-server
+  description: Mount for /root/.stremio-server
+  required: false
 env:
-  - name: NO_CORS
-    default: '1'
-    description: NO_CORS environment variable
-    advanced: true
-  - name: AUTO_SERVER_URL
-    default: '1'
-    description: AUTO_SERVER_URL environment variable
-    advanced: true
+- name: NO_CORS
+  default: '1'
+  description: NO_CORS environment variable
+  advanced: true
+- name: AUTO_SERVER_URL
+  default: '1'
+  description: AUTO_SERVER_URL environment variable
+  advanced: true
 web_ui:
   port: 11470
   path: /

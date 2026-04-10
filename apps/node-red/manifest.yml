@@ -1,20 +1,19 @@
 name: Node RED
 slug: node-red
 type: docker
-description: Node RED application imported from CasaOS catalog
-tagline: Node RED application imported from CasaOS catalog
+description: Wire together devices, APIs, and services with a flow editor
+tagline: Visual programming for IoT
 category: tools
 developer:
-  name: CasaOS Team
+  name: Node RED Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - s390x
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- s390x
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -28,14 +27,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 1880
-    host: 1880
-    description: Service port 1880
-    protocol: tcp
+- container: 1880
+  host: 1880
+  description: Service port 1880
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
+- container: /data
+  description: App data storage
+  required: true
 env: []
 web_ui:
   port: 1880

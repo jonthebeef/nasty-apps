@@ -1,18 +1,17 @@
 name: Grafana
 slug: grafana
 type: docker
-description: Grafana application imported from CasaOS catalog
-tagline: Grafana application imported from CasaOS catalog
+description: Create beautiful dashboards from any data source
+tagline: Data visualisation and dashboards
 category: network-and-dns
 developer:
-  name: CasaOS Team
+  name: Grafana Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,14 +25,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3003
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3003
+  description: Service port 3000
+  protocol: tcp
 volumes:
-  - container: /var/lib/grafana
-    description: Mount for /var/lib/grafana
-    required: false
+- container: /var/lib/grafana
+  description: Mount for /var/lib/grafana
+  required: false
 env: []
 web_ui:
   port: 3003

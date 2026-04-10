@@ -1,8 +1,8 @@
 name: PsiTransfer
 slug: psitransfer
 type: docker
-description: PsiTransfer application imported from CasaOS catalog
-tagline: PsiTransfer application imported from CasaOS catalog
+description: Share files with auto-expiring download links
+tagline: Simple file sharing
 category: tools
 developer:
   name: psitrax
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,19 +25,19 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 13001
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 13001
+  description: Service port 3000
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
+- container: /data
+  description: App data storage
+  required: true
 env:
-  - name: PSITRANSFER_ADMIN_PASS
-    default: secret
-    description: PSITRANSFER_ADMIN_PASS environment variable
-    advanced: true
+- name: PSITRANSFER_ADMIN_PASS
+  default: secret
+  description: PSITRANSFER_ADMIN_PASS environment variable
+  advanced: true
 web_ui:
   port: 13001
   path: /

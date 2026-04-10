@@ -1,8 +1,8 @@
 name: LyrionMusicServer
 slug: lyrionmusicserver
 type: docker
-description: LyrionMusicServer application imported from CasaOS catalog
-tagline: LyrionMusicServer application imported from CasaOS catalog
+description: Stream your music library to Squeezebox and other players
+tagline: Music streaming server
 category: media
 developer:
   name: lmscommunity
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,43 +26,43 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 9000
-    host: 9000
-    description: Service port 9000
-    protocol: tcp
-  - container: 9090
-    host: 9090
-    description: Service port 9090
-    protocol: tcp
-  - container: 3483
-    host: 3483
-    description: Service port 3483
-    protocol: tcp
-  - container: 3483
-    host: 3483
-    description: Service port 3483
-    protocol: udp
+- container: 9000
+  host: 9000
+  description: Service port 9000
+  protocol: tcp
+- container: 9090
+  host: 9090
+  description: Service port 9090
+  protocol: tcp
+- container: 3483
+  host: 3483
+  description: Service port 3483
+  protocol: tcp
+- container: 3483
+  host: 3483
+  description: Service port 3483
+  protocol: udp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /music
-    description: Mount for /music
-    required: false
-  - container: /playlist
-    description: Mount for /playlist
-    required: false
-  - container: /etc/localtime
-    description: Mount for /etc/localtime
-    required: false
-  - container: /etc/timezone
-    description: Mount for /etc/timezone
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /music
+  description: Mount for /music
+  required: false
+- container: /playlist
+  description: Mount for /playlist
+  required: false
+- container: /etc/localtime
+  description: Mount for /etc/localtime
+  required: false
+- container: /etc/timezone
+  description: Mount for /etc/timezone
+  required: false
 env:
-  - name: HTTP_PORT
-    default: '9000'
-    description: HTTP_PORT environment variable
-    advanced: true
+- name: HTTP_PORT
+  default: '9000'
+  description: HTTP_PORT environment variable
+  advanced: true
 web_ui:
   port: 9000
   path: /

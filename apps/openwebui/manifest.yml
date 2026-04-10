@@ -1,8 +1,8 @@
 name: OpenWebUI
 slug: openwebui
 type: docker
-description: OpenWebUI application imported from CasaOS catalog
-tagline: OpenWebUI application imported from CasaOS catalog
+description: Chat with local LLMs through a polished web UI
+tagline: Web interface for Ollama
 category: tools
 developer:
   name: Unknown
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,26 +24,26 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8080
-    host: 3050
-    description: Service port 8080
-    protocol: tcp
+- container: 8080
+  host: 3050
+  description: Service port 8080
+  protocol: tcp
 volumes:
-  - container: /app/backend/data
-    description: App data storage
-    required: true
-  - container: /root/.ollama
-    description: Mount for /root/.ollama
-    required: false
+- container: /app/backend/data
+  description: App data storage
+  required: true
+- container: /root/.ollama
+  description: Mount for /root/.ollama
+  required: false
 env:
-  - name: CPU_FALLBACK
-    default: 'true'
-    description: CPU_FALLBACK environment variable
-    advanced: true
-  - name: NVIDIA_VISIBLE_DEVICES
-    default: all
-    description: NVIDIA_VISIBLE_DEVICES environment variable
-    advanced: true
+- name: CPU_FALLBACK
+  default: 'true'
+  description: CPU_FALLBACK environment variable
+  advanced: true
+- name: NVIDIA_VISIBLE_DEVICES
+  default: all
+  description: NVIDIA_VISIBLE_DEVICES environment variable
+  advanced: true
 web_ui:
   port: 3050
   path: /

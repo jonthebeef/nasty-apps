@@ -1,8 +1,8 @@
 name: VirtualMachineManager
 slug: virtualmachinemanager
 type: docker
-description: VirtualMachineManager application imported from CasaOS catalog
-tagline: VirtualMachineManager application imported from CasaOS catalog
+description: Create and manage virtual machines from a web UI
+tagline: Virtual machine manager
 category: tools
 developer:
   name: mber5
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,29 +25,29 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 8185
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 8185
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /var/run/libvirt/libvirt-sock
-    description: Mount for /var/run/libvirt/libvirt-sock
-    required: false
-  - container: /var/lib/libvirt
-    description: Mount for /var/lib/libvirt
-    required: false
-  - container: /DATA/Downloads
-    description: App data storage
-    required: true
+- container: /var/run/libvirt/libvirt-sock
+  description: Mount for /var/run/libvirt/libvirt-sock
+  required: false
+- container: /var/lib/libvirt
+  description: Mount for /var/lib/libvirt
+  required: false
+- container: /DATA/Downloads
+  description: App data storage
+  required: true
 env:
-  - name: DARK_MODE
-    default: 'false'
-    description: DARK_MODE environment variable
-    advanced: true
-  - name: HOSTS
-    default: '[''qemu:///system'']'
-    description: HOSTS environment variable
-    advanced: true
+- name: DARK_MODE
+  default: 'false'
+  description: DARK_MODE environment variable
+  advanced: true
+- name: HOSTS
+  default: '[''qemu:///system'']'
+  description: HOSTS environment variable
+  advanced: true
 web_ui:
   port: 8185
   path: /

@@ -1,8 +1,8 @@
 name: Filedrop
 slug: filedrop
 type: docker
-description: Filedrop application imported from CasaOS catalog
-tagline: Filedrop application imported from CasaOS catalog
+description: Drag-and-drop file sharing between devices on your network
+tagline: Simple file sharing
 category: cloud-and-files
 developer:
   name: Noé Favier
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,27 +25,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8000
-    host: 8000
-    description: Service port 8000
-    protocol: tcp
+- container: 8000
+  host: 8000
+  description: Service port 8000
+  protocol: tcp
 volumes:
-  - container: /var/file_drop_files
-    description: Mount for /var/file_drop_files
-    required: false
+- container: /var/file_drop_files
+  description: Mount for /var/file_drop_files
+  required: false
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8000
   path: /

@@ -1,8 +1,8 @@
 name: Index TTS
 slug: index-tts
 type: docker
-description: Index TTS application imported from CasaOS catalog
-tagline: Index TTS application imported from CasaOS catalog
+description: Convert text to natural-sounding speech
+tagline: Text-to-speech engine
 category: tools
 developer:
   name: index-tts
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,10 +24,10 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 7860
-    host: 17869
-    description: Service port 7860
-    protocol: tcp
+- container: 7860
+  host: 17869
+  description: Service port 7860
+  protocol: tcp
 volumes: []
 env: []
 web_ui:

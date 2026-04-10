@@ -1,18 +1,17 @@
 name: Duplicati
 slug: duplicati
 type: docker
-description: Duplicati application imported from CasaOS catalog
-tagline: Duplicati application imported from CasaOS catalog
+description: Back up files to any cloud storage with encryption and scheduling
+tagline: Encrypted cloud backup
 category: cloud-and-files
 developer:
-  name: CasaOS Team
+  name: Duplicati Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,33 +25,33 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8200
-    host: 8200
-    description: Service port 8200
-    protocol: tcp
+- container: 8200
+  host: 8200
+  description: Service port 8200
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /backups
-    description: Mount for /backups
-    required: false
-  - container: /source
-    description: Mount for /source
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /backups
+  description: Mount for /backups
+  required: false
+- container: /source
+  description: Mount for /source
+  required: false
 env:
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8200
   path: /

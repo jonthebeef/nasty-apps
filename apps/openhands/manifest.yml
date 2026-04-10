@@ -1,8 +1,8 @@
 name: OpenHands
 slug: openhands
 type: docker
-description: OpenHands application imported from CasaOS catalog
-tagline: OpenHands application imported from CasaOS catalog
+description: Autonomous coding assistant that writes and runs code
+tagline: AI software development agent
 category: tools
 developer:
   name: All-Hands-AI
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,29 +24,29 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 13333
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 13333
+  description: Service port 3000
+  protocol: tcp
 volumes:
-  - container: /var/run/docker.sock
-    description: Mount for /var/run/docker.sock
-    required: false
-  - container: /.openhands
-    description: Mount for /.openhands
-    required: false
-  - container: /opt/workspace_base
-    description: Mount for /opt/workspace_base
-    required: false
+- container: /var/run/docker.sock
+  description: Mount for /var/run/docker.sock
+  required: false
+- container: /.openhands
+  description: Mount for /.openhands
+  required: false
+- container: /opt/workspace_base
+  description: Mount for /opt/workspace_base
+  required: false
 env:
-  - name: SANDBOX_RUNTIME_CONTAINER_IMAGE
-    default: ghcr.io/all-hands-ai/runtime:main-nikolaik
-    description: SANDBOX_RUNTIME_CONTAINER_IMAGE environment variable
-    advanced: true
-  - name: WORKSPACE_MOUNT_PATH
-    default: /DATA/AppData/$AppID/workspace
-    description: WORKSPACE_MOUNT_PATH environment variable
-    advanced: true
+- name: SANDBOX_RUNTIME_CONTAINER_IMAGE
+  default: ghcr.io/all-hands-ai/runtime:main-nikolaik
+  description: SANDBOX_RUNTIME_CONTAINER_IMAGE environment variable
+  advanced: true
+- name: WORKSPACE_MOUNT_PATH
+  default: /DATA/AppData/$AppID/workspace
+  description: WORKSPACE_MOUNT_PATH environment variable
+  advanced: true
 web_ui:
   port: 13333
   path: /

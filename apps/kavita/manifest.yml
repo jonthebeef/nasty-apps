@@ -1,8 +1,8 @@
 name: Kavita
 slug: kavita
 type: docker
-description: Kavita application imported from CasaOS catalog
-tagline: Kavita application imported from CasaOS catalog
+description: Read manga, comics, and books from your browser
+tagline: Digital comic and book reader
 category: media
 developer:
   name: jvmilazz0
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,22 +26,22 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5000
-    host: 5150
-    description: Service port 5000
-    protocol: tcp
+- container: 5000
+  host: 5150
+  description: Service port 5000
+  protocol: tcp
 volumes:
-  - container: /kavita/config
-    description: App configuration
-    required: true
-  - container: /manga
-    description: Mount for /manga
-    required: false
+- container: /kavita/config
+  description: App configuration
+  required: true
+- container: /manga
+  description: Mount for /manga
+  required: false
 env:
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 5150
   path: /

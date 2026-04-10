@@ -1,19 +1,18 @@
 name: OpenHAB
 slug: openhab
 type: docker
-description: OpenHAB application imported from CasaOS catalog
-tagline: OpenHAB application imported from CasaOS catalog
+description: Integrate and automate smart home devices from any vendor
+tagline: Home automation bus
 category: home-automation
 developer:
-  name: CasaOS Team
+  name: OpenHAB Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -28,31 +27,31 @@ resources:
       cpu: 2
 ports: []
 volumes:
-  - container: /etc/localtime
-    description: Mount for /etc/localtime
-    required: false
-  - container: /etc/timezone
-    description: Mount for /etc/timezone
-    required: false
-  - container: /openhab/addons
-    description: Mount for /openhab/addons
-    required: false
-  - container: /openhab/conf
-    description: Mount for /openhab/conf
-    required: false
-  - container: /openhab/userdata
-    description: App data storage
-    required: true
+- container: /etc/localtime
+  description: Mount for /etc/localtime
+  required: false
+- container: /etc/timezone
+  description: Mount for /etc/timezone
+  required: false
+- container: /openhab/addons
+  description: Mount for /openhab/addons
+  required: false
+- container: /openhab/conf
+  description: Mount for /openhab/conf
+  required: false
+- container: /openhab/userdata
+  description: App data storage
+  required: true
 env:
-  - name: CRYPTO_POLICY
-    default: unlimited
-    description: CRYPTO_POLICY environment variable
-    advanced: true
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
+- name: CRYPTO_POLICY
+  default: unlimited
+  description: CRYPTO_POLICY environment variable
+  advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true

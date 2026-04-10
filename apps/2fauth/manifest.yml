@@ -1,20 +1,19 @@
 name: 2FAuth
 slug: 2fauth
 type: docker
-description: 2FAuth application imported from CasaOS catalog
-tagline: 2FAuth application imported from CasaOS catalog
+description: Manage your 2FA tokens in a self-hosted web app
+tagline: Two-factor authentication code manager
 category: tools
 developer:
-  name: CasaOS Team
+  name: 2FAuth Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - '386'
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- '386'
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -28,14 +27,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8000
-    host: 8000
-    description: Service port 8000
-    protocol: tcp
+- container: 8000
+  host: 8000
+  description: Service port 8000
+  protocol: tcp
 volumes:
-  - container: /2fauth
-    description: Mount for /2fauth
-    required: false
+- container: /2fauth
+  description: Mount for /2fauth
+  required: false
 env: []
 web_ui:
   port: 8000

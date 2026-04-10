@@ -1,18 +1,17 @@
 name: Smokeping
 slug: smokeping
 type: docker
-description: Smokeping application imported from CasaOS catalog
-tagline: Smokeping application imported from CasaOS catalog
+description: Track network performance and packet loss over time
+tagline: Network latency monitor
 category: network-and-dns
 developer:
-  name: CasaOS Team
+  name: Smokeping Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,30 +25,30 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 10280
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 10280
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /data
-    description: App data storage
-    required: true
+- container: /config
+  description: App configuration
+  required: true
+- container: /data
+  description: App data storage
+  required: true
 env:
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 10280
   path: /

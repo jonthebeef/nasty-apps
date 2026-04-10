@@ -1,8 +1,8 @@
 name: Anaconda3
 slug: anaconda3
 type: docker
-description: Anaconda3 application imported from CasaOS catalog
-tagline: Anaconda3 application imported from CasaOS catalog
+description: Pre-configured Python environment with Jupyter and scientific libraries
+tagline: Python data science platform
 category: tools
 developer:
   name: LisonEvf
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,27 +24,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8888
-    host: 8888
-    description: Service port 8888
-    protocol: tcp
+- container: 8888
+  host: 8888
+  description: Service port 8888
+  protocol: tcp
 volumes:
-  - container: /opt/notebooks
-    description: Mount for /opt/notebooks
-    required: false
+- container: /opt/notebooks
+  description: Mount for /opt/notebooks
+  required: false
 env:
-  - name: LANG
-    default: C.UTF-8
-    description: LANG environment variable
-    advanced: true
-  - name: LC_ALL
-    default: C.UTF-8
-    description: LC_ALL environment variable
-    advanced: true
-  - name: PATH
-    default: /opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-    description: PATH environment variable
-    advanced: true
+- name: LANG
+  default: C.UTF-8
+  description: LANG environment variable
+  advanced: true
+- name: LC_ALL
+  default: C.UTF-8
+  description: LC_ALL environment variable
+  advanced: true
+- name: PATH
+  default: /opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  description: PATH environment variable
+  advanced: true
 web_ui:
   port: 8888
   path: /

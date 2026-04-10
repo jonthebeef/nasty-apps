@@ -1,8 +1,8 @@
 name: OpenSpeedTest
 slug: openspeedtest
 type: docker
-description: OpenSpeedTest application imported from CasaOS catalog
-tagline: OpenSpeedTest application imported from CasaOS catalog
+description: Test your local network speed from any browser
+tagline: Network speed test server
 category: tools
 developer:
   name: OpenSpeedTest
@@ -10,13 +10,12 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - ppc64le
-  - s390x
-  - '386'
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- ppc64le
+- s390x
+- '386'
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -30,10 +29,10 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3004
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3004
+  description: Service port 3000
+  protocol: tcp
 volumes: []
 env: []
 web_ui:

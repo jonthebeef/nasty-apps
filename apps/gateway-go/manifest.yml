@@ -1,8 +1,8 @@
 name: Gateway Go
 slug: gateway-go
 type: docker
-description: Gateway Go application imported from CasaOS catalog
-tagline: Gateway Go application imported from CasaOS catalog
+description: Lightweight reverse proxy and API gateway
+tagline: Network gateway service
 category: network-and-dns
 developer:
   name: iotserv
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,14 +26,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 34323
-    host: 34323
-    description: Service port 34323
-    protocol: tcp
+- container: 34323
+  host: 34323
+  description: Service port 34323
+  protocol: tcp
 volumes:
-  - container: /root
-    description: Mount for /root
-    required: false
+- container: /root
+  description: Mount for /root
+  required: false
 env: []
 web_ui:
   port: 34323

@@ -1,8 +1,8 @@
 name: CloudBeaver
 slug: cloudbeaver
 type: docker
-description: CloudBeaver application imported from CasaOS catalog
-tagline: CloudBeaver application imported from CasaOS catalog
+description: Web-based tool for managing databases with a modern interface
+tagline: Cloud database manager
 category: tools
 developer:
   name: joaobosconff
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,14 +25,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8978
-    host: 8978
-    description: Service port 8978
-    protocol: tcp
+- container: 8978
+  host: 8978
+  description: Service port 8978
+  protocol: tcp
 volumes:
-  - container: /opt/cloudbeaver/workspace
-    description: Mount for /opt/cloudbeaver/workspace
-    required: false
+- container: /opt/cloudbeaver/workspace
+  description: Mount for /opt/cloudbeaver/workspace
+  required: false
 env: []
 web_ui:
   port: 8978

@@ -1,8 +1,8 @@
 name: Adminer
 slug: adminer
 type: docker
-description: Adminer application imported from CasaOS catalog
-tagline: Adminer application imported from CasaOS catalog
+description: Manage MySQL, PostgreSQL, SQLite and more from a single PHP page
+tagline: Lightweight database management tool
 category: tools
 developer:
   name: Tim Düsterhus
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,10 +26,10 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8080
-    host: 8080
-    description: Service port 8080
-    protocol: tcp
+- container: 8080
+  host: 8080
+  description: Service port 8080
+  protocol: tcp
 volumes: []
 env: []
 web_ui:

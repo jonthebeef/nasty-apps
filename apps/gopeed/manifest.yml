@@ -1,8 +1,8 @@
 name: Gopeed
 slug: gopeed
 type: docker
-description: Gopeed application imported from CasaOS catalog
-tagline: Gopeed application imported from CasaOS catalog
+description: Fast downloads with multi-protocol support
+tagline: Modern download manager
 category: tools
 developer:
   name: joaobosconff
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,17 +26,17 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 9999
-    host: 9999
-    description: Service port 9999
-    protocol: tcp
+- container: 9999
+  host: 9999
+  description: Service port 9999
+  protocol: tcp
 volumes:
-  - container: /app/storage
-    description: Mount for /app/storage
-    required: false
-  - container: /app/Downloads
-    description: Mount for /app/Downloads
-    required: false
+- container: /app/storage
+  description: Mount for /app/storage
+  required: false
+- container: /app/Downloads
+  description: Mount for /app/Downloads
+  required: false
 env: []
 web_ui:
   port: 9999

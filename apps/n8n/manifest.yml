@@ -1,8 +1,8 @@
 name: N8n
 slug: n8n
 type: docker
-description: N8n application imported from CasaOS catalog
-tagline: N8n application imported from CasaOS catalog
+description: Connect apps and automate tasks with visual workflows
+tagline: Workflow automation platform
 category: tools
 developer:
   name: YoussofKhawaja
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,23 +25,23 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5678
-    host: 5678
-    description: Service port 5678
-    protocol: tcp
+- container: 5678
+  host: 5678
+  description: Service port 5678
+  protocol: tcp
 volumes:
-  - container: /home/node/.n8n
-    description: Mount for /home/node/.n8n
-    required: false
+- container: /home/node/.n8n
+  description: Mount for /home/node/.n8n
+  required: false
 env:
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
-  - name: N8N_SECURE_COOKIE
-    default: 'false'
-    description: N8N_SECURE_COOKIE environment variable
-    advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
+- name: N8N_SECURE_COOKIE
+  default: 'false'
+  description: N8N_SECURE_COOKIE environment variable
+  advanced: true
 web_ui:
   port: 5678
   path: /

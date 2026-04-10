@@ -1,8 +1,8 @@
 name: FlowiseAi
 slug: flowiseai
 type: docker
-description: FlowiseAi application imported from CasaOS catalog
-tagline: FlowiseAi application imported from CasaOS catalog
+description: Build LLM apps with a drag-and-drop interface
+tagline: Visual AI workflow builder
 category: tools
 developer:
   name: Flowise
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,47 +24,47 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3025
-    host: 3025
-    description: Service port 3025
-    protocol: tcp
+- container: 3025
+  host: 3025
+  description: Service port 3025
+  protocol: tcp
 volumes:
-  - container: /root/.flowise
-    description: Mount for /root/.flowise
-    required: false
+- container: /root/.flowise
+  description: Mount for /root/.flowise
+  required: false
 env:
-  - name: PORT
-    default: '3025'
-    description: PORT environment variable
-    advanced: true
-  - name: DATABASE_PATH
-    default: /root/.flowise
-    description: DATABASE_PATH environment variable
-    advanced: true
-  - name: APIKEY_PATH
-    default: /root/.flowise
-    description: APIKEY_PATH environment variable
-    advanced: true
-  - name: SECRETKEY_PATH
-    default: /root/.flowise
-    description: SECRETKEY_PATH environment variable
-    advanced: true
-  - name: LOG_PATH
-    default: /root/.flowise/logs
-    description: LOG_PATH environment variable
-    advanced: true
-  - name: BLOB_STORAGE_PATH
-    default: /root/.flowise/storage
-    description: BLOB_STORAGE_PATH environment variable
-    advanced: true
-  - name: FLOWISE_USERNAME
-    default: casaos
-    description: FLOWISE_USERNAME environment variable
-    advanced: true
-  - name: FLOWISE_PASSWORD
-    default: casaos
-    description: FLOWISE_PASSWORD environment variable
-    advanced: true
+- name: PORT
+  default: '3025'
+  description: PORT environment variable
+  advanced: true
+- name: DATABASE_PATH
+  default: /root/.flowise
+  description: DATABASE_PATH environment variable
+  advanced: true
+- name: APIKEY_PATH
+  default: /root/.flowise
+  description: APIKEY_PATH environment variable
+  advanced: true
+- name: SECRETKEY_PATH
+  default: /root/.flowise
+  description: SECRETKEY_PATH environment variable
+  advanced: true
+- name: LOG_PATH
+  default: /root/.flowise/logs
+  description: LOG_PATH environment variable
+  advanced: true
+- name: BLOB_STORAGE_PATH
+  default: /root/.flowise/storage
+  description: BLOB_STORAGE_PATH environment variable
+  advanced: true
+- name: FLOWISE_USERNAME
+  default: casaos
+  description: FLOWISE_USERNAME environment variable
+  advanced: true
+- name: FLOWISE_PASSWORD
+  default: casaos
+  description: FLOWISE_PASSWORD environment variable
+  advanced: true
 web_ui:
   port: 3025
   path: /

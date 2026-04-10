@@ -1,18 +1,17 @@
 name: Readarr
 slug: readarr
 type: docker
-description: Readarr application imported from CasaOS catalog
-tagline: Readarr application imported from CasaOS catalog
+description: Automatically find and download eBooks
+tagline: Book collection manager
 category: media
 developer:
-  name: CasaOS Team
+  name: Readarr Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,33 +25,33 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8787
-    host: 8787
-    description: Service port 8787
-    protocol: tcp
+- container: 8787
+  host: 8787
+  description: Service port 8787
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /books
-    description: Mount for /books
-    required: false
-  - container: /downloads
-    description: Mount for /downloads
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /books
+  description: Mount for /books
+  required: false
+- container: /downloads
+  description: Mount for /downloads
+  required: false
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8787
   path: /

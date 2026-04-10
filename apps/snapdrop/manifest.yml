@@ -1,8 +1,8 @@
 name: Snapdrop
 slug: snapdrop
 type: docker
-description: Snapdrop application imported from CasaOS catalog
-tagline: Snapdrop application imported from CasaOS catalog
+description: Share files between devices on the same network instantly
+tagline: Local file sharing
 category: tools
 developer:
   name: self
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,31 +25,31 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 443
-    host: 443
-    description: Web interface
-    protocol: tcp
-  - container: 80
-    host: 89
-    description: Web interface
-    protocol: tcp
+- container: 443
+  host: 443
+  description: Web interface
+  protocol: tcp
+- container: 80
+  host: 89
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 443
   path: /

@@ -1,8 +1,8 @@
 name: LangFlow
 slug: langflow
 type: docker
-description: LangFlow application imported from CasaOS catalog
-tagline: LangFlow application imported from CasaOS catalog
+description: Design AI workflows with a drag-and-drop interface
+tagline: Visual LLM chain builder
 category: tools
 developer:
   name: langflowai
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,23 +24,23 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 7860
-    host: 17860
-    description: Service port 7860
-    protocol: tcp
+- container: 7860
+  host: 17860
+  description: Service port 7860
+  protocol: tcp
 volumes:
-  - container: /app/langflow
-    description: Mount for /app/langflow
-    required: false
+- container: /app/langflow
+  description: Mount for /app/langflow
+  required: false
 env:
-  - name: LANGFLOW_DATABASE_URL
-    default: postgresql://langflow:langflow@langflow-postgres:5432/langflow
-    description: LANGFLOW_DATABASE_URL environment variable
-    advanced: true
-  - name: LANGFLOW_CONFIG_DIR
-    default: /app/langflow
-    description: LANGFLOW_CONFIG_DIR environment variable
-    advanced: true
+- name: LANGFLOW_DATABASE_URL
+  default: postgresql://langflow:langflow@langflow-postgres:5432/langflow
+  description: LANGFLOW_DATABASE_URL environment variable
+  advanced: true
+- name: LANGFLOW_CONFIG_DIR
+  default: /app/langflow
+  description: LANGFLOW_CONFIG_DIR environment variable
+  advanced: true
 web_ui:
   port: 17860
   path: /

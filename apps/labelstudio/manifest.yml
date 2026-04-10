@@ -1,8 +1,8 @@
 name: LabelStudio
 slug: labelstudio
 type: docker
-description: LabelStudio application imported from CasaOS catalog
-tagline: LabelStudio application imported from CasaOS catalog
+description: Annotate text, images, and audio for machine learning
+tagline: Data labelling platform
 category: tools
 developer:
   name: CorrectRoadH
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,27 +25,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8080
-    host: 3080
-    description: Service port 8080
-    protocol: tcp
+- container: 8080
+  host: 3080
+  description: Service port 8080
+  protocol: tcp
 volumes:
-  - container: /label-studio/data
-    description: App data storage
-    required: true
+- container: /label-studio/data
+  description: App data storage
+  required: true
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 3080
   path: /

@@ -1,8 +1,8 @@
 name: Medusa
 slug: medusa
 type: docker
-description: Medusa application imported from CasaOS catalog
-tagline: Medusa application imported from CasaOS catalog
+description: Automatically find and download TV episodes
+tagline: TV show download automation
 category: media
 developer:
   name: Jason McFeetors
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,25 +26,25 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8081
-    host: 8081
-    description: Service port 8081
-    protocol: tcp
+- container: 8081
+  host: 8081
+  description: Service port 8081
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /downloads
-    description: Mount for /downloads
-    required: false
-  - container: /tv
-    description: Mount for /tv
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /downloads
+  description: Mount for /downloads
+  required: false
+- container: /tv
+  description: Mount for /tv
+  required: false
 env:
-  - name: TZ
-    default: ' $TZ'
-    description: TZ environment variable
-    advanced: true
+- name: TZ
+  default: ' $TZ'
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8081
   path: /

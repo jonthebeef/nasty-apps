@@ -1,8 +1,8 @@
 name: Alist
 slug: alist
 type: docker
-description: Alist application imported from CasaOS catalog
-tagline: Alist application imported from CasaOS catalog
+description: Browse and manage files across local, cloud, and remote storage
+tagline: Multi-storage file browser
 category: cloud-and-files
 developer:
   name: Xhofe
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,14 +26,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5244
-    host: 5244
-    description: Service port 5244
-    protocol: tcp
+- container: 5244
+  host: 5244
+  description: Service port 5244
+  protocol: tcp
 volumes:
-  - container: /opt/alist/data
-    description: App data storage
-    required: true
+- container: /opt/alist/data
+  description: App data storage
+  required: true
 env: []
 web_ui:
   port: 5244

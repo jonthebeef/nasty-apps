@@ -1,8 +1,8 @@
 name: Playit Agent
 slug: playit-agent
 type: docker
-description: Playit Agent application imported from CasaOS catalog
-tagline: Playit Agent application imported from CasaOS catalog
+description: Host game servers without port forwarding
+tagline: Gaming tunnel service
 category: tools
 developer:
   name: mafen
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:

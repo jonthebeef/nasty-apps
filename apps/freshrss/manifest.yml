@@ -1,8 +1,8 @@
 name: FreshRSS
 slug: freshrss
 type: docker
-description: FreshRSS application imported from CasaOS catalog
-tagline: FreshRSS application imported from CasaOS catalog
+description: Follow your favourite websites and blogs in one place
+tagline: Self-hosted RSS reader
 category: tools
 developer:
   name: FreshRSS
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,26 +26,26 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 8749
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 8749
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /var/www/FreshRSS/data
-    description: App data storage
-    required: true
-  - container: /var/www/FreshRSS/extensions
-    description: Mount for /var/www/FreshRSS/extensions
-    required: false
+- container: /var/www/FreshRSS/data
+  description: App data storage
+  required: true
+- container: /var/www/FreshRSS/extensions
+  description: Mount for /var/www/FreshRSS/extensions
+  required: false
 env:
-  - name: TZ
-    default: ''
-    description: TZ environment variable
-    advanced: true
-  - name: CRON_MIN
-    default: 1,31
-    description: CRON_MIN environment variable
-    advanced: true
+- name: TZ
+  default: ''
+  description: TZ environment variable
+  advanced: true
+- name: CRON_MIN
+  default: 1,31
+  description: CRON_MIN environment variable
+  advanced: true
 web_ui:
   port: 8749
   path: /

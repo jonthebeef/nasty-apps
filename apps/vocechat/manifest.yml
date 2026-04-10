@@ -1,8 +1,8 @@
 name: VoceChat
 slug: vocechat
 type: docker
-description: VoceChat application imported from CasaOS catalog
-tagline: VoceChat application imported from CasaOS catalog
+description: Self-hosted messaging for small teams
+tagline: Lightweight team chat
 category: tools
 developer:
   name: Privoce
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,19 +24,19 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3009
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3009
+  description: Service port 3000
+  protocol: tcp
 volumes:
-  - container: /home/vocechat-server/data
-    description: App data storage
-    required: true
+- container: /home/vocechat-server/data
+  description: App data storage
+  required: true
 env:
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 3009
   path: /

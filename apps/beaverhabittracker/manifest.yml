@@ -1,8 +1,8 @@
 name: BeaverHabitTracker
 slug: beaverhabittracker
 type: docker
-description: BeaverHabitTracker application imported from CasaOS catalog
-tagline: BeaverHabitTracker application imported from CasaOS catalog
+description: Track daily habits with streaks and statistics
+tagline: Simple habit tracking app
 category: tools
 developer:
   name: daya0576
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,31 +25,31 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8080
-    host: 15580
-    description: Service port 8080
-    protocol: tcp
+- container: 8080
+  host: 15580
+  description: Service port 8080
+  protocol: tcp
 volumes:
-  - container: /app/.user
-    description: Mount for /app/.user
-    required: false
+- container: /app/.user
+  description: Mount for /app/.user
+  required: false
 env:
-  - name: HABITS_STORAGE
-    default: USER_DISK
-    description: HABITS_STORAGE environment variable
-    advanced: true
-  - name: TRUSTED_LOCAL_EMAIL
-    default: your@email.com
-    description: TRUSTED_LOCAL_EMAIL environment variable
-    advanced: true
-  - name: INDEX_HABIT_DATE_COLUMNS
-    default: '5'
-    description: INDEX_HABIT_DATE_COLUMNS environment variable
-    advanced: true
-  - name: ENABLE_IOS_STANDALONE
-    default: 'true'
-    description: ENABLE_IOS_STANDALONE environment variable
-    advanced: true
+- name: HABITS_STORAGE
+  default: USER_DISK
+  description: HABITS_STORAGE environment variable
+  advanced: true
+- name: TRUSTED_LOCAL_EMAIL
+  default: your@email.com
+  description: TRUSTED_LOCAL_EMAIL environment variable
+  advanced: true
+- name: INDEX_HABIT_DATE_COLUMNS
+  default: '5'
+  description: INDEX_HABIT_DATE_COLUMNS environment variable
+  advanced: true
+- name: ENABLE_IOS_STANDALONE
+  default: 'true'
+  description: ENABLE_IOS_STANDALONE environment variable
+  advanced: true
 web_ui:
   port: 15580
   path: /

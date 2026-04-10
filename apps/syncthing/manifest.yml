@@ -1,18 +1,17 @@
 name: Syncthing
 slug: syncthing
 type: docker
-description: Syncthing application imported from CasaOS catalog
-tagline: Syncthing application imported from CasaOS catalog
+description: Keep folders in sync across all your devices
+tagline: Continuous file synchronisation
 category: tools
 developer:
-  name: CasaOS Team
+  name: Syncthing Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,42 +25,42 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8384
-    host: 8384
-    description: Service port 8384
-    protocol: tcp
-  - container: 22000
-    host: 22000
-    description: Service port 22000
-    protocol: tcp
-  - container: 22000
-    host: 22000
-    description: Service port 22000
-    protocol: udp
-  - container: 21027
-    host: 21027
-    description: Service port 21027
-    protocol: udp
+- container: 8384
+  host: 8384
+  description: Service port 8384
+  protocol: tcp
+- container: 22000
+  host: 22000
+  description: Service port 22000
+  protocol: tcp
+- container: 22000
+  host: 22000
+  description: Service port 22000
+  protocol: udp
+- container: 21027
+  host: 21027
+  description: Service port 21027
+  protocol: udp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /DATA
-    description: App data storage
-    required: true
+- container: /config
+  description: App configuration
+  required: true
+- container: /DATA
+  description: App data storage
+  required: true
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8384
   path: /

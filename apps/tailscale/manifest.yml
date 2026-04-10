@@ -1,20 +1,19 @@
 name: Tailscale
 slug: tailscale
 type: docker
-description: Tailscale application imported from CasaOS catalog
-tagline: Tailscale application imported from CasaOS catalog
+description: Connect your devices securely with WireGuard-based mesh networking
+tagline: Zero-config VPN
 category: network-and-dns
 developer:
-  name: CasaOS Team
+  name: Tailscale Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-  - '386'
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
+- '386'
 resources:
   min_ram: 512
   profiles:
@@ -29,14 +28,14 @@ resources:
       cpu: 2
 ports: []
 volumes:
-  - container: /var/lib/tailscale
-    description: Mount for /var/lib/tailscale
-    required: false
-  - container: /dev/net/tun
-    description: Mount for /dev/net/tun
-    required: false
+- container: /var/lib/tailscale
+  description: Mount for /var/lib/tailscale
+  required: false
+- container: /dev/net/tun
+  description: Mount for /dev/net/tun
+  required: false
 env:
-  - name: TS_STATE_DIR
-    default: /var/lib/tailscale
-    description: TS_STATE_DIR environment variable
-    advanced: true
+- name: TS_STATE_DIR
+  default: /var/lib/tailscale
+  description: TS_STATE_DIR environment variable
+  advanced: true

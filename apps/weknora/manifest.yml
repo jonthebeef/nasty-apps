@@ -1,8 +1,8 @@
 name: WeKnora
 slug: weknora
 type: docker
-description: WeKnora application imported from CasaOS catalog
-tagline: WeKnora application imported from CasaOS catalog
+description: Organise notes and knowledge with linked references
+tagline: Knowledge management tool
 category: tools
 developer:
   name: tencent
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,16 +25,16 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 1080
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 1080
+  description: Web interface
+  protocol: tcp
 volumes: []
 env:
-  - name: MAX_FILE_SIZE_MB
-    default: '50'
-    description: MAX_FILE_SIZE_MB environment variable
-    advanced: true
+- name: MAX_FILE_SIZE_MB
+  default: '50'
+  description: MAX_FILE_SIZE_MB environment variable
+  advanced: true
 web_ui:
   port: 1080
   path: /

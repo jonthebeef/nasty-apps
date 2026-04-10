@@ -1,8 +1,8 @@
 name: ConvertX
 slug: convertx
 type: docker
-description: ConvertX application imported from CasaOS catalog
-tagline: ConvertX application imported from CasaOS catalog
+description: Convert documents, images, and media between formats
+tagline: File conversion service
 category: tools
 developer:
   name: c4illin
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,23 +25,23 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3333
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3333
+  description: Service port 3000
+  protocol: tcp
 volumes:
-  - container: /app/data
-    description: App data storage
-    required: true
+- container: /app/data
+  description: App data storage
+  required: true
 env:
-  - name: JWT_SECRET
-    default: aLongAndSecretStringUsedToSignTheJSONWebToken1234
-    description: JWT_SECRET environment variable
-    advanced: true
-  - name: HTTP_ALLOWED
-    default: 'true'
-    description: HTTP_ALLOWED environment variable
-    advanced: true
+- name: JWT_SECRET
+  default: aLongAndSecretStringUsedToSignTheJSONWebToken1234
+  description: JWT_SECRET environment variable
+  advanced: true
+- name: HTTP_ALLOWED
+  default: 'true'
+  description: HTTP_ALLOWED environment variable
+  advanced: true
 web_ui:
   port: 3333
   path: /

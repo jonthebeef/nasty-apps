@@ -1,18 +1,17 @@
 name: ChatbotUI
 slug: chatbotui
 type: docker
-description: ChatbotUI application imported from CasaOS catalog
-tagline: ChatbotUI application imported from CasaOS catalog
+description: Clean web UI for interacting with OpenAI and other LLMs
+tagline: Chat interface for AI models
 category: tools
 developer:
-  name: CasaOS Team
+  name: ChatbotUI Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,24 +25,24 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3080
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3080
+  description: Service port 3000
+  protocol: tcp
 volumes: []
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 3080
   path: /

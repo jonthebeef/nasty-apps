@@ -1,8 +1,8 @@
 name: RagFlow
 slug: ragflow
 type: docker
-description: RagFlow application imported from CasaOS catalog
-tagline: RagFlow application imported from CasaOS catalog
+description: Chat with your documents using retrieval-augmented generation
+tagline: RAG-powered AI chat
 category: tools
 developer:
   name: RagFlow
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,66 +24,66 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 9380
-    host: 9380
-    description: Service port 9380
-    protocol: tcp
-  - container: 80
-    host: 30080
-    description: Web interface
-    protocol: tcp
-  - container: 443
-    host: 10443
-    description: Web interface
-    protocol: tcp
-  - container: 5678
-    host: 5678
-    description: Service port 5678
-    protocol: tcp
-  - container: 5679
-    host: 5679
-    description: Service port 5679
-    protocol: tcp
-  - container: 9382
-    host: 9382
-    description: Service port 9382
-    protocol: tcp
+- container: 9380
+  host: 9380
+  description: Service port 9380
+  protocol: tcp
+- container: 80
+  host: 30080
+  description: Web interface
+  protocol: tcp
+- container: 443
+  host: 10443
+  description: Web interface
+  protocol: tcp
+- container: 5678
+  host: 5678
+  description: Service port 5678
+  protocol: tcp
+- container: 5679
+  host: 5679
+  description: Service port 5679
+  protocol: tcp
+- container: 9382
+  host: 9382
+  description: Service port 9382
+  protocol: tcp
 volumes:
-  - container: /ragflow/logs
-    description: Mount for /ragflow/logs
-    required: false
-  - container: /ragflow/history_data_agent
-    description: App data storage
-    required: true
+- container: /ragflow/logs
+  description: Mount for /ragflow/logs
+  required: false
+- container: /ragflow/history_data_agent
+  description: App data storage
+  required: true
 env:
-  - name: ES_HOST
-    default: ragflow-es01
-    description: ES_HOST environment variable
-    advanced: true
-  - name: INFINITY_HOST
-    default: ragflow-infinity
-    description: INFINITY_HOST environment variable
-    advanced: true
-  - name: MINIO_HOST
-    default: ragflow-minio
-    description: MINIO_HOST environment variable
-    advanced: true
-  - name: MYSQL_HOST
-    default: ragflow-mysql
-    description: MYSQL_HOST environment variable
-    advanced: true
-  - name: OS_HOST
-    default: ragflow-opensearch01
-    description: OS_HOST environment variable
-    advanced: true
-  - name: REDIS_HOST
-    default: ragflow-redis
-    description: REDIS_HOST environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: ES_HOST
+  default: ragflow-es01
+  description: ES_HOST environment variable
+  advanced: true
+- name: INFINITY_HOST
+  default: ragflow-infinity
+  description: INFINITY_HOST environment variable
+  advanced: true
+- name: MINIO_HOST
+  default: ragflow-minio
+  description: MINIO_HOST environment variable
+  advanced: true
+- name: MYSQL_HOST
+  default: ragflow-mysql
+  description: MYSQL_HOST environment variable
+  advanced: true
+- name: OS_HOST
+  default: ragflow-opensearch01
+  description: OS_HOST environment variable
+  advanced: true
+- name: REDIS_HOST
+  default: ragflow-redis
+  description: REDIS_HOST environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 9380
   path: /

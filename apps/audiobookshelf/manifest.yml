@@ -1,8 +1,8 @@
 name: Audiobookshelf
 slug: audiobookshelf
 type: docker
-description: Audiobookshelf application imported from CasaOS catalog
-tagline: Audiobookshelf application imported from CasaOS catalog
+description: Stream your audiobook and podcast library to any device
+tagline: Audiobook and podcast server
 category: media
 developer:
   name: advplyr
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,23 +25,23 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 13378
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 13378
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /audiobooks
-    description: Mount for /audiobooks
-    required: false
-  - container: /podcasts
-    description: Mount for /podcasts
-    required: false
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /metadata
-    description: App data storage
-    required: true
+- container: /audiobooks
+  description: Mount for /audiobooks
+  required: false
+- container: /podcasts
+  description: Mount for /podcasts
+  required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /metadata
+  description: App data storage
+  required: true
 env: []
 web_ui:
   port: 13378

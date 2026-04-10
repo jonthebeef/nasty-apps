@@ -1,8 +1,8 @@
 name: Tautulli
 slug: tautulli
 type: docker
-description: Tautulli application imported from CasaOS catalog
-tagline: Tautulli application imported from CasaOS catalog
+description: Track what's being played on your Plex server
+tagline: Plex monitoring dashboard
 category: media
 developer:
   name: Triskae
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,27 +25,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8181
-    host: 8181
-    description: Service port 8181
-    protocol: tcp
+- container: 8181
+  host: 8181
+  description: Service port 8181
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8181
   path: /

@@ -1,8 +1,8 @@
 name: Sure
 slug: sure
 type: docker
-description: Sure application imported from CasaOS catalog
-tagline: Sure application imported from CasaOS catalog
+description: Create short links for your URLs
+tagline: Self-hosted URL shortener
 category: tools
 developer:
   name: we-promise
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,60 +25,59 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 23000
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 23000
+  description: Service port 3000
+  protocol: tcp
 volumes:
-  - container: /rails/storage
-    description: Mount for /rails/storage
-    required: false
+- container: /rails/storage
+  description: Mount for /rails/storage
+  required: false
 env:
-  - name: POSTGRES_USER
-    default: sure_user
-    description: POSTGRES_USER environment variable
-    advanced: true
-  - name: POSTGRES_PASSWORD
-    default: sure_password
-    description: POSTGRES_PASSWORD environment variable
-    advanced: true
-  - name: POSTGRES_DB
-    default: sure_production
-    description: POSTGRES_DB environment variable
-    advanced: true
-  - name: SECRET_KEY_BASE
-    default: >-
-      a7523c3d0ae56415046ad8abae168d71074a79534a7062258f8d1d51ac2f76d3c3bc86d86b6b0b307df30d9a6a90a2066a3fa9e67c5e6f374dbd7dd4e0778e13
-    description: SECRET_KEY_BASE environment variable
-    advanced: true
-  - name: SELF_HOSTED
-    default: 'true'
-    description: SELF_HOSTED environment variable
-    advanced: true
-  - name: RAILS_FORCE_SSL
-    default: 'false'
-    description: RAILS_FORCE_SSL environment variable
-    advanced: true
-  - name: RAILS_ASSUME_SSL
-    default: 'false'
-    description: RAILS_ASSUME_SSL environment variable
-    advanced: true
-  - name: DB_HOST
-    default: sure-db
-    description: DB_HOST environment variable
-    advanced: true
-  - name: DB_PORT
-    default: '5432'
-    description: DB_PORT environment variable
-    advanced: true
-  - name: REDIS_URL
-    default: redis://sure-redis:6379/1
-    description: REDIS_URL environment variable
-    advanced: true
-  - name: OPENAI_ACCESS_TOKEN
-    default: ${OPENAI_ACCESS_TOKEN}
-    description: OPENAI_ACCESS_TOKEN environment variable
-    advanced: true
+- name: POSTGRES_USER
+  default: sure_user
+  description: POSTGRES_USER environment variable
+  advanced: true
+- name: POSTGRES_PASSWORD
+  default: sure_password
+  description: POSTGRES_PASSWORD environment variable
+  advanced: true
+- name: POSTGRES_DB
+  default: sure_production
+  description: POSTGRES_DB environment variable
+  advanced: true
+- name: SECRET_KEY_BASE
+  default: a7523c3d0ae56415046ad8abae168d71074a79534a7062258f8d1d51ac2f76d3c3bc86d86b6b0b307df30d9a6a90a2066a3fa9e67c5e6f374dbd7dd4e0778e13
+  description: SECRET_KEY_BASE environment variable
+  advanced: true
+- name: SELF_HOSTED
+  default: 'true'
+  description: SELF_HOSTED environment variable
+  advanced: true
+- name: RAILS_FORCE_SSL
+  default: 'false'
+  description: RAILS_FORCE_SSL environment variable
+  advanced: true
+- name: RAILS_ASSUME_SSL
+  default: 'false'
+  description: RAILS_ASSUME_SSL environment variable
+  advanced: true
+- name: DB_HOST
+  default: sure-db
+  description: DB_HOST environment variable
+  advanced: true
+- name: DB_PORT
+  default: '5432'
+  description: DB_PORT environment variable
+  advanced: true
+- name: REDIS_URL
+  default: redis://sure-redis:6379/1
+  description: REDIS_URL environment variable
+  advanced: true
+- name: OPENAI_ACCESS_TOKEN
+  default: ${OPENAI_ACCESS_TOKEN}
+  description: OPENAI_ACCESS_TOKEN environment variable
+  advanced: true
 web_ui:
   port: 23000
   path: /

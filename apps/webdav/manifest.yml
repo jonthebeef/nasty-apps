@@ -1,20 +1,19 @@
 name: WebDav
 slug: webdav
 type: docker
-description: WebDav application imported from CasaOS catalog
-tagline: WebDav application imported from CasaOS catalog
+description: Access files remotely using the WebDAV protocol
+tagline: WebDAV file server
 category: tools
 developer:
-  name: CasaOS Team
+  name: WebDav Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - '386'
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- '386'
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -28,36 +27,36 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 5005
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 5005
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /media
-    description: Media library
-    required: true
-    hint: Path to your movies, TV shows, and music
+- container: /media
+  description: Media library
+  required: true
+  hint: Path to your movies, TV shows, and music
 env:
-  - name: GID
-    default: '1000'
-    description: GID environment variable
-    advanced: true
-  - name: PASSWORD
-    default: casaos
-    description: PASSWORD environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/Madrid
-    description: TZ environment variable
-    advanced: true
-  - name: UDI
-    default: '1000'
-    description: UDI environment variable
-    advanced: true
-  - name: USERNAME
-    default: casaos
-    description: USERNAME environment variable
-    advanced: true
+- name: GID
+  default: '1000'
+  description: GID environment variable
+  advanced: true
+- name: PASSWORD
+  default: casaos
+  description: PASSWORD environment variable
+  advanced: true
+- name: TZ
+  default: Europe/Madrid
+  description: TZ environment variable
+  advanced: true
+- name: UDI
+  default: '1000'
+  description: UDI environment variable
+  advanced: true
+- name: USERNAME
+  default: casaos
+  description: USERNAME environment variable
+  advanced: true
 web_ui:
   port: 5005
   path: /

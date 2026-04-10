@@ -1,18 +1,17 @@
 name: Jellyfin
 slug: jellyfin
 type: docker
-description: Jellyfin application imported from CasaOS catalog
-tagline: Jellyfin application imported from CasaOS catalog
+description: Stream your movies, TV shows, and music to any device
+tagline: Free media streaming server
 category: media
 developer:
-  name: CasaOS Team
+  name: Jellyfin Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,46 +25,46 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8096
-    host: 8097
-    description: Service port 8096
-    protocol: tcp
-  - container: 8920
-    host: 8921
-    description: Service port 8920
-    protocol: tcp
-  - container: 7359
-    host: 7359
-    description: Service port 7359
-    protocol: tcp
-  - container: 1900
-    host: 1901
-    description: Service port 1900
-    protocol: tcp
+- container: 8096
+  host: 8097
+  description: Service port 8096
+  protocol: tcp
+- container: 8920
+  host: 8921
+  description: Service port 8920
+  protocol: tcp
+- container: 7359
+  host: 7359
+  description: Service port 7359
+  protocol: tcp
+- container: 1900
+  host: 1901
+  description: Service port 1900
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /Media
-    description: Media library
-    required: true
-    hint: Path to your movies, TV shows, and music
-  - container: /opt/vc/lib
-    description: Mount for /opt/vc/lib
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /Media
+  description: Media library
+  required: true
+  hint: Path to your movies, TV shows, and music
+- container: /opt/vc/lib
+  description: Mount for /opt/vc/lib
+  required: false
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8097
   path: /

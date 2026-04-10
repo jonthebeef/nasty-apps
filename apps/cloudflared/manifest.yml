@@ -1,8 +1,8 @@
 name: Cloudflared
 slug: cloudflared
 type: docker
-description: Cloudflared application imported from CasaOS catalog
-tagline: Cloudflared application imported from CasaOS catalog
+description: Expose local services to the internet securely without port forwarding
+tagline: Cloudflare Tunnel client
 category: tools
 developer:
   name: WisdomSky
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,14 +26,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 14333
-    host: 14333
-    description: Service port 14333
-    protocol: tcp
+- container: 14333
+  host: 14333
+  description: Service port 14333
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env: []
 web_ui:
   port: 14333

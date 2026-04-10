@@ -1,19 +1,18 @@
 name: Siyuan Note
 slug: siyuan-note
 type: docker
-description: Siyuan Note application imported from CasaOS catalog
-tagline: Siyuan Note application imported from CasaOS catalog
+description: Block-based notes with end-to-end encryption
+tagline: Privacy-first note-taking
 category: tools
 developer:
-  name: CasaOS Team
+  name: Siyuan Note Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,23 +26,23 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 6806
-    host: 6806
-    description: Service port 6806
-    protocol: tcp
+- container: 6806
+  host: 6806
+  description: Service port 6806
+  protocol: tcp
 volumes:
-  - container: /siyuan/workspace
-    description: Mount for /siyuan/workspace
-    required: false
+- container: /siyuan/workspace
+  description: Mount for /siyuan/workspace
+  required: false
 env:
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
 web_ui:
   port: 6806
   path: /

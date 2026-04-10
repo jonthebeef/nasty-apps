@@ -1,8 +1,8 @@
 name: Pingvin Share
 slug: pingvin-share
 type: docker
-description: Pingvin Share application imported from CasaOS catalog
-tagline: Pingvin Share application imported from CasaOS catalog
+description: Share files with expiring links and password protection
+tagline: Self-hosted file sharing
 category: tools
 developer:
   name: stonith404
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,22 +25,22 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3410
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3410
+  description: Service port 3000
+  protocol: tcp
 volumes:
-  - container: /opt/app/backend/data
-    description: App data storage
-    required: true
-  - container: /opt/app/frontend/public/img
-    description: Mount for /opt/app/frontend/public/img
-    required: false
+- container: /opt/app/backend/data
+  description: App data storage
+  required: true
+- container: /opt/app/frontend/public/img
+  description: Mount for /opt/app/frontend/public/img
+  required: false
 env:
-  - name: TRUST_PROXY
-    default: 'false'
-    description: TRUST_PROXY environment variable
-    advanced: true
+- name: TRUST_PROXY
+  default: 'false'
+  description: TRUST_PROXY environment variable
+  advanced: true
 web_ui:
   port: 3410
   path: /

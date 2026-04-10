@@ -1,23 +1,22 @@
 name: Nextcloud
 slug: nextcloud
 type: docker
-description: Nextcloud application imported from CasaOS catalog
-tagline: Nextcloud application imported from CasaOS catalog
+description: Files, calendars, contacts, and collaboration in one place
+tagline: Self-hosted cloud platform
 category: cloud-and-files
 developer:
-  name: CasaOS Team
+  name: Nextcloud Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-  - '386'
-  - mips64le
-  - ppc64le
-  - s390x
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
+- '386'
+- mips64le
+- ppc64le
+- s390x
 resources:
   min_ram: 512
   profiles:
@@ -31,18 +30,18 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 10081
-    description: Web interface
-    protocol: tcp
-  - container: 443
-    host: 10443
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 10081
+  description: Web interface
+  protocol: tcp
+- container: 443
+  host: 10443
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /var/www/html
-    description: Mount for /var/www/html
-    required: false
+- container: /var/www/html
+  description: Mount for /var/www/html
+  required: false
 env: []
 web_ui:
   port: 10081

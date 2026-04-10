@@ -1,8 +1,8 @@
 name: Memos
 slug: memos
 type: docker
-description: Memos application imported from CasaOS catalog
-tagline: Memos application imported from CasaOS catalog
+description: Quick notes and memos with Markdown support
+tagline: Lightweight note-taking app
 category: tools
 developer:
   name: usememos Team
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,27 +26,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5230
-    host: 5230
-    description: Service port 5230
-    protocol: tcp
+- container: 5230
+  host: 5230
+  description: Service port 5230
+  protocol: tcp
 volumes:
-  - container: /var/opt/memos
-    description: Mount for /var/opt/memos
-    required: false
+- container: /var/opt/memos
+  description: Mount for /var/opt/memos
+  required: false
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 5230
   path: /

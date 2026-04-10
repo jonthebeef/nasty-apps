@@ -1,18 +1,17 @@
 name: Emby Nvidia
 slug: emby-nvidia
 type: docker
-description: Emby Nvidia application imported from CasaOS catalog
-tagline: Emby Nvidia application imported from CasaOS catalog
+description: Emby with hardware-accelerated video transcoding
+tagline: Media server with Nvidia GPU transcoding
 category: media
 developer:
-  name: CasaOS Team
+  name: Emby Nvidia Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,45 +25,45 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8096
-    host: 8096
-    description: Service port 8096
-    protocol: tcp
-  - container: 8920
-    host: 8920
-    description: Service port 8920
-    protocol: tcp
+- container: 8096
+  host: 8096
+  description: Service port 8096
+  protocol: tcp
+- container: 8920
+  host: 8920
+  description: Service port 8920
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /data/tvshows
-    description: App data storage
-    required: true
-  - container: /data/movies
-    description: App data storage
-    required: true
+- container: /config
+  description: App configuration
+  required: true
+- container: /data/tvshows
+  description: App data storage
+  required: true
+- container: /data/movies
+  description: App data storage
+  required: true
 env:
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
-  - name: CPU_FALLBACK
-    default: 'true'
-    description: CPU_FALLBACK environment variable
-    advanced: true
-  - name: NVIDIA_VISIBLE_DEVICES
-    default: all
-    description: NVIDIA_VISIBLE_DEVICES environment variable
-    advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
+- name: CPU_FALLBACK
+  default: 'true'
+  description: CPU_FALLBACK environment variable
+  advanced: true
+- name: NVIDIA_VISIBLE_DEVICES
+  default: all
+  description: NVIDIA_VISIBLE_DEVICES environment variable
+  advanced: true
 web_ui:
   port: 8096
   path: /

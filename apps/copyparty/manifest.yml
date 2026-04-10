@@ -1,8 +1,8 @@
 name: CopyParty
 slug: copyparty
 type: docker
-description: CopyParty application imported from CasaOS catalog
-tagline: CopyParty application imported from CasaOS catalog
+description: Share files over HTTP with upload, search, and media playback
+tagline: Portable file server
 category: tools
 developer:
   name: CopyParty
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,17 +24,17 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3923
-    host: 29708
-    description: Service port 3923
-    protocol: tcp
+- container: 3923
+  host: 29708
+  description: Service port 3923
+  protocol: tcp
 volumes:
-  - container: /w
-    description: Mount for /w
-    required: false
-  - container: /cfg
-    description: Mount for /cfg
-    required: false
+- container: /w
+  description: Mount for /w
+  required: false
+- container: /cfg
+  description: Mount for /cfg
+  required: false
 env: []
 web_ui:
   port: 29708

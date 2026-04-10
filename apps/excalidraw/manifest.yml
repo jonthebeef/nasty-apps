@@ -1,8 +1,8 @@
 name: Excalidraw
 slug: excalidraw
 type: docker
-description: Excalidraw application imported from CasaOS catalog
-tagline: Excalidraw application imported from CasaOS catalog
+description: Draw diagrams and collaborate on a shared canvas
+tagline: Virtual whiteboard for sketching
 category: tools
 developer:
   name: excalidraw
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,10 +24,10 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 17638
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 17638
+  description: Web interface
+  protocol: tcp
 volumes: []
 env: []
 web_ui:

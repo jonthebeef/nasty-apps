@@ -1,19 +1,18 @@
 name: NginxProxyManager
 slug: nginxproxymanager
 type: docker
-description: NginxProxyManager application imported from CasaOS catalog
-tagline: NginxProxyManager application imported from CasaOS catalog
+description: Manage Nginx proxy hosts and Let's Encrypt certificates
+tagline: Reverse proxy with SSL
 category: network-and-dns
 developer:
-  name: CasaOS Team
+  name: NginxProxyManager Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,25 +26,25 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 80
-    description: Web interface
-    protocol: tcp
-  - container: 443
-    host: 443
-    description: Web interface
-    protocol: tcp
-  - container: 81
-    host: 81
-    description: Service port 81
-    protocol: tcp
+- container: 80
+  host: 80
+  description: Web interface
+  protocol: tcp
+- container: 443
+  host: 443
+  description: Web interface
+  protocol: tcp
+- container: 81
+  host: 81
+  description: Service port 81
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
-  - container: /etc/letsencrypt
-    description: Mount for /etc/letsencrypt
-    required: false
+- container: /data
+  description: App data storage
+  required: true
+- container: /etc/letsencrypt
+  description: Mount for /etc/letsencrypt
+  required: false
 env: []
 web_ui:
   port: 80

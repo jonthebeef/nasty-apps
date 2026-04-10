@@ -1,8 +1,8 @@
 name: Downtify
 slug: downtify
 type: docker
-description: Downtify application imported from CasaOS catalog
-tagline: Downtify application imported from CasaOS catalog
+description: Download music from streaming services for offline listening
+tagline: Music downloader
 category: tools
 developer:
   name: Henrique Sebastião
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,27 +25,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8000
-    host: 8582
-    description: Service port 8000
-    protocol: tcp
+- container: 8000
+  host: 8582
+  description: Service port 8000
+  protocol: tcp
 volumes:
-  - container: /downloads
-    description: Mount for /downloads
-    required: false
+- container: /downloads
+  description: Mount for /downloads
+  required: false
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8582
   path: /

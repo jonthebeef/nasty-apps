@@ -1,8 +1,8 @@
 name: Petio
 slug: petio
 type: docker
-description: Petio application imported from CasaOS catalog
-tagline: Petio application imported from CasaOS catalog
+description: Simple media request system for Plex users
+tagline: Media request companion for Plex
 category: media
 developer:
   name: WisdomSky
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,30 +26,30 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 7777
-    host: 7777
-    description: Service port 7777
-    protocol: tcp
+- container: 7777
+  host: 7777
+  description: Service port 7777
+  protocol: tcp
 volumes:
-  - container: /app/api/config
-    description: App configuration
-    required: true
-  - container: /app/logs
-    description: Mount for /app/logs
-    required: false
+- container: /app/api/config
+  description: App configuration
+  required: true
+- container: /app/logs
+  description: Mount for /app/logs
+  required: false
 env:
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 7777
   path: /

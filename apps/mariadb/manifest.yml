@@ -1,8 +1,8 @@
 name: MariaDB
 slug: mariadb
 type: docker
-description: MariaDB application imported from CasaOS catalog
-tagline: MariaDB application imported from CasaOS catalog
+description: Reliable relational database for your applications
+tagline: MySQL-compatible database server
 category: tools
 developer:
   name: WisdomSky
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,47 +25,47 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3306
-    host: 3306
-    description: Service port 3306
-    protocol: tcp
+- container: 3306
+  host: 3306
+  description: Service port 3306
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
-  - name: MYSQL_ROOT_PASSWORD
-    default: casaos
-    description: MYSQL_ROOT_PASSWORD environment variable
-    advanced: true
-  - name: MYSQL_DATABASE
-    default: casaos
-    description: MYSQL_DATABASE environment variable
-    advanced: true
-  - name: MYSQL_USER
-    default: casaos
-    description: MYSQL_USER environment variable
-    advanced: true
-  - name: MYSQL_PASSWORD
-    default: casaos
-    description: MYSQL_PASSWORD environment variable
-    advanced: true
-  - name: REMOTE_SQL
-    default: ''
-    description: REMOTE_SQL environment variable
-    advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
+- name: MYSQL_ROOT_PASSWORD
+  default: casaos
+  description: MYSQL_ROOT_PASSWORD environment variable
+  advanced: true
+- name: MYSQL_DATABASE
+  default: casaos
+  description: MYSQL_DATABASE environment variable
+  advanced: true
+- name: MYSQL_USER
+  default: casaos
+  description: MYSQL_USER environment variable
+  advanced: true
+- name: MYSQL_PASSWORD
+  default: casaos
+  description: MYSQL_PASSWORD environment variable
+  advanced: true
+- name: REMOTE_SQL
+  default: ''
+  description: REMOTE_SQL environment variable
+  advanced: true
 web_ui:
   port: 3306
   path: /

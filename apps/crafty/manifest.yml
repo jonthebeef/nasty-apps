@@ -1,8 +1,8 @@
 name: Crafty
 slug: crafty
 type: docker
-description: Crafty application imported from CasaOS catalog
-tagline: Crafty application imported from CasaOS catalog
+description: Run and manage Minecraft servers from a web dashboard
+tagline: Minecraft server manager
 category: tools
 developer:
   name: Chàra Rose
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,39 +26,39 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8443
-    host: 8111
-    description: Service port 8443
-    protocol: tcp
-  - container: 8123
-    host: 8112
-    description: Service port 8123
-    protocol: tcp
-  - container: 19132
-    host: 19132
-    description: Service port 19132
-    protocol: udp
+- container: 8443
+  host: 8111
+  description: Service port 8443
+  protocol: tcp
+- container: 8123
+  host: 8112
+  description: Service port 8123
+  protocol: tcp
+- container: 19132
+  host: 19132
+  description: Service port 19132
+  protocol: udp
 volumes:
-  - container: /crafty/backups
-    description: Mount for /crafty/backups
-    required: false
-  - container: /crafty/logs
-    description: Mount for /crafty/logs
-    required: false
-  - container: /crafty/servers
-    description: Mount for /crafty/servers
-    required: false
-  - container: /crafty/app/config
-    description: App configuration
-    required: true
-  - container: /crafty/import
-    description: Mount for /crafty/import
-    required: false
+- container: /crafty/backups
+  description: Mount for /crafty/backups
+  required: false
+- container: /crafty/logs
+  description: Mount for /crafty/logs
+  required: false
+- container: /crafty/servers
+  description: Mount for /crafty/servers
+  required: false
+- container: /crafty/app/config
+  description: App configuration
+  required: true
+- container: /crafty/import
+  description: Mount for /crafty/import
+  required: false
 env:
-  - name: TZ
-    default: Etc/UTC
-    description: TZ environment variable
-    advanced: true
+- name: TZ
+  default: Etc/UTC
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8111
   path: /

@@ -1,18 +1,17 @@
 name: PhotoPrism
 slug: photoprism
 type: docker
-description: PhotoPrism application imported from CasaOS catalog
-tagline: PhotoPrism application imported from CasaOS catalog
+description: Browse, organise, and share your photo collection
+tagline: AI-powered photo management
 category: tools
 developer:
-  name: CasaOS Team
+  name: PhotoPrism Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,30 +25,30 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 2342
-    host: 2342
-    description: Service port 2342
-    protocol: tcp
+- container: 2342
+  host: 2342
+  description: Service port 2342
+  protocol: tcp
 volumes:
-  - container: /photoprism/storage
-    description: Mount for /photoprism/storage
-    required: false
-  - container: /photoprism/originals
-    description: Mount for /photoprism/originals
-    required: false
+- container: /photoprism/storage
+  description: Mount for /photoprism/storage
+  required: false
+- container: /photoprism/originals
+  description: Mount for /photoprism/originals
+  required: false
 env:
-  - name: PHOTOPRISM_ADMIN_PASSWORD
-    default: casaos
-    description: PHOTOPRISM_ADMIN_PASSWORD environment variable
-    advanced: true
-  - name: PHOTOPRISM_UPLOAD_NSFW
-    default: 'true'
-    description: PHOTOPRISM_UPLOAD_NSFW environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PHOTOPRISM_ADMIN_PASSWORD
+  default: casaos
+  description: PHOTOPRISM_ADMIN_PASSWORD environment variable
+  advanced: true
+- name: PHOTOPRISM_UPLOAD_NSFW
+  default: 'true'
+  description: PHOTOPRISM_UPLOAD_NSFW environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 2342
   path: /

@@ -1,8 +1,8 @@
 name: JDownloader2
 slug: jdownloader2
 type: docker
-description: JDownloader2 application imported from CasaOS catalog
-tagline: JDownloader2 application imported from CasaOS catalog
+description: Automate downloads from file hosting services
+tagline: Download management tool
 category: tools
 developer:
   name: Fabio Tea
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,54 +25,54 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5800
-    host: 5800
-    description: Service port 5800
-    protocol: tcp
-  - container: 5900
-    host: 5900
-    description: Service port 5900
-    protocol: tcp
-  - container: 3129
-    host: 3129
-    description: Service port 3129
-    protocol: tcp
+- container: 5800
+  host: 5800
+  description: Service port 5800
+  protocol: tcp
+- container: 5900
+  host: 5900
+  description: Service port 5900
+  protocol: tcp
+- container: 3129
+  host: 3129
+  description: Service port 3129
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /output
-    description: Mount for /output
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /output
+  description: Mount for /output
+  required: false
 env:
-  - name: USER_ID
-    default: $PUID
-    description: USER_ID environment variable
-    advanced: true
-  - name: GROUP_ID
-    default: $PGID
-    description: GROUP_ID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
-  - name: MYJDOWNLOADER_EMAIL
-    default: $MYJDOWNLOADER_EMAIL
-    description: MYJDOWNLOADER_EMAIL environment variable
-    advanced: true
-  - name: MYJDOWNLOADER_PASSWORD
-    default: $MYJDOWNLOADER_PASSWORD
-    description: MYJDOWNLOADER_PASSWORD environment variable
-    advanced: true
-  - name: MYJDOWNLOADER_DEVICE_NAME
-    default: $MYJDOWNLOADER_DEVICE_NAME
-    description: MYJDOWNLOADER_DEVICE_NAME environment variable
-    advanced: true
-  - name: JDOWNLOADER_HEADLESS
-    default: $JDOWNLOADER_HEADLESS
-    description: JDOWNLOADER_HEADLESS environment variable
-    advanced: true
+- name: USER_ID
+  default: $PUID
+  description: USER_ID environment variable
+  advanced: true
+- name: GROUP_ID
+  default: $PGID
+  description: GROUP_ID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
+- name: MYJDOWNLOADER_EMAIL
+  default: $MYJDOWNLOADER_EMAIL
+  description: MYJDOWNLOADER_EMAIL environment variable
+  advanced: true
+- name: MYJDOWNLOADER_PASSWORD
+  default: $MYJDOWNLOADER_PASSWORD
+  description: MYJDOWNLOADER_PASSWORD environment variable
+  advanced: true
+- name: MYJDOWNLOADER_DEVICE_NAME
+  default: $MYJDOWNLOADER_DEVICE_NAME
+  description: MYJDOWNLOADER_DEVICE_NAME environment variable
+  advanced: true
+- name: JDOWNLOADER_HEADLESS
+  default: $JDOWNLOADER_HEADLESS
+  description: JDOWNLOADER_HEADLESS environment variable
+  advanced: true
 web_ui:
   port: 5800
   path: /

@@ -1,8 +1,8 @@
 name: SwingMusic
 slug: swingmusic
 type: docker
-description: SwingMusic application imported from CasaOS catalog
-tagline: SwingMusic application imported from CasaOS catalog
+description: Beautiful web-based music player for your library
+tagline: Modern music player
 category: media
 developer:
   name: SwingMX
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,17 +24,17 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 1970
-    host: 1970
-    description: Service port 1970
-    protocol: tcp
+- container: 1970
+  host: 1970
+  description: Service port 1970
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /music
-    description: Mount for /music
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /music
+  description: Mount for /music
+  required: false
 env: []
 web_ui:
   port: 1970

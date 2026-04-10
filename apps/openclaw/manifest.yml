@@ -1,8 +1,8 @@
 name: OpenClaw
 slug: openclaw
 type: docker
-description: OpenClaw application imported from CasaOS catalog
-tagline: OpenClaw application imported from CasaOS catalog
+description: Extract and analyse data from legal documents
+tagline: Document analysis tool
 category: tools
 developer:
   name: openclaw
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,31 +25,31 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 18789
-    host: 24190
-    description: Service port 18789
-    protocol: tcp
-  - container: 18790
-    host: 18790
-    description: Service port 18790
-    protocol: tcp
+- container: 18789
+  host: 24190
+  description: Service port 18789
+  protocol: tcp
+- container: 18790
+  host: 18790
+  description: Service port 18790
+  protocol: tcp
 volumes:
-  - container: /home/node/.openclaw
-    description: Mount for /home/node/.openclaw
-    required: false
+- container: /home/node/.openclaw
+  description: Mount for /home/node/.openclaw
+  required: false
 env:
-  - name: HOME
-    default: /home/node
-    description: HOME environment variable
-    advanced: true
-  - name: TERM
-    default: xterm-256color
-    description: TERM environment variable
-    advanced: true
-  - name: OPENCLAW_GATEWAY_TOKEN
-    default: casaos
-    description: OPENCLAW_GATEWAY_TOKEN environment variable
-    advanced: true
+- name: HOME
+  default: /home/node
+  description: HOME environment variable
+  advanced: true
+- name: TERM
+  default: xterm-256color
+  description: TERM environment variable
+  advanced: true
+- name: OPENCLAW_GATEWAY_TOKEN
+  default: casaos
+  description: OPENCLAW_GATEWAY_TOKEN environment variable
+  advanced: true
 web_ui:
   port: 24190
   path: /

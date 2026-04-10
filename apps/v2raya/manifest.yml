@@ -1,8 +1,8 @@
 name: V2rayA
 slug: v2raya
 type: docker
-description: V2rayA application imported from CasaOS catalog
-tagline: V2rayA application imported from CasaOS catalog
+description: Proxy and VPN client for bypassing network restrictions
+tagline: V2Ray client with web UI
 category: network-and-dns
 developer:
   name: v2rayA
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,13 +26,13 @@ resources:
       cpu: 2
 ports: []
 volumes:
-  - container: /lib/modules
-    description: Mount for /lib/modules
-    required: false
-  - container: /etc/resolv.conf
-    description: Mount for /etc/resolv.conf
-    required: false
-  - container: /etc/v2raya
-    description: Mount for /etc/v2raya
-    required: false
+- container: /lib/modules
+  description: Mount for /lib/modules
+  required: false
+- container: /etc/resolv.conf
+  description: Mount for /etc/resolv.conf
+  required: false
+- container: /etc/v2raya
+  description: Mount for /etc/v2raya
+  required: false
 env: []

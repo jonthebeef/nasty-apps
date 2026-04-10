@@ -1,18 +1,17 @@
 name: Plex
 slug: plex
 type: docker
-description: Plex application imported from CasaOS catalog
-tagline: Plex application imported from CasaOS catalog
+description: Organise and stream your media collection beautifully
+tagline: Premium media streaming server
 category: media
 developer:
-  name: CasaOS Team
+  name: Plex Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,23 +26,23 @@ resources:
       cpu: 2
 ports: []
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /Media
-    description: Media library
-    required: true
-    hint: Path to your movies, TV shows, and music
+- container: /config
+  description: App configuration
+  required: true
+- container: /Media
+  description: Media library
+  required: true
+  hint: Path to your movies, TV shows, and music
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: VERSION
-    default: docker
-    description: VERSION environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: VERSION
+  default: docker
+  description: VERSION environment variable
+  advanced: true

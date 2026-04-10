@@ -1,18 +1,17 @@
 name: ActualBudget
 slug: actualbudget
 type: docker
-description: ActualBudget application imported from CasaOS catalog
-tagline: ActualBudget application imported from CasaOS catalog
+description: Track spending and manage budgets with a clean local-first interface
+tagline: Privacy-focused budgeting app
 category: tools
 developer:
-  name: CasaOS Team
+  name: ActualBudget Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,14 +25,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5006
-    host: 15006
-    description: Service port 5006
-    protocol: tcp
+- container: 5006
+  host: 15006
+  description: Service port 5006
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
+- container: /data
+  description: App data storage
+  required: true
 env: []
 web_ui:
   port: 15006

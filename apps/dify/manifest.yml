@@ -1,8 +1,8 @@
 name: Dify
 slug: dify
 type: docker
-description: Dify application imported from CasaOS catalog
-tagline: Dify application imported from CasaOS catalog
+description: Build AI apps with visual workflows and prompt engineering
+tagline: LLM application development platform
 category: tools
 developer:
   name: IceWhaleTech
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - arm64
-  - amd64
-attribution: CasaOS App Store
+- arm64
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -27,13 +26,13 @@ resources:
       cpu: 2
 ports: []
 volumes:
-  - container: /configs/nginx
-    description: App configuration
-    required: true
-  - container: /configs/ssrf_proxy
-    description: App configuration
-    required: true
-  - container: /configs/sandbox
-    description: App configuration
-    required: true
+- container: /configs/nginx
+  description: App configuration
+  required: true
+- container: /configs/ssrf_proxy
+  description: App configuration
+  required: true
+- container: /configs/sandbox
+  description: App configuration
+  required: true
 env: []

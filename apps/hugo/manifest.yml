@@ -1,18 +1,17 @@
 name: Hugo
 slug: hugo
 type: docker
-description: Hugo application imported from CasaOS catalog
-tagline: Hugo application imported from CasaOS catalog
+description: Build websites from Markdown with instant previews
+tagline: Fast static site generator
 category: tools
 developer:
-  name: CasaOS Team
+  name: Hugo Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,17 +25,17 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 1313
-    host: 1313
-    description: Service port 1313
-    protocol: tcp
+- container: 1313
+  host: 1313
+  description: Service port 1313
+  protocol: tcp
 volumes:
-  - container: /project
-    description: Mount for /project
-    required: false
-  - container: /cache
-    description: Mount for /cache
-    required: false
+- container: /project
+  description: Mount for /project
+  required: false
+- container: /cache
+  description: Mount for /cache
+  required: false
 env: []
 web_ui:
   port: 1313

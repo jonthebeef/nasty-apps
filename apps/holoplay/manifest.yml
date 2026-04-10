@@ -1,8 +1,8 @@
 name: HoloPlay
 slug: holoplay
 type: docker
-description: HoloPlay application imported from CasaOS catalog
-tagline: HoloPlay application imported from CasaOS catalog
+description: Stream your music library with a modern web player
+tagline: Music streaming server
 category: tools
 developer:
   name: Unknown
@@ -10,11 +10,10 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - '386'
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- '386'
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -28,10 +27,10 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3000
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3000
+  description: Service port 3000
+  protocol: tcp
 volumes: []
 env: []
 web_ui:

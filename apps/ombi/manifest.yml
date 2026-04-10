@@ -1,18 +1,17 @@
 name: Ombi
 slug: ombi
 type: docker
-description: Ombi application imported from CasaOS catalog
-tagline: Ombi application imported from CasaOS catalog
+description: Let users request movies and TV shows for Plex or Emby
+tagline: Media request manager
 category: media
 developer:
-  name: CasaOS Team
+  name: Ombi Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,31 +25,31 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3579
-    host: 3579
-    description: Service port 3579
-    protocol: tcp
+- container: 3579
+  host: 3579
+  description: Service port 3579
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: BASE_URL
-    default: /ombi
-    description: BASE_URL environment variable
-    advanced: true
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
+- name: BASE_URL
+  default: /ombi
+  description: BASE_URL environment variable
+  advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 3579
   path: /

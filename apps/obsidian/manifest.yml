@@ -1,18 +1,17 @@
 name: Obsidian
 slug: obsidian
 type: docker
-description: Obsidian application imported from CasaOS catalog
-tagline: Obsidian application imported from CasaOS catalog
+description: Web-based access to your Obsidian vault
+tagline: Knowledge base and note-taking
 category: tools
 developer:
-  name: CasaOS Team
+  name: Obsidian Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,31 +25,31 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 15323
-    description: Service port 3000
-    protocol: tcp
-  - container: 3001
-    host: 15324
-    description: Service port 3001
-    protocol: tcp
+- container: 3000
+  host: 15323
+  description: Service port 3000
+  protocol: tcp
+- container: 3001
+  host: 15324
+  description: Service port 3001
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 15323
   path: /

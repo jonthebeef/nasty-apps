@@ -1,18 +1,17 @@
 name: TaskingAI
 slug: taskingai
 type: docker
-description: TaskingAI application imported from CasaOS catalog
-tagline: TaskingAI application imported from CasaOS catalog
+description: Build and deploy AI agents for task automation
+tagline: AI task management platform
 category: tools
 developer:
-  name: CasaOS Team
+  name: TaskingAI Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:

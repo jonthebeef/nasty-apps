@@ -1,8 +1,8 @@
 name: Alist Sync
 slug: alist-sync
 type: docker
-description: Alist Sync application imported from CasaOS catalog
-tagline: Alist Sync application imported from CasaOS catalog
+description: Sync files between multiple storage backends automatically
+tagline: File synchronisation for AList
 category: cloud-and-files
 developer:
   name: xjxjin
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,19 +26,19 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 52441
-    host: 52441
-    description: Service port 52441
-    protocol: tcp
+- container: 52441
+  host: 52441
+  description: Service port 52441
+  protocol: tcp
 volumes:
-  - container: /app/data
-    description: App data storage
-    required: true
+- container: /app/data
+  description: App data storage
+  required: true
 env:
-  - name: TZ
-    default: Asia/Shanghai
-    description: TZ environment variable
-    advanced: true
+- name: TZ
+  default: Asia/Shanghai
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 52441
   path: /

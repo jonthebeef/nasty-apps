@@ -1,8 +1,8 @@
 name: Homebridge
 slug: homebridge
 type: docker
-description: Homebridge application imported from CasaOS catalog
-tagline: Homebridge application imported from CasaOS catalog
+description: Connect non-HomeKit devices to Apple Home
+tagline: HomeKit bridge for smart devices
 category: home-automation
 developer:
   name: UnderCurve
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -28,7 +27,7 @@ resources:
       cpu: 2
 ports: []
 volumes:
-  - container: /homebridge
-    description: Mount for /homebridge
-    required: false
+- container: /homebridge
+  description: Mount for /homebridge
+  required: false
 env: []

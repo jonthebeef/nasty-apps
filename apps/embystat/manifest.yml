@@ -1,18 +1,17 @@
 name: Embystat
 slug: embystat
 type: docker
-description: Embystat application imported from CasaOS catalog
-tagline: Embystat application imported from CasaOS catalog
+description: Visualise your media library with charts and insights
+tagline: Statistics for your Emby server
 category: media
 developer:
-  name: CasaOS Team
+  name: Embystat Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,27 +25,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 6555
-    host: 6555
-    description: Service port 6555
-    protocol: tcp
+- container: 6555
+  host: 6555
+  description: Service port 6555
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 6555
   path: /

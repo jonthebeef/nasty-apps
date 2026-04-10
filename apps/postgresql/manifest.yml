@@ -1,8 +1,8 @@
 name: PostgreSQL
 slug: postgresql
 type: docker
-description: PostgreSQL application imported from CasaOS catalog
-tagline: PostgreSQL application imported from CasaOS catalog
+description: Powerful open-source SQL database for any workload
+tagline: Advanced relational database
 category: tools
 developer:
   name: WisdomSky
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,39 +26,39 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5432
-    host: 5432
-    description: Service port 5432
-    protocol: tcp
+- container: 5432
+  host: 5432
+  description: Service port 5432
+  protocol: tcp
 volumes:
-  - container: /var/lib/postgresql/data
-    description: App data storage
-    required: true
+- container: /var/lib/postgresql/data
+  description: App data storage
+  required: true
 env:
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
-  - name: POSTGRES_USER
-    default: casaos
-    description: POSTGRES_USER environment variable
-    advanced: true
-  - name: POSTGRES_PASSWORD
-    default: casaos
-    description: POSTGRES_PASSWORD environment variable
-    advanced: true
-  - name: POSTGRES_DB
-    default: casaos
-    description: POSTGRES_DB environment variable
-    advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
+- name: POSTGRES_USER
+  default: casaos
+  description: POSTGRES_USER environment variable
+  advanced: true
+- name: POSTGRES_PASSWORD
+  default: casaos
+  description: POSTGRES_PASSWORD environment variable
+  advanced: true
+- name: POSTGRES_DB
+  default: casaos
+  description: POSTGRES_DB environment variable
+  advanced: true
 web_ui:
   port: 5432
   path: /

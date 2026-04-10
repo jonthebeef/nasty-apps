@@ -1,18 +1,17 @@
 name: Wallabag
 slug: wallabag
 type: docker
-description: Wallabag application imported from CasaOS catalog
-tagline: Wallabag application imported from CasaOS catalog
+description: Save web articles to read offline at your own pace
+tagline: Read-it-later service
 category: tools
 developer:
-  name: CasaOS Team
+  name: Wallabag Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,23 +25,23 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 25661
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 25661
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /var/www/wallabag/web/assets/images
-    description: Mount for /var/www/wallabag/web/assets/images
-    required: false
+- container: /var/www/wallabag/web/assets/images
+  description: Mount for /var/www/wallabag/web/assets/images
+  required: false
 env:
-  - name: SYMFONY__ENV__DOMAIN_NAME
-    default: http://<IP>:25661
-    description: SYMFONY__ENV__DOMAIN_NAME environment variable
-    advanced: true
-  - name: SYMFONY__ENV__SERVER_NAME
-    default: Wallabag
-    description: SYMFONY__ENV__SERVER_NAME environment variable
-    advanced: true
+- name: SYMFONY__ENV__DOMAIN_NAME
+  default: http://<IP>:25661
+  description: SYMFONY__ENV__DOMAIN_NAME environment variable
+  advanced: true
+- name: SYMFONY__ENV__SERVER_NAME
+  default: Wallabag
+  description: SYMFONY__ENV__SERVER_NAME environment variable
+  advanced: true
 web_ui:
   port: 25661
   path: /

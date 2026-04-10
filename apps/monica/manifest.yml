@@ -1,8 +1,8 @@
 name: Monica
 slug: monica
 type: docker
-description: Monica application imported from CasaOS catalog
-tagline: Monica application imported from CasaOS catalog
+description: Keep track of interactions with friends and family
+tagline: Personal relationship manager
 category: tools
 developer:
   name: monica
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,31 +25,31 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 18930
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 18930
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /var/www/html/storage
-    description: Mount for /var/www/html/storage
-    required: false
+- container: /var/www/html/storage
+  description: Mount for /var/www/html/storage
+  required: false
 env:
-  - name: APP_KEY
-    default: ChangeMeBy32KeyLengthOrGenerated
-    description: APP_KEY environment variable
-    advanced: true
-  - name: DB_HOST
-    default: monica-db
-    description: DB_HOST environment variable
-    advanced: true
-  - name: DB_USERNAME
-    default: monicauser
-    description: DB_USERNAME environment variable
-    advanced: true
-  - name: DB_PASSWORD
-    default: monicasecret
-    description: DB_PASSWORD environment variable
-    advanced: true
+- name: APP_KEY
+  default: ChangeMeBy32KeyLengthOrGenerated
+  description: APP_KEY environment variable
+  advanced: true
+- name: DB_HOST
+  default: monica-db
+  description: DB_HOST environment variable
+  advanced: true
+- name: DB_USERNAME
+  default: monicauser
+  description: DB_USERNAME environment variable
+  advanced: true
+- name: DB_PASSWORD
+  default: monicasecret
+  description: DB_PASSWORD environment variable
+  advanced: true
 web_ui:
   port: 18930
   path: /

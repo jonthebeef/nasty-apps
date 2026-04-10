@@ -1,17 +1,16 @@
 name: DeepSeek OCR Nvidia
 slug: deepseek-ocr-nvidia
 type: docker
-description: DeepSeek OCR Nvidia application imported from CasaOS catalog
-tagline: DeepSeek OCR Nvidia application imported from CasaOS catalog
+description: Extract text from images using DeepSeek AI models on Nvidia GPUs
+tagline: GPU-accelerated OCR with DeepSeek
 category: tools
 developer:
-  name: CasaOS Team
+  name: DeepSeek OCR Nvidia Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,51 +24,51 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8000
-    host: 22523
-    description: Service port 8000
-    protocol: tcp
+- container: 8000
+  host: 22523
+  description: Service port 8000
+  protocol: tcp
 volumes:
-  - container: /models
-    description: Mount for /models
-    required: false
+- container: /models
+  description: Mount for /models
+  required: false
 env:
-  - name: API_HOST
-    default: 0.0.0.0
-    description: API_HOST environment variable
-    advanced: true
-  - name: API_PORT
-    default: '8000'
-    description: API_PORT environment variable
-    advanced: true
-  - name: FRONTEND_PORT
-    default: '3000'
-    description: FRONTEND_PORT environment variable
-    advanced: true
-  - name: MODEL_NAME
-    default: deepseek-ai/DeepSeek-OCR
-    description: MODEL_NAME environment variable
-    advanced: true
-  - name: HF_HOME
-    default: /models
-    description: HF_HOME environment variable
-    advanced: true
-  - name: MAX_UPLOAD_SIZE_MB
-    default: '100'
-    description: MAX_UPLOAD_SIZE_MB environment variable
-    advanced: true
-  - name: BASE_SIZE
-    default: '1024'
-    description: BASE_SIZE environment variable
-    advanced: true
-  - name: IMAGE_SIZE
-    default: '640'
-    description: IMAGE_SIZE environment variable
-    advanced: true
-  - name: CROP_MODE
-    default: 'true'
-    description: CROP_MODE environment variable
-    advanced: true
+- name: API_HOST
+  default: 0.0.0.0
+  description: API_HOST environment variable
+  advanced: true
+- name: API_PORT
+  default: '8000'
+  description: API_PORT environment variable
+  advanced: true
+- name: FRONTEND_PORT
+  default: '3000'
+  description: FRONTEND_PORT environment variable
+  advanced: true
+- name: MODEL_NAME
+  default: deepseek-ai/DeepSeek-OCR
+  description: MODEL_NAME environment variable
+  advanced: true
+- name: HF_HOME
+  default: /models
+  description: HF_HOME environment variable
+  advanced: true
+- name: MAX_UPLOAD_SIZE_MB
+  default: '100'
+  description: MAX_UPLOAD_SIZE_MB environment variable
+  advanced: true
+- name: BASE_SIZE
+  default: '1024'
+  description: BASE_SIZE environment variable
+  advanced: true
+- name: IMAGE_SIZE
+  default: '640'
+  description: IMAGE_SIZE environment variable
+  advanced: true
+- name: CROP_MODE
+  default: 'true'
+  description: CROP_MODE environment variable
+  advanced: true
 web_ui:
   port: 22523
   path: /

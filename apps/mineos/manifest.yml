@@ -1,8 +1,8 @@
 name: MineOS
 slug: mineos
 type: docker
-description: MineOS application imported from CasaOS catalog
-tagline: MineOS application imported from CasaOS catalog
+description: Create and manage multiple Minecraft servers
+tagline: Minecraft server management
 category: tools
 developer:
   name: Chàra Rose
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,35 +24,35 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8443
-    host: 8444
-    description: Service port 8443
-    protocol: tcp
+- container: 8443
+  host: 8444
+  description: Service port 8443
+  protocol: tcp
 volumes:
-  - container: /var/games/minecraft
-    description: Mount for /var/games/minecraft
-    required: false
+- container: /var/games/minecraft
+  description: Mount for /var/games/minecraft
+  required: false
 env:
-  - name: USE_HTTPS
-    default: 'true'
-    description: USE_HTTPS environment variable
-    advanced: true
-  - name: SERVER_PORT
-    default: '8443'
-    description: SERVER_PORT environment variable
-    advanced: true
-  - name: USER_NAME
-    default: mc
-    description: USER_NAME environment variable
-    advanced: true
-  - name: USER_UID
-    default: '1000'
-    description: USER_UID environment variable
-    advanced: true
-  - name: USER_PASSWORD
-    default: root
-    description: USER_PASSWORD environment variable
-    advanced: true
+- name: USE_HTTPS
+  default: 'true'
+  description: USE_HTTPS environment variable
+  advanced: true
+- name: SERVER_PORT
+  default: '8443'
+  description: SERVER_PORT environment variable
+  advanced: true
+- name: USER_NAME
+  default: mc
+  description: USER_NAME environment variable
+  advanced: true
+- name: USER_UID
+  default: '1000'
+  description: USER_UID environment variable
+  advanced: true
+- name: USER_PASSWORD
+  default: root
+  description: USER_PASSWORD environment variable
+  advanced: true
 web_ui:
   port: 8444
   path: /

@@ -1,18 +1,17 @@
 name: Sickchill
 slug: sickchill
 type: docker
-description: Sickchill application imported from CasaOS catalog
-tagline: Sickchill application imported from CasaOS catalog
+description: Automatically search and download TV episodes
+tagline: TV show download automation
 category: media
 developer:
-  name: CasaOS Team
+  name: Sickchill Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,33 +25,33 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8081
-    host: 8081
-    description: Service port 8081
-    protocol: tcp
+- container: 8081
+  host: 8081
+  description: Service port 8081
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /downloads
-    description: Mount for /downloads
-    required: false
-  - container: /tv
-    description: Mount for /tv
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /downloads
+  description: Mount for /downloads
+  required: false
+- container: /tv
+  description: Mount for /tv
+  required: false
 env:
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8081
   path: /

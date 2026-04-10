@@ -1,8 +1,8 @@
 name: Ddns Go
 slug: ddns-go
 type: docker
-description: Ddns Go application imported from CasaOS catalog
-tagline: Ddns Go application imported from CasaOS catalog
+description: Keep your domain pointing to your home IP automatically
+tagline: Dynamic DNS client
 category: network-and-dns
 developer:
   name: zxxhz,Cp0204
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,14 +26,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 9876
-    host: 9876
-    description: Service port 9876
-    protocol: tcp
+- container: 9876
+  host: 9876
+  description: Service port 9876
+  protocol: tcp
 volumes:
-  - container: /root
-    description: Mount for /root
-    required: false
+- container: /root
+  description: Mount for /root
+  required: false
 env: []
 web_ui:
   port: 9876

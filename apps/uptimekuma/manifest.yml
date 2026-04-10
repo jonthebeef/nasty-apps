@@ -1,19 +1,18 @@
 name: UptimeKuma
 slug: uptimekuma
 type: docker
-description: UptimeKuma application imported from CasaOS catalog
-tagline: UptimeKuma application imported from CasaOS catalog
+description: Monitor your websites and services with alerts
+tagline: Uptime monitoring
 category: network-and-dns
 developer:
-  name: CasaOS Team
+  name: UptimeKuma Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,14 +26,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3001
-    host: 3001
-    description: Service port 3001
-    protocol: tcp
+- container: 3001
+  host: 3001
+  description: Service port 3001
+  protocol: tcp
 volumes:
-  - container: /app/data
-    description: App data storage
-    required: true
+- container: /app/data
+  description: App data storage
+  required: true
 env: []
 web_ui:
   port: 3001

@@ -1,8 +1,8 @@
 name: ChatGPT Next Web
 slug: chatgpt-next-web
 type: docker
-description: ChatGPT Next Web application imported from CasaOS catalog
-tagline: ChatGPT Next Web application imported from CasaOS catalog
+description: Self-hosted ChatGPT interface with conversation history
+tagline: ChatGPT web client
 category: tools
 developer:
   name: CorrectRoadH,Cp0204
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,36 +25,36 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3000
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3000
+  description: Service port 3000
+  protocol: tcp
 volumes: []
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
-  - name: CODE
-    default: ''
-    description: CODE environment variable
-    advanced: true
-  - name: PROXY_URL
-    default: ''
-    description: PROXY_URL environment variable
-    advanced: true
-  - name: BASE_URL
-    default: https://api.openai.com
-    description: BASE_URL environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
+- name: CODE
+  default: ''
+  description: CODE environment variable
+  advanced: true
+- name: PROXY_URL
+  default: ''
+  description: PROXY_URL environment variable
+  advanced: true
+- name: BASE_URL
+  default: https://api.openai.com
+  description: BASE_URL environment variable
+  advanced: true
 web_ui:
   port: 3000
   path: /

@@ -1,8 +1,8 @@
 name: Threadfin
 slug: threadfin
 type: docker
-description: Threadfin application imported from CasaOS catalog
-tagline: Threadfin application imported from CasaOS catalog
+description: Stream live TV from HDHomeRun and other tuners
+tagline: TV tuner proxy
 category: tools
 developer:
   name: Fabio Tea
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,26 +26,26 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 34400
-    host: 34400
-    description: Service port 34400
-    protocol: tcp
+- container: 34400
+  host: 34400
+  description: Service port 34400
+  protocol: tcp
 volumes:
-  - container: /home/threadfin/conf/data
-    description: App data storage
-    required: true
-  - container: /home/threadfin/conf/backup
-    description: Mount for /home/threadfin/conf/backup
-    required: false
+- container: /home/threadfin/conf/data
+  description: App data storage
+  required: true
+- container: /home/threadfin/conf/backup
+  description: Mount for /home/threadfin/conf/backup
+  required: false
 env:
-  - name: THREADFIN_BRANCH
-    default: main
-    description: THREADFIN_BRANCH environment variable
-    advanced: true
-  - name: THREADFIN_DEBUG
-    default: '0'
-    description: THREADFIN_DEBUG environment variable
-    advanced: true
+- name: THREADFIN_BRANCH
+  default: main
+  description: THREADFIN_BRANCH environment variable
+  advanced: true
+- name: THREADFIN_DEBUG
+  default: '0'
+  description: THREADFIN_DEBUG environment variable
+  advanced: true
 web_ui:
   port: 34400
   path: /

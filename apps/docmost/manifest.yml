@@ -1,8 +1,8 @@
 name: Docmost
 slug: docmost
 type: docker
-description: Docmost application imported from CasaOS catalog
-tagline: Docmost application imported from CasaOS catalog
+description: Create and share docs with your team in real time
+tagline: Collaborative documentation platform
 category: tools
 developer:
   name: docmost
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,31 +25,31 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3000
-    description: Service port 3000
-    protocol: tcp
+- container: 3000
+  host: 3000
+  description: Service port 3000
+  protocol: tcp
 volumes:
-  - container: /app/data/storage
-    description: App data storage
-    required: true
+- container: /app/data/storage
+  description: App data storage
+  required: true
 env:
-  - name: APP_URL
-    default: http://localhost:3000
-    description: APP_URL environment variable
-    advanced: true
-  - name: APP_SECRET
-    default: gxahngf9wc9ak9ahgpjp03zp1akcr7ry
-    description: APP_SECRET environment variable
-    advanced: true
-  - name: DATABASE_URL
-    default: postgresql://docmost:jcui51lw747yuuk4zrpm@docmost-db:5432/docmost?schema=public
-    description: DATABASE_URL environment variable
-    advanced: true
-  - name: REDIS_URL
-    default: redis://docmost-redis:6379
-    description: REDIS_URL environment variable
-    advanced: true
+- name: APP_URL
+  default: http://localhost:3000
+  description: APP_URL environment variable
+  advanced: true
+- name: APP_SECRET
+  default: gxahngf9wc9ak9ahgpjp03zp1akcr7ry
+  description: APP_SECRET environment variable
+  advanced: true
+- name: DATABASE_URL
+  default: postgresql://docmost:jcui51lw747yuuk4zrpm@docmost-db:5432/docmost?schema=public
+  description: DATABASE_URL environment variable
+  advanced: true
+- name: REDIS_URL
+  default: redis://docmost-redis:6379
+  description: REDIS_URL environment variable
+  advanced: true
 web_ui:
   port: 3000
   path: /

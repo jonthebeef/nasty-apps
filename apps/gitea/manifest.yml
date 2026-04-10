@@ -1,18 +1,17 @@
 name: Gitea
 slug: gitea
 type: docker
-description: Gitea application imported from CasaOS catalog
-tagline: Gitea application imported from CasaOS catalog
+description: Self-hosted Git service with issues, PRs, and CI
+tagline: Lightweight Git hosting
 category: tools
 developer:
-  name: CasaOS Team
+  name: Gitea Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,27 +25,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3002
-    description: Service port 3000
-    protocol: tcp
-  - container: 22
-    host: 222
-    description: SSH access
-    protocol: tcp
+- container: 3000
+  host: 3002
+  description: Service port 3000
+  protocol: tcp
+- container: 22
+  host: 222
+  description: SSH access
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
+- container: /data
+  description: App data storage
+  required: true
 env:
-  - name: USER_GID
-    default: '1000'
-    description: USER_GID environment variable
-    advanced: true
-  - name: USER_UID
-    default: '1000'
-    description: USER_UID environment variable
-    advanced: true
+- name: USER_GID
+  default: '1000'
+  description: USER_GID environment variable
+  advanced: true
+- name: USER_UID
+  default: '1000'
+  description: USER_UID environment variable
+  advanced: true
 web_ui:
   port: 3002
   path: /

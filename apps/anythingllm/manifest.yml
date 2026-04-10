@@ -1,8 +1,8 @@
 name: AnythingLLM
 slug: anythingllm
 type: docker
-description: AnythingLLM application imported from CasaOS catalog
-tagline: AnythingLLM application imported from CasaOS catalog
+description: Chat with documents using any LLM — local or cloud
+tagline: All-in-one AI desktop app
 category: tools
 developer:
   name: Unknown
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,14 +24,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3001
-    host: 3051
-    description: Service port 3001
-    protocol: tcp
+- container: 3001
+  host: 3051
+  description: Service port 3001
+  protocol: tcp
 volumes:
-  - container: /app/server/storage
-    description: Mount for /app/server/storage
-    required: false
+- container: /app/server/storage
+  description: Mount for /app/server/storage
+  required: false
 env: []
 web_ui:
   port: 3051

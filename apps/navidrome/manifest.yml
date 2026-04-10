@@ -1,8 +1,8 @@
 name: Navidrome
 slug: navidrome
 type: docker
-description: Navidrome application imported from CasaOS catalog
-tagline: Navidrome application imported from CasaOS catalog
+description: Stream your music collection with subsonic-compatible apps
+tagline: Music streaming server
 category: media
 developer:
   name: The Navidrome Authors
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,38 +26,38 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 4533
-    host: 4533
-    description: Service port 4533
-    protocol: tcp
+- container: 4533
+  host: 4533
+  description: Service port 4533
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
-  - container: /music
-    description: Mount for /music
-    required: false
+- container: /data
+  description: App data storage
+  required: true
+- container: /music
+  description: Mount for /music
+  required: false
 env:
-  - name: ND_SCANSCHEDULE
-    default: 1h
-    description: ND_SCANSCHEDULE environment variable
-    advanced: true
-  - name: ND_LOGLEVEL
-    default: info
-    description: ND_LOGLEVEL environment variable
-    advanced: true
-  - name: ND_SESSIONTIMEOUT
-    default: 24h
-    description: ND_SESSIONTIMEOUT environment variable
-    advanced: true
-  - name: ND_BASEURL
-    default: ''
-    description: ND_BASEURL environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: ND_SCANSCHEDULE
+  default: 1h
+  description: ND_SCANSCHEDULE environment variable
+  advanced: true
+- name: ND_LOGLEVEL
+  default: info
+  description: ND_LOGLEVEL environment variable
+  advanced: true
+- name: ND_SESSIONTIMEOUT
+  default: 24h
+  description: ND_SESSIONTIMEOUT environment variable
+  advanced: true
+- name: ND_BASEURL
+  default: ''
+  description: ND_BASEURL environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 4533
   path: /

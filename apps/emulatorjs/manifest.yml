@@ -1,8 +1,8 @@
 name: EmulatorJS
 slug: emulatorjs
 type: docker
-description: EmulatorJS application imported from CasaOS catalog
-tagline: EmulatorJS application imported from CasaOS catalog
+description: Play classic console games directly in your web browser
+tagline: Retro game emulator in the browser
 category: tools
 developer:
   name: self
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,45 +25,45 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3000
-    host: 3001
-    description: Service port 3000
-    protocol: tcp
-  - container: 4001
-    host: 4001
-    description: Service port 4001
-    protocol: tcp
-  - container: 80
-    host: 88
-    description: Web interface
-    protocol: tcp
+- container: 3000
+  host: 3001
+  description: Service port 3000
+  protocol: tcp
+- container: 4001
+  host: 4001
+  description: Service port 4001
+  protocol: tcp
+- container: 80
+  host: 88
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /data
-    description: App data storage
-    required: true
-  - container: /data/nes/roms
-    description: App data storage
-    required: true
+- container: /config
+  description: App configuration
+  required: true
+- container: /data
+  description: App data storage
+  required: true
+- container: /data/nes/roms
+  description: App data storage
+  required: true
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: SUBFOLDER
-    default: /
-    description: SUBFOLDER environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: SUBFOLDER
+  default: /
+  description: SUBFOLDER environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 3001
   path: /

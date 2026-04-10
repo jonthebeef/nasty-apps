@@ -1,8 +1,8 @@
 name: Jenkin
 slug: jenkin
 type: docker
-description: Jenkin application imported from CasaOS catalog
-tagline: Jenkin application imported from CasaOS catalog
+description: Build, test, and deploy code automatically
+tagline: Automation server for CI/CD
 category: network-and-dns
 developer:
   name: bepp-boop
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,17 +25,17 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8080
-    host: 8080
-    description: Service port 8080
-    protocol: tcp
+- container: 8080
+  host: 8080
+  description: Service port 8080
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
-  - container: /var/jenkins_home
-    description: Mount for /var/jenkins_home
-    required: false
+- container: /data
+  description: App data storage
+  required: true
+- container: /var/jenkins_home
+  description: Mount for /var/jenkins_home
+  required: false
 env: []
 web_ui:
   port: 8080

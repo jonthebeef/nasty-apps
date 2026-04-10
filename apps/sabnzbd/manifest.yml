@@ -1,18 +1,17 @@
 name: Sabnzbd
 slug: sabnzbd
 type: docker
-description: Sabnzbd application imported from CasaOS catalog
-tagline: Sabnzbd application imported from CasaOS catalog
+description: Automated newsgroup downloader with web interface
+tagline: Usenet download client
 category: media
 developer:
-  name: CasaOS Team
+  name: Sabnzbd Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,33 +25,33 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8080
-    host: 8282
-    description: Service port 8080
-    protocol: tcp
+- container: 8080
+  host: 8282
+  description: Service port 8080
+  protocol: tcp
 volumes:
-  - container: /incomplete-downloads
-    description: Mount for /incomplete-downloads
-    required: false
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /downloads
-    description: Mount for /downloads
-    required: false
+- container: /incomplete-downloads
+  description: Mount for /incomplete-downloads
+  required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /downloads
+  description: Mount for /downloads
+  required: false
 env:
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8282
   path: /

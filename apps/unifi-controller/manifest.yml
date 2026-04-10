@@ -1,18 +1,17 @@
 name: Unifi Controller
 slug: unifi-controller
 type: docker
-description: Unifi Controller application imported from CasaOS catalog
-tagline: Unifi Controller application imported from CasaOS catalog
+description: Manage your Ubiquiti UniFi network devices
+tagline: UniFi network management
 category: network-and-dns
 developer:
-  name: CasaOS Team
+  name: Unifi Controller Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,63 +25,63 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 3478
-    host: 3478
-    description: Service port 3478
-    protocol: udp
-  - container: 10001
-    host: 10001
-    description: Service port 10001
-    protocol: udp
-  - container: 8080
-    host: 8383
-    description: Service port 8080
-    protocol: tcp
-  - container: 8443
-    host: 8443
-    description: Service port 8443
-    protocol: tcp
-  - container: 1900
-    host: 1900
-    description: Service port 1900
-    protocol: udp
-  - container: 8843
-    host: 8843
-    description: Service port 8843
-    protocol: tcp
-  - container: 8880
-    host: 8880
-    description: Service port 8880
-    protocol: tcp
-  - container: 6789
-    host: 6789
-    description: Service port 6789
-    protocol: tcp
-  - container: 5514
-    host: 5514
-    description: Service port 5514
-    protocol: udp
+- container: 3478
+  host: 3478
+  description: Service port 3478
+  protocol: udp
+- container: 10001
+  host: 10001
+  description: Service port 10001
+  protocol: udp
+- container: 8080
+  host: 8383
+  description: Service port 8080
+  protocol: tcp
+- container: 8443
+  host: 8443
+  description: Service port 8443
+  protocol: tcp
+- container: 1900
+  host: 1900
+  description: Service port 1900
+  protocol: udp
+- container: 8843
+  host: 8843
+  description: Service port 8843
+  protocol: tcp
+- container: 8880
+  host: 8880
+  description: Service port 8880
+  protocol: tcp
+- container: 6789
+  host: 6789
+  description: Service port 6789
+  protocol: tcp
+- container: 5514
+  host: 5514
+  description: Service port 5514
+  protocol: udp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: MEM_LIMIT
-    default: '1024'
-    description: MEM_LIMIT environment variable
-    advanced: true
-  - name: MEM_STARTUP
-    default: '1024'
-    description: MEM_STARTUP environment variable
-    advanced: true
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
+- name: MEM_LIMIT
+  default: '1024'
+  description: MEM_LIMIT environment variable
+  advanced: true
+- name: MEM_STARTUP
+  default: '1024'
+  description: MEM_STARTUP environment variable
+  advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
 web_ui:
   port: 3478
   path: /

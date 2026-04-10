@@ -1,18 +1,17 @@
 name: Transmission
 slug: transmission
 type: docker
-description: Transmission application imported from CasaOS catalog
-tagline: Transmission application imported from CasaOS catalog
+description: Simple, fast torrent downloads with web UI
+tagline: Lightweight BitTorrent client
 category: tools
 developer:
-  name: CasaOS Team
+  name: Transmission Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,53 +25,53 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 9091
-    host: 9091
-    description: Service port 9091
-    protocol: tcp
-  - container: 51413
-    host: 51413
-    description: Service port 51413
-    protocol: tcp
-  - container: 51413
-    host: 51413
-    description: Service port 51413
-    protocol: udp
+- container: 9091
+  host: 9091
+  description: Service port 9091
+  protocol: tcp
+- container: 51413
+  host: 51413
+  description: Service port 51413
+  protocol: tcp
+- container: 51413
+  host: 51413
+  description: Service port 51413
+  protocol: udp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /downloads
-    description: Mount for /downloads
-    required: false
-  - container: /watch
-    description: Mount for /watch
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /downloads
+  description: Mount for /downloads
+  required: false
+- container: /watch
+  description: Mount for /watch
+  required: false
 env:
-  - name: PASS
-    default: casaos
-    description: PASS environment variable
-    advanced: true
-  - name: PEERPORT
-    default: '51413'
-    description: PEERPORT environment variable
-    advanced: true
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
-  - name: USER
-    default: casaos
-    description: USER environment variable
-    advanced: true
+- name: PASS
+  default: casaos
+  description: PASS environment variable
+  advanced: true
+- name: PEERPORT
+  default: '51413'
+  description: PEERPORT environment variable
+  advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
+- name: USER
+  default: casaos
+  description: USER environment variable
+  advanced: true
 web_ui:
   port: 9091
   path: /

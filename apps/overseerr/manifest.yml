@@ -1,8 +1,8 @@
 name: Overseerr
 slug: overseerr
 type: docker
-description: Overseerr application imported from CasaOS catalog
-tagline: Overseerr application imported from CasaOS catalog
+description: Request and discover movies and TV shows for Plex
+tagline: Media request and discovery
 category: media
 developer:
   name: WisdomSky
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,27 +25,27 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5055
-    host: 5055
-    description: Service port 5055
-    protocol: tcp
+- container: 5055
+  host: 5055
+  description: Service port 5055
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 5055
   path: /

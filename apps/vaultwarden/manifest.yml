@@ -1,19 +1,18 @@
 name: Vaultwarden
 slug: vaultwarden
 type: docker
-description: Vaultwarden application imported from CasaOS catalog
-tagline: Vaultwarden application imported from CasaOS catalog
+description: Self-hosted Bitwarden-compatible password vault
+tagline: Lightweight password manager
 category: tools
 developer:
-  name: CasaOS Team
+  name: Vaultwarden Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,14 +26,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 10380
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 10380
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
+- container: /data
+  description: App data storage
+  required: true
 env: []
 web_ui:
   port: 10380

@@ -1,8 +1,8 @@
 name: Lucky
 slug: lucky
 type: docker
-description: Lucky application imported from CasaOS catalog
-tagline: Lucky application imported from CasaOS catalog
+description: Route traffic and manage certificates for your services
+tagline: Reverse proxy and SSL manager
 category: network-and-dns
 developer:
   name: IceWhaleTech
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -28,11 +27,11 @@ resources:
       cpu: 2
 ports: []
 volumes:
-  - container: /goodluck
-    description: Mount for /goodluck
-    required: false
+- container: /goodluck
+  description: Mount for /goodluck
+  required: false
 env:
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true

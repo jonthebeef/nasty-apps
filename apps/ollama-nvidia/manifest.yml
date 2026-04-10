@@ -1,8 +1,8 @@
 name: Ollama Nvidia
 slug: ollama-nvidia
 type: docker
-description: Ollama Nvidia application imported from CasaOS catalog
-tagline: Ollama Nvidia application imported from CasaOS catalog
+description: GPU-accelerated local language model inference
+tagline: Run LLMs with Nvidia GPU
 category: tools
 developer:
   name: ollama
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,14 +25,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 11434
-    host: 11434
-    description: Service port 11434
-    protocol: tcp
+- container: 11434
+  host: 11434
+  description: Service port 11434
+  protocol: tcp
 volumes:
-  - container: /root/.ollama
-    description: Mount for /root/.ollama
-    required: false
+- container: /root/.ollama
+  description: Mount for /root/.ollama
+  required: false
 env: []
 web_ui:
   port: 11434

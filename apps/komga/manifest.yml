@@ -1,8 +1,8 @@
 name: Komga
 slug: komga
 type: docker
-description: Komga application imported from CasaOS catalog
-tagline: Komga application imported from CasaOS catalog
+description: Organise and read your comic book collection online
+tagline: Comic and manga server
 category: media
 developer:
   name: gotson
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,29 +26,29 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 25600
-    host: 25600
-    description: Service port 25600
-    protocol: tcp
+- container: 25600
+  host: 25600
+  description: Service port 25600
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /data
-    description: App data storage
-    required: true
-  - container: /etc/timezone
-    description: Mount for /etc/timezone
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /data
+  description: App data storage
+  required: true
+- container: /etc/timezone
+  description: Mount for /etc/timezone
+  required: false
 env:
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
 web_ui:
   port: 25600
   path: /

@@ -1,18 +1,17 @@
 name: Jackett
 slug: jackett
 type: docker
-description: Jackett application imported from CasaOS catalog
-tagline: Jackett application imported from CasaOS catalog
+description: Search multiple torrent sites from Sonarr, Radarr, and other apps
+tagline: Torrent indexer proxy
 category: network-and-dns
 developer:
-  name: CasaOS Team
+  name: Jackett Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,34 +25,34 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 9117
-    host: 9117
-    description: Service port 9117
-    protocol: tcp
+- container: 9117
+  host: 9117
+  description: Service port 9117
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /downloads
-    description: Mount for /downloads
-    required: false
+- container: /config
+  description: App configuration
+  required: true
+- container: /downloads
+  description: Mount for /downloads
+  required: false
 env:
-  - name: AUTO_UPDATE
-    default: 'true'
-    description: AUTO_UPDATE environment variable
-    advanced: true
-  - name: PGID
-    default: '1000'
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: '1000'
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: Europe/London
-    description: TZ environment variable
-    advanced: true
+- name: AUTO_UPDATE
+  default: 'true'
+  description: AUTO_UPDATE environment variable
+  advanced: true
+- name: PGID
+  default: '1000'
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: '1000'
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: Europe/London
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 9117
   path: /

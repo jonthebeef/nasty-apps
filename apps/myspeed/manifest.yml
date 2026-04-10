@@ -1,8 +1,8 @@
 name: MySpeed
 slug: myspeed
 type: docker
-description: MySpeed application imported from CasaOS catalog
-tagline: MySpeed application imported from CasaOS catalog
+description: Monitor your internet speed over time with charts
+tagline: Internet speed test tracker
 category: tools
 developer:
   name: joaobosconff
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,14 +26,14 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 5216
-    host: 5216
-    description: Service port 5216
-    protocol: tcp
+- container: 5216
+  host: 5216
+  description: Service port 5216
+  protocol: tcp
 volumes:
-  - container: /myspeed/data
-    description: App data storage
-    required: true
+- container: /myspeed/data
+  description: App data storage
+  required: true
 env: []
 web_ui:
   port: 5216

@@ -1,8 +1,8 @@
 name: AlbyHub
 slug: albyhub
 type: docker
-description: AlbyHub application imported from CasaOS catalog
-tagline: AlbyHub application imported from CasaOS catalog
+description: Connect to the Bitcoin Lightning Network and manage payments
+tagline: Lightning Network node manager
 category: tools
 developer:
   name: calganaygun
@@ -10,9 +10,8 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,39 +25,39 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8080
-    host: 58000
-    description: Service port 8080
-    protocol: tcp
+- container: 8080
+  host: 58000
+  description: Service port 8080
+  protocol: tcp
 volumes:
-  - container: /data
-    description: App data storage
-    required: true
+- container: /data
+  description: App data storage
+  required: true
 env:
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
-  - name: UMASK
-    default: '002'
-    description: UMASK environment variable
-    advanced: true
-  - name: WORK_DIR
-    default: /data/albyhub
-    description: WORK_DIR environment variable
-    advanced: true
-  - name: LOG_EVENTS
-    default: 'true'
-    description: LOG_EVENTS environment variable
-    advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
+- name: UMASK
+  default: '002'
+  description: UMASK environment variable
+  advanced: true
+- name: WORK_DIR
+  default: /data/albyhub
+  description: WORK_DIR environment variable
+  advanced: true
+- name: LOG_EVENTS
+  default: 'true'
+  description: LOG_EVENTS environment variable
+  advanced: true
 web_ui:
   port: 58000
   path: /

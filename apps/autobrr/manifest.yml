@@ -1,8 +1,8 @@
 name: Autobrr
 slug: autobrr
 type: docker
-description: Autobrr application imported from CasaOS catalog
-tagline: Autobrr application imported from CasaOS catalog
+description: Monitor IRC and RSS feeds for new releases and auto-download
+tagline: Torrent automation tool
 category: media
 developer:
   name: Autobrr Team
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -27,19 +26,19 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 7474
-    host: 7474
-    description: Service port 7474
-    protocol: tcp
+- container: 7474
+  host: 7474
+  description: Service port 7474
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 7474
   path: /

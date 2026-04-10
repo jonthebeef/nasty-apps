@@ -1,8 +1,8 @@
 name: TurboDiffusion Nvidia
 slug: turbodiffusion-nvidia
 type: docker
-description: TurboDiffusion Nvidia application imported from CasaOS catalog
-tagline: TurboDiffusion Nvidia application imported from CasaOS catalog
+description: Generate images quickly using Nvidia GPU acceleration
+tagline: Fast AI image generation
 category: tools
 developer:
   name: thu-ml
@@ -10,8 +10,7 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-attribution: CasaOS App Store
+- amd64
 resources:
   min_ram: 512
   profiles:
@@ -25,38 +24,38 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 7860
-    host: 27860
-    description: Service port 7860
-    protocol: tcp
+- container: 7860
+  host: 27860
+  description: Service port 7860
+  protocol: tcp
 volumes:
-  - container: /workspace/TurboDiffusion/checkpoints_host
-    description: Mount for /workspace/TurboDiffusion/checkpoints_host
-    required: false
-  - container: /workspace/TurboDiffusion/outputs
-    description: Mount for /workspace/TurboDiffusion/outputs
-    required: false
+- container: /workspace/TurboDiffusion/checkpoints_host
+  description: Mount for /workspace/TurboDiffusion/checkpoints_host
+  required: false
+- container: /workspace/TurboDiffusion/outputs
+  description: Mount for /workspace/TurboDiffusion/outputs
+  required: false
 env:
-  - name: MODEL_PATHS
-    default: /workspace/TurboDiffusion/checkpoints_host,/workspace/TurboDiffusion/checkpoints
-    description: MODEL_PATHS environment variable
-    advanced: true
-  - name: NVIDIA_VISIBLE_DEVICES
-    default: all
-    description: NVIDIA_VISIBLE_DEVICES environment variable
-    advanced: true
-  - name: NVIDIA_DRIVER_CAPABILITIES
-    default: compute,utility,video
-    description: NVIDIA_DRIVER_CAPABILITIES environment variable
-    advanced: true
-  - name: CUDA_HOME
-    default: /usr/local/cuda
-    description: CUDA_HOME environment variable
-    advanced: true
-  - name: PYTHONPATH
-    default: /workspace/TurboDiffusion/turbodiffusion
-    description: PYTHONPATH environment variable
-    advanced: true
+- name: MODEL_PATHS
+  default: /workspace/TurboDiffusion/checkpoints_host,/workspace/TurboDiffusion/checkpoints
+  description: MODEL_PATHS environment variable
+  advanced: true
+- name: NVIDIA_VISIBLE_DEVICES
+  default: all
+  description: NVIDIA_VISIBLE_DEVICES environment variable
+  advanced: true
+- name: NVIDIA_DRIVER_CAPABILITIES
+  default: compute,utility,video
+  description: NVIDIA_DRIVER_CAPABILITIES environment variable
+  advanced: true
+- name: CUDA_HOME
+  default: /usr/local/cuda
+  description: CUDA_HOME environment variable
+  advanced: true
+- name: PYTHONPATH
+  default: /workspace/TurboDiffusion/turbodiffusion
+  description: PYTHONPATH environment variable
+  advanced: true
 web_ui:
   port: 27860
   path: /

@@ -1,18 +1,17 @@
 name: Deluge
 slug: deluge
 type: docker
-description: Deluge application imported from CasaOS catalog
-tagline: Deluge application imported from CasaOS catalog
+description: Download torrents with a clean web interface
+tagline: Lightweight BitTorrent client
 category: tools
 developer:
-  name: CasaOS Team
+  name: Deluge Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-attribution: CasaOS App Store
+- amd64
+- arm64
 resources:
   min_ram: 512
   profiles:
@@ -26,42 +25,42 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 8112
-    host: 8112
-    description: Service port 8112
-    protocol: tcp
-  - container: 6881
-    host: 6881
-    description: Service port 6881
-    protocol: tcp
-  - container: 6881
-    host: 6881
-    description: Service port 6881
-    protocol: udp
+- container: 8112
+  host: 8112
+  description: Service port 8112
+  protocol: tcp
+- container: 6881
+  host: 6881
+  description: Service port 6881
+  protocol: tcp
+- container: 6881
+  host: 6881
+  description: Service port 6881
+  protocol: udp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
-  - container: /DATA
-    description: App data storage
-    required: true
+- container: /config
+  description: App configuration
+  required: true
+- container: /DATA
+  description: App data storage
+  required: true
 env:
-  - name: DELUGE_LOGLEVEL
-    default: error
-    description: DELUGE_LOGLEVEL environment variable
-    advanced: true
-  - name: PGID
-    default: $PGID
-    description: PGID environment variable
-    advanced: true
-  - name: PUID
-    default: $PUID
-    description: PUID environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: DELUGE_LOGLEVEL
+  default: error
+  description: DELUGE_LOGLEVEL environment variable
+  advanced: true
+- name: PGID
+  default: $PGID
+  description: PGID environment variable
+  advanced: true
+- name: PUID
+  default: $PUID
+  description: PUID environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 8112
   path: /

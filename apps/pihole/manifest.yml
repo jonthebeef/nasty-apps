@@ -1,20 +1,19 @@
 name: Pihole
 slug: pihole
 type: docker
-description: Pihole application imported from CasaOS catalog
-tagline: Pihole application imported from CasaOS catalog
+description: Block ads and trackers for all devices via DNS
+tagline: Network-wide ad blocker
 category: network-and-dns
 developer:
-  name: CasaOS Team
+  name: Pihole Project
   website: ''
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - '386'
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- '386'
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -28,39 +27,39 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 80
-    host: 8800
-    description: Web interface
-    protocol: tcp
-  - container: 53
-    host: 53
-    description: DNS service
-    protocol: tcp
-  - container: 53
-    host: 53
-    description: DNS service
-    protocol: udp
-  - container: 443
-    host: 8443
-    description: Web interface
-    protocol: tcp
+- container: 80
+  host: 8800
+  description: Web interface
+  protocol: tcp
+- container: 53
+  host: 53
+  description: DNS service
+  protocol: tcp
+- container: 53
+  host: 53
+  description: DNS service
+  protocol: udp
+- container: 443
+  host: 8443
+  description: Web interface
+  protocol: tcp
 volumes:
-  - container: /etc/pihole
-    description: Mount for /etc/pihole
-    required: false
+- container: /etc/pihole
+  description: Mount for /etc/pihole
+  required: false
 env:
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
-  - name: FTLCONF_webserver_api_password
-    default: casaos
-    description: FTLCONF_webserver_api_password environment variable
-    advanced: true
-  - name: FTLCONF_dns_listeningMode
-    default: all
-    description: FTLCONF_dns_listeningMode environment variable
-    advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
+- name: FTLCONF_webserver_api_password
+  default: casaos
+  description: FTLCONF_webserver_api_password environment variable
+  advanced: true
+- name: FTLCONF_dns_listeningMode
+  default: all
+  description: FTLCONF_dns_listeningMode environment variable
+  advanced: true
 web_ui:
   port: 8800
   path: /

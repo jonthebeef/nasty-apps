@@ -1,8 +1,8 @@
 name: Firefly
 slug: firefly
 type: docker
-description: Firefly application imported from CasaOS catalog
-tagline: Firefly application imported from CasaOS catalog
+description: Track transactions, budgets, and financial goals
+tagline: Personal finance manager
 category: tools
 developer:
   name: Cp0204
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -28,14 +27,14 @@ resources:
       cpu: 2
 ports: []
 volumes:
-  - container: /lib/modules
-    description: Mount for /lib/modules
-    required: false
-  - container: /firefly/conf
-    description: Mount for /firefly/conf
-    required: false
+- container: /lib/modules
+  description: Mount for /lib/modules
+  required: false
+- container: /firefly/conf
+  description: Mount for /firefly/conf
+  required: false
 env:
-  - name: FIREFLY_PASSWORD
-    default: firefly
-    description: FIREFLY_PASSWORD environment variable
-    advanced: true
+- name: FIREFLY_PASSWORD
+  default: firefly
+  description: FIREFLY_PASSWORD environment variable
+  advanced: true

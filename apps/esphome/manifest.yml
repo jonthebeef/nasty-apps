@@ -1,8 +1,8 @@
 name: ESPHome
 slug: esphome
 type: docker
-description: ESPHome application imported from CasaOS catalog
-tagline: ESPHome application imported from CasaOS catalog
+description: Configure and flash ESP8266/ESP32 devices for Home Assistant
+tagline: Smart home device firmware manager
 category: home-automation
 developer:
   name: kd9lsv
@@ -10,10 +10,9 @@ developer:
 icon: icon.png
 screenshots: []
 arch:
-  - amd64
-  - arm64
-  - arm
-attribution: CasaOS App Store
+- amd64
+- arm64
+- arm
 resources:
   min_ram: 512
   profiles:
@@ -27,23 +26,23 @@ resources:
       ram: 1024
       cpu: 2
 ports:
-  - container: 6052
-    host: 6052
-    description: Service port 6052
-    protocol: tcp
+- container: 6052
+  host: 6052
+  description: Service port 6052
+  protocol: tcp
 volumes:
-  - container: /config
-    description: App configuration
-    required: true
+- container: /config
+  description: App configuration
+  required: true
 env:
-  - name: ESPHOME_DASHBOARD_USE_PING
-    default: 'false'
-    description: ESPHOME_DASHBOARD_USE_PING environment variable
-    advanced: true
-  - name: TZ
-    default: $TZ
-    description: TZ environment variable
-    advanced: true
+- name: ESPHOME_DASHBOARD_USE_PING
+  default: 'false'
+  description: ESPHOME_DASHBOARD_USE_PING environment variable
+  advanced: true
+- name: TZ
+  default: $TZ
+  description: TZ environment variable
+  advanced: true
 web_ui:
   port: 6052
   path: /

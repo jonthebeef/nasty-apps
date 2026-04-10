@@ -1,14 +1,19 @@
 name: Downtify
 slug: downtify
 type: docker
-description: Download music from streaming services for offline listening
-tagline: Music downloader
+description: With Downtify you can download Spotify musics containing album art, track
+  names, album title and other metadata about the songs. Just copy the Spotify link,
+  whether it's a single song, an album, etc. As soon as your downloads are complete
+  you will be notified!
+tagline: Download Spotify music with album art and metadata
 category: tools
 developer:
   name: Henrique Sebastião
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://raw.githubusercontent.com/henriquesebastiao/downtify/refs/heads/main/assets/casaos-icon.png
+screenshots:
+- https://raw.githubusercontent.com/henriquesebastiao/downtify/refs/heads/main/assets/screenshot-1.png
+- https://raw.githubusercontent.com/henriquesebastiao/downtify/refs/heads/main/assets/screenshot-2.png
 arch:
 - amd64
 - arm64

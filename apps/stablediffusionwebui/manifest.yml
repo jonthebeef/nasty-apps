@@ -1,14 +1,21 @@
 name: StableDiffusionWebUI
 slug: stablediffusionwebui
 type: docker
-description: Generate images from text prompts using Stable Diffusion
-tagline: AI image generator
+description: Stable Diffusion is a deep learning, text-to-image model released in
+  2022 based on diffusion techniques. It is primarily used to generate detailed images
+  conditioned on text descriptions, though it can also be applied to other tasks such
+  as inpainting, outpainting, and generating image-to-image translations guided by
+  a text prompt.
+tagline: An AI model used to generate images conditioned on text descriptions.
 category: tools
 developer:
-  name: Unknown
+  name: stability.ai
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/StableDiffusionWebUI/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/StableDiffusionWebUI/screenshot-1.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/StableDiffusionWebUI/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/StableDiffusionWebUI/screenshot-3.webp
 arch:
 - amd64
 resources:

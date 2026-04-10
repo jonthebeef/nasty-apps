@@ -1,14 +1,19 @@
 name: OpenSpeedTest
 slug: openspeedtest
 type: docker
-description: Test your local network speed from any browser
-tagline: Network speed test server
+description: An application for launching HTML5 Network Speed Test Server. You can
+  test download & upload speed from any device within your network with a web browser
+  that is IE10 or new.
+tagline: HTML5 Network Speed Test Server.
 category: tools
 developer:
   name: OpenSpeedTest
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenSpeedTest/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenSpeedTest/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenSpeedTest/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenSpeedTest/screenshot-3.png
 arch:
 - amd64
 - arm64

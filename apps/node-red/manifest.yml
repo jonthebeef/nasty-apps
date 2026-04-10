@@ -5,10 +5,13 @@ description: Wire together devices, APIs, and services with a flow editor
 tagline: Visual programming for IoT
 category: tools
 developer:
-  name: Node RED Project
+  name: Node-RED
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Node-RED/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Node-RED/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Node-RED/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Node-RED/screenshot-3.png
 arch:
 - amd64
 - arm64

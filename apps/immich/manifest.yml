@@ -5,10 +5,13 @@ description: Google Photos alternative with facial recognition and sharing
 tagline: Self-hosted photo and video backup
 category: tools
 developer:
-  name: Cp0204
+  name: alextran1502
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Immich/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Immich/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Immich/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Immich/screenshot-3.png
 arch:
 - amd64
 - arm64

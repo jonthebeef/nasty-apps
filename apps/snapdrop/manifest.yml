@@ -1,14 +1,16 @@
 name: Snapdrop
 slug: snapdrop
 type: docker
-description: Share files between devices on the same network instantly
-tagline: Local file sharing
+description: Snapdrop is a Progressive Web App (PWA) that allows you to transfer files
+  between devices in the same network without having to install anything.
+tagline: Cross-platform file sharing made easy.
 category: tools
 developer:
   name: self
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Snapdrop/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Snapdrop/screenshot-1.png
 arch:
 - amd64
 - arm64

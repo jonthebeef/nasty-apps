@@ -5,10 +5,13 @@ description: Create secure private networks between your devices
 tagline: Peer-to-peer VPN
 category: network-and-dns
 developer:
-  name: NetBird Team
+  name: NetBird GmbH
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NetBird/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NetBird/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NetBird/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NetBird/screenshot-3.png
 arch:
 - amd64
 - arm64

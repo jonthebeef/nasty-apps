@@ -1,14 +1,19 @@
 name: Vaultwarden
 slug: vaultwarden
 type: docker
-description: Self-hosted Bitwarden-compatible password vault
-tagline: Lightweight password manager
+description: Alternative implementation of the Bitwarden server API written in Rust
+  and compatible with upstream Bitwarden clients*, perfect for self-hosted deployment
+  where running the official resource-heavy service might not be ideal.
+tagline: A self-hosted Bitwarden server
 category: tools
 developer:
-  name: Vaultwarden Project
+  name: Daniel García
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Vaultwarden/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Vaultwarden/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Vaultwarden/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Vaultwarden/screenshot-3.png
 arch:
 - amd64
 - arm

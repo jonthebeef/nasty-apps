@@ -1,14 +1,22 @@
 name: Ddns Go
 slug: ddns-go
 type: docker
-description: Keep your domain pointing to your home IP automatically
-tagline: Dynamic DNS client
+description: 'A simple and easy-to-use DDNS tool. Automatically updates domain name
+  resolution to your public IP (supports Alibaba Cloud, Tencent Cloud, Dnspod, Cloudflare,
+  Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, and Google Domain).
+
+
+  Deploy DDNS-go on Zima, and you can bind the public IP of your Zima device to your
+  domain name. This way, you can access your Zima device via the domain name while
+  you are away.'
+tagline: Simple and easy to use DDNS
 category: network-and-dns
 developer:
-  name: zxxhz,Cp0204
+  name: jeessy2
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ddns-go/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ddns-go/screenshot-1.png
 arch:
 - amd64
 - arm

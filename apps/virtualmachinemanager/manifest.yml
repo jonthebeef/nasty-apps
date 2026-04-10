@@ -1,14 +1,17 @@
 name: VirtualMachineManager
 slug: virtualmachinemanager
 type: docker
-description: Create and manage virtual machines from a web UI
-tagline: Virtual machine manager
+description: A GTK Broadway web UI for libvirt and virt-manager, to run virtual machines
+  using QEMU/KVM.
+tagline: A GTK Broadway web UI for libvirt and virt-manager.
 category: tools
 developer:
-  name: mber5
+  name: Red Hat
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/VirtualMachineManager/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/VirtualMachineManager/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/VirtualMachineManager/screenshot-2.png
 arch:
 - amd64
 - arm64

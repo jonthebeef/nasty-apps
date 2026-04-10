@@ -1,14 +1,17 @@
 name: ESPHome
 slug: esphome
 type: docker
-description: Configure and flash ESP8266/ESP32 devices for Home Assistant
-tagline: Smart home device firmware manager
+description: ESPHome is a system to control your microcontrollers by simple yet powerful
+  configuration files and control them remotely through Home Automation systems.
+tagline: Home Automation systems
 category: home-automation
 developer:
   name: kd9lsv
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ESPHome/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ESPHome/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ESPHome/screenshot-2.png
 arch:
 - amd64
 - arm64

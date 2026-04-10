@@ -1,14 +1,18 @@
 name: Motioneye
 slug: motioneye
 type: docker
-description: Monitor security cameras with motion detection
-tagline: Video surveillance system
+description: motionEye is a web-based frontend for motion. Check out the wiki for
+  more details. Changelog is available on the releases page. https://github.com/motioneye-project/motioneye
+tagline: A web frontend for the motion daemon.
 category: tools
 developer:
-  name: f4bio
+  name: Motioneye
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Motioneye/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Motioneye/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Motioneye/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Motioneye/screenshot-3.png
 arch:
 - amd64
 resources:

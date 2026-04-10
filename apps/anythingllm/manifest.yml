@@ -1,14 +1,16 @@
 name: AnythingLLM
 slug: anythingllm
 type: docker
-description: Chat with documents using any LLM — local or cloud
-tagline: All-in-one AI desktop app
+description: AnythingLLM is the easiest to use, all-in-one AI application that can
+  do RAG, AI Agents, and much more with no code or infrastructure headaches.
+tagline: The all-in-one AI application.
 category: tools
 developer:
-  name: Unknown
+  name: Mintplex Labs
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/AnythingLLM/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/AnythingLLM/screenshot-1.gif
 arch:
 - amd64
 resources:

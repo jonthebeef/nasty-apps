@@ -1,14 +1,16 @@
 name: Resilio Sync
 slug: resilio-sync
 type: docker
-description: Sync files between devices without cloud storage
-tagline: Peer-to-peer file sync
+description: resilio-sync is a Docker-based application that enables fast and secure
+  file synchronization and sharing.
+tagline: Unleash the power of seamless file synchronization.
 category: tools
 developer:
   name: self
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Resilio-sync/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Resilio-sync/screenshot-1.jpg
 arch:
 - amd64
 - arm64

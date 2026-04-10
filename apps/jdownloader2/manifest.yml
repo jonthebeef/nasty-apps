@@ -1,14 +1,20 @@
 name: JDownloader2
 slug: jdownloader2
 type: docker
-description: Automate downloads from file hosting services
-tagline: Download management tool
+description: JDownloader is a free, open-source download management tool with a huge
+  community that makes downloading as easy and fast as it should be. Users can start,
+  stop or pause downloads, set bandwith limitations, auto-extract archives and much
+  more. It's an easy-to-extend framework that can save hours of your valuable time
+  every day!
+tagline: Free & open-source download management tool
 category: tools
 developer:
-  name: Fabio Tea
+  name: jdownloader
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/screenshot-1.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/screenshot-2.jpg
 arch:
 - amd64
 - arm64

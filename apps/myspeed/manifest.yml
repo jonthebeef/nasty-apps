@@ -1,14 +1,20 @@
 name: MySpeed
 slug: myspeed
 type: docker
-description: Monitor your internet speed over time with charts
-tagline: Internet speed test tracker
+description: MySpeed is a speed test analysis software that stores the speed of your
+  internet for up to 30 days. This can also be useful if you want to know when your
+  network might have drops or if you want to check if your internet matches the booked
+  values from your contract.
+tagline: Analysis software that shows your internet speed for up to 30 days.
 category: tools
 developer:
-  name: joaobosconff
+  name: Mathias Wagner
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MySpeed/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MySpeed/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MySpeed/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MySpeed/screenshot-3.png
 arch:
 - amd64
 - arm64

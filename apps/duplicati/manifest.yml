@@ -1,14 +1,19 @@
 name: Duplicati
 slug: duplicati
 type: docker
-description: Back up files to any cloud storage with encryption and scheduling
-tagline: Encrypted cloud backup
+description: Duplicati is a free, open source, backup client that securely stores
+  encrypted, incremental, compressed backups on cloud storage services and remote
+  file servers.
+tagline: Store securely encrypted backups in the cloud!
 category: cloud-and-files
 developer:
-  name: Duplicati Project
+  name: duplicati
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Duplicati/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Duplicati/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Duplicati/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Duplicati/screenshot-3.png
 arch:
 - amd64
 - arm64

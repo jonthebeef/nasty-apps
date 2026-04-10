@@ -1,14 +1,17 @@
 name: EmulatorJS
 slug: emulatorjs
 type: docker
-description: Play classic console games directly in your web browser
+description: EmulatorJS is a Docker-based emulator application that can simulate various
+  operating systems and device environments within containers for development, testing,
+  and learning purposes.
 tagline: Retro game emulator in the browser
 category: tools
 developer:
   name: self
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/EmulatorJS/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/EmulatorJS/screenshot-1.jpg
 arch:
 - amd64
 - arm64

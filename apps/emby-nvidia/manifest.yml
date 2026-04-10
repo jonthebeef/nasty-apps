@@ -1,14 +1,19 @@
 name: Emby Nvidia
 slug: emby-nvidia
 type: docker
-description: Emby with hardware-accelerated video transcoding
-tagline: Media server with Nvidia GPU transcoding
+description: Bringing all of your home videos, music, and photos together into one
+  place has never been easier. Your personal Emby Server automatically converts and
+  streams your media on-the-fly to play on any device.
+tagline: TAKE YOUR MEDIA ANYWHERE WITH EMBY
 category: media
 developer:
-  name: Emby Nvidia Project
+  name: linuxserver
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-3.png
 arch:
 - amd64
 - arm64

@@ -1,14 +1,17 @@
 name: Filedrop
 slug: filedrop
 type: docker
-description: Drag-and-drop file sharing between devices on your network
-tagline: Simple file sharing
+description: FileDrop is a self-hosted file sharing service that allows you to easily
+  share files with family, friends, or colleagues. It's been designed to be easy to
+  use and light on resources.
+tagline: FileDrop is a free, open source file sharing service
 category: cloud-and-files
 developer:
-  name: Noé Favier
+  name: Noé Favier (noe.favier@outlook.com)
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Filedrop/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Filedrop/screenshot-1.png
 arch:
 - amd64
 - arm64

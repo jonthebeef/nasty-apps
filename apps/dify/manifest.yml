@@ -1,14 +1,21 @@
 name: Dify
 slug: dify
 type: docker
-description: Build AI apps with visual workflows and prompt engineering
-tagline: LLM application development platform
+description: Dify is an open-source large language model (LLM) application development
+  platform. It combines the concepts of Backend-as-a-Service and LLMOps to enable
+  developers to quickly build production-grade generative AI applications. Even non-technical
+  personnel can participate in the definition and data operations of AI applications.
+tagline: LLM App Development Platform
 category: tools
 developer:
-  name: IceWhaleTech
+  name: LangGenius
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Dify/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Dify/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Dify/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Dify/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Dify/screenshot-4.png
 arch:
 - arm64
 - amd64

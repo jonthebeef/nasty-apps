@@ -1,14 +1,21 @@
 name: LabelStudio
 slug: labelstudio
 type: docker
-description: Annotate text, images, and audio for machine learning
-tagline: Data labelling platform
+description: Label Studio is an open source data labeling tool. It lets you label
+  data types like audio, text, images, videos, and time series with a simple and straightforward
+  UI and export to various model formats. It can be used to prepare raw data or improve
+  existing training data to get more accurate ML models.
+tagline: Label Studio is an open source data labeling tool. It lets you label data
+  types like audio, text, images, videos, and time series with a simple and straightforward
+  UI and export to various model formats. It can be used to prepare raw data or improve
+  existing training data to get more accurate ML models.
 category: tools
 developer:
-  name: CorrectRoadH
+  name: Yidadaa
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LabelStudio/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LabelStudio/screenshot-1.jpg
 arch:
 - amd64
 - arm64

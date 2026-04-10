@@ -1,14 +1,20 @@
 name: Readarr
 slug: readarr
 type: docker
-description: Automatically find and download eBooks
-tagline: Book collection manager
+description: Readarr is a ebook collection manager for Usenet and BitTorrent users.
+  It can monitor multiple RSS feeds for new books from your favorite authors and will
+  interface with clients and indexers to grab, sort, and rename them.
+tagline: Ebook and audiobook collection manager for Usenet and BitTorrent users.
 category: media
 developer:
-  name: Readarr Project
+  name: Readarr Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/screenshot-4.png
 arch:
 - amd64
 - arm64

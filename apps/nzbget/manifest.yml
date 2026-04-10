@@ -1,14 +1,21 @@
 name: Nzbget
 slug: nzbget
 type: docker
-description: Fast and efficient newsgroup downloader
-tagline: Usenet download client
+description: NZBGet can run on almost any device - classic PC, NAS, media player,
+  SAT-receiver, WLAN-router, etc. The download area provides precompiled binaries
+  for Windows, macOS, Linux (compatible with many CPUs and platform variants), FreeBSD
+  and Android. For other platforms the program can be compiled from sources.
+tagline: Efficient Usenet downloader
 category: tools
 developer:
-  name: Nzbget Project
+  name: Nzbget Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Nzbget/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Nzbget/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Nzbget/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Nzbget/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Nzbget/screenshot-4.png
 arch:
 - amd64
 - arm

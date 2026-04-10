@@ -1,14 +1,18 @@
 name: WireGuardEasy
 slug: wireguardeasy
 type: docker
-description: Set up and manage a WireGuard VPN server easily
-tagline: WireGuard VPN with web UI
+description: You have found the easiest way to install & manage WireGuard on any Linux
+  host!
+tagline: WEB UI to manage WireGuard VPN.
 category: network-and-dns
 developer:
-  name: Sawy
+  name: WeejeWel
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WireGuardEasy/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WireGuardEasy/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WireGuardEasy/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WireGuardEasy/screenshot-3.png
 arch:
 - amd64
 - arm

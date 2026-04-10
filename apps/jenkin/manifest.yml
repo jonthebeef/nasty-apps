@@ -1,13 +1,14 @@
 name: Jenkin
 slug: jenkin
 type: docker
-description: Build, test, and deploy code automatically
-tagline: Automation server for CI/CD
+description: A server for creating pipelines for Jenkins continuous integration and
+  delivery.
+tagline: Jenkins Continuous Integration and Delivery server.
 category: network-and-dns
 developer:
   name: bepp-boop
   website: ''
-icon: icon.png
+icon: https://icon.casaos.io/main/all/jenkins.png
 screenshots: []
 arch:
 - amd64

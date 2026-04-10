@@ -1,14 +1,18 @@
 name: NginxProxyManager
 slug: nginxproxymanager
 type: docker
-description: Manage Nginx proxy hosts and Let's Encrypt certificates
-tagline: Reverse proxy with SSL
+description: Nginx Proxy Manager is a simple, powerful tool to help you host multiple
+  websites on a single server.
+tagline: Managing Nginx proxy hosts with a simple, powerful interface.
 category: network-and-dns
 developer:
-  name: NginxProxyManager Project
+  name: Nginx Proxy Manager
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-1.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-2.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-3.jpg
 arch:
 - amd64
 - arm64

@@ -1,14 +1,16 @@
 name: WebDav
 slug: webdav
 type: docker
-description: Access files remotely using the WebDAV protocol
-tagline: WebDAV file server
+description: WebDAV is a web-based protocol that allows you to share and manage files
+  over the internet, providing a collaborative environment for file editing and versioning.
+tagline: A web-based file sharing and management protocol
 category: tools
 developer:
-  name: WebDav Project
+  name: CasaOS Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://icon.casaos.io/main/all/webdav.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WebDAV/screenshot-1.png
 arch:
 - amd64
 - '386'

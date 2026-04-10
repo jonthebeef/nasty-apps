@@ -1,14 +1,29 @@
 name: Petio
 slug: petio
 type: docker
-description: Simple media request system for Plex users
-tagline: Media request companion for Plex
+description: 'Petio is a third party companion app available to Plex server owners
+  to allow their users to request, review and discover content. The app is built to
+  appear instantly familiar and intuitive to even the most tech-agnostic users. Petio
+  will help you manage requests from your users, connect to other third party apps
+  such as Sonarr and Radarr, notify users when content is available and track request
+  progress. Petio also allows users to discover media both on and off your server,
+  quickly and easily find related content and review to leave their opinion for other
+  users.
+
+
+  Petio is an ongoing, forever free, always evolving project currently in alpha prototype
+  stage and now available!'
+tagline: A third party companion app available to Plex server owners to allow their
+  users to request, review and discover content.
 category: media
 developer:
-  name: WisdomSky
+  name: Petio Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Petio/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Petio/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Petio/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Petio/screenshot-3.png
 arch:
 - amd64
 - arm

@@ -5,10 +5,13 @@ description: Block ads and trackers for all devices via DNS
 tagline: Network-wide ad blocker
 category: network-and-dns
 developer:
-  name: Pihole Project
+  name: Pi-hole
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pihole/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pihole/screenshot-1.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pihole/screenshot-2.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pihole/screenshot-3.jpg
 arch:
 - amd64
 - arm64

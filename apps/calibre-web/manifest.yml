@@ -1,14 +1,21 @@
 name: Calibre Web
 slug: calibre-web
 type: docker
-description: Browse, read, and download your Calibre eBook collection
-tagline: Web-based eBook library
+description: Calibre-web is a web app providing a clean interface for browsing, reading
+  and downloading eBooks using an existing Calibre database. It is also possible to
+  integrate google drive and edit metadata and your calibre library through the app
+  itself.
+tagline: Web app for browsing, reading and downloading eBooks stored in a Calibre
+  database
 category: media
 developer:
-  name: Calibre Web Project
+  name: linuxserver
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-3.png
 arch:
 - amd64
 - arm64

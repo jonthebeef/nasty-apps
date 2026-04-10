@@ -1,14 +1,22 @@
 name: Jackett
 slug: jackett
 type: docker
-description: Search multiple torrent sites from Sonarr, Radarr, and other apps
-tagline: Torrent indexer proxy
+description: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato,
+  Mylar3, Lidarr, DuckieTV, qBittorrent, Nefarious etc.) into tracker-site-specific
+  http queries, parses the html or json response, and then sends results back to the
+  requesting software. This allows for getting recent uploads (like RSS) and performing
+  searches. Jackett is a single repository of maintained indexer scraping & translation
+  logic - removing the burden from other apps.
+tagline: Jackett works as a proxy server
 category: network-and-dns
 developer:
-  name: Jackett Project
+  name: Jackett
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Jackett/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Jackett/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Jackett/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Jackett/screenshot-3.png
 arch:
 - amd64
 - arm64

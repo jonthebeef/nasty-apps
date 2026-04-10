@@ -1,14 +1,20 @@
 name: TaskingAI
 slug: taskingai
 type: docker
-description: Build and deploy AI agents for task automation
-tagline: AI task management platform
+description: The developer-friendly cloud platform for building and running LLM agents
+  for AI-native applications.
+tagline: The developer-friendly cloud platform for building and running LLM agents
+  for AI-native applications.
 category: tools
 developer:
-  name: TaskingAI Project
+  name: TaskingAI Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/screenshot-4.png
 arch:
 - amd64
 - arm64

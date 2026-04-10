@@ -1,14 +1,19 @@
 name: CloudBeaver
 slug: cloudbeaver
 type: docker
-description: Web-based tool for managing databases with a modern interface
-tagline: Cloud database manager
+description: CloudBeaver is a web-based database GUI tool which provides rich web
+  interface. You can use it to manage PostgreSQL, MySQL, MariaDB, SQL Server, Oracle,
+  DB2, Firebird, H2, Trino.
+tagline: Cloud Database Manager.
 category: tools
 developer:
-  name: joaobosconff
+  name: dbeaver
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-3.png
 arch:
 - amd64
 - arm64

@@ -1,14 +1,15 @@
 name: ChatbotUI
 slug: chatbotui
 type: docker
-description: Clean web UI for interacting with OpenAI and other LLMs
-tagline: Chat interface for AI models
+description: Chatbot UI is an open source chat UI for AI models.
+tagline: Open source chat UI for AI models
 category: tools
 developer:
-  name: ChatbotUI Project
+  name: Mckay Wrigley
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatbotUI/icon.jpg
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatbotUI/screenshot-1.jpg
 arch:
 - amd64
 - arm64

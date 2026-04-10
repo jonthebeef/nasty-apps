@@ -1,14 +1,18 @@
 name: Navidrome
 slug: navidrome
 type: docker
-description: Stream your music collection with subsonic-compatible apps
-tagline: Music streaming server
+description: Navidrome is an open source web-based music collection server and streamer.
+  It gives you freedom to listen to your music collection from any browser or mobile
+  device. It's like your personal Spotify!
+tagline: Music Collection and Streaming Server
 category: media
 developer:
   name: The Navidrome Authors
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Navidrome/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Navidrome/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Navidrome/screenshot-2.png
 arch:
 - amd64
 - arm64

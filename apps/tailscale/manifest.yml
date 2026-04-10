@@ -5,10 +5,11 @@ description: Connect your devices securely with WireGuard-based mesh networking
 tagline: Zero-config VPN
 category: network-and-dns
 developer:
-  name: Tailscale Project
+  name: Tailscale Inc.
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Tailscale/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Tailscale/screenshot-1.png
 arch:
 - amd64
 - arm

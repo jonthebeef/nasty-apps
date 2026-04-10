@@ -5,10 +5,12 @@ description: Manage Docker containers, images, and networks visually
 tagline: Container management UI
 category: tools
 developer:
-  name: Cp0204
+  name: Portainer
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Portainer/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Portainer/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Portainer/screenshot-2.png
 arch:
 - amd64
 - arm

@@ -1,14 +1,20 @@
 name: Adminer
 slug: adminer
 type: docker
-description: Manage MySQL, PostgreSQL, SQLite and more from a single PHP page
-tagline: Lightweight database management tool
+description: Adminer (formerly phpMinAdmin) is a full-featured database management
+  tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready
+  to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite,
+  MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.
+tagline: Database management in a single PHP file
 category: tools
 developer:
-  name: Tim Düsterhus
+  name: Jakub Vrána
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-3.png
 arch:
 - amd64
 - arm

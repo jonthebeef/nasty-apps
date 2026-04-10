@@ -1,13 +1,13 @@
 name: DDNS Updater
 slug: ddns-updater
 type: docker
-description: Update DNS records across multiple providers when your IP changes
-tagline: Multi-provider DDNS updater
+description: Program to keep DNS A and/or AAAA records updated for multiple DNS providers
+tagline: Simple and easy to use DDNS
 category: network-and-dns
 developer:
-  name: rstuhlmuller
+  name: qmcgaw
   website: ''
-icon: icon.png
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/DDNS-Updater/icon.png
 screenshots:
 - screenshots/1.png
 arch:

@@ -1,14 +1,22 @@
 name: Stremio
 slug: stremio
 type: docker
-description: Stream movies and TV from multiple sources in one app
-tagline: Media streaming aggregator
+description: Stremio offers a secure, modern and seamless entertainment experience.
+  With its easy-to-use interface and diverse content library, including 4K HDR support,
+  users can enjoy their favorite movies and TV shows across all their devices. And
+  with its commitment to security, Stremio is the ultimate choice for a worry-free,
+  high-quality streaming experience.
+tagline: Stremio is a modern media center that gives you the freedom to watch everything
+  you want.
 category: media
 developer:
-  name: joaobosconff
+  name: Andreas Tsarida / Stremio
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Stremio/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Stremio/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Stremio/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Stremio/screenshot-3.png
 arch:
 - amd64
 - arm64

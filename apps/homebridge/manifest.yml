@@ -1,14 +1,19 @@
 name: Homebridge
 slug: homebridge
 type: docker
-description: Connect non-HomeKit devices to Apple Home
-tagline: HomeKit bridge for smart devices
+description: Homebridge is a lightweight NodeJS server you can run on your home network
+  that emulates the iOS HomeKit API. It supports Plugins, which are community-contributed
+  modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided
+  by manufacturers of "smart home" devices.
+tagline: HomeKit support for the impatient.
 category: home-automation
 developer:
-  name: UnderCurve
+  name: Homebridge
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Homebridge/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Homebridge/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Homebridge/screenshot-2.png
 arch:
 - amd64
 - arm

@@ -1,14 +1,17 @@
 name: Anaconda3
 slug: anaconda3
 type: docker
-description: Pre-configured Python environment with Jupyter and scientific libraries
-tagline: Python data science platform
+description: Your machine learning Env work with Jupyter Lab
+tagline: Your machine learning Env work with Jupyter Lab
 category: tools
 developer:
   name: LisonEvf
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Anaconda3/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Anaconda3/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Anaconda3/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Anaconda3/screenshot-3.png
 arch:
 - amd64
 resources:

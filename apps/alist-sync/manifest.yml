@@ -1,14 +1,22 @@
 name: Alist Sync
 slug: alist-sync
 type: docker
-description: Sync files between multiple storage backends automatically
-tagline: File synchronisation for AList
+description: Alist-Sync is a storage synchronization tool based on the Web interface.
+  It can achieve data synchronization and mutual backup among multiple network disks,
+  and also has practical functions such as multi-task management, scheduled synchronization
+  and difference handling.
+tagline: An Alist storage synchronization tool based on the Web interface.
 category: cloud-and-files
 developer:
   name: xjxjin
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-5.png
 arch:
 - amd64
 - arm

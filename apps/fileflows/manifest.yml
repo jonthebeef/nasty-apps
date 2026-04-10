@@ -1,14 +1,21 @@
 name: FileFlows
 slug: fileflows
 type: docker
-description: Process and convert media files with customisable workflows
-tagline: Automated file processing
+description: 'Save storage space with efficient file processing.
+
+
+  FileFlows lets you monitor and process any file type with custom flows. Videos,
+  audio, images, archives, comics, eBooks—you name it!'
+tagline: File processing made easy!
 category: media
 developer:
   name: FileFlows
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileFlows/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileFlows/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileFlows/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileFlows/screenshot-3.png
 arch:
 - amd64
 - arm64

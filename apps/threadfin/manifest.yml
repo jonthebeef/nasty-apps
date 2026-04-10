@@ -1,13 +1,14 @@
 name: Threadfin
 slug: threadfin
 type: docker
-description: Stream live TV from HDHomeRun and other tuners
-tagline: TV tuner proxy
+description: Threadfin is a M3U proxy server for Plex, Emby, Jellyfin and any client
+  and provider which supports the .TS and .M3U8 (HLS) streaming formats.
+tagline: M3U proxy server
 category: tools
 developer:
-  name: Fabio Tea
+  name: jdownloader
   website: ''
-icon: icon.png
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Threadfin/icon.png
 screenshots: []
 arch:
 - amd64

@@ -1,14 +1,22 @@
 name: Gateway Go
 slug: gateway-go
 type: docker
-description: Lightweight reverse proxy and API gateway
-tagline: Network gateway service
+description: 'A fast reverse proxy to help you expose a local server behind a NAT
+  or firewall to your client, remote access all your casaos/zimaos apps.
+
+
+  Use OpenIoTHub to scan the following QR code add a gateway,then add host,add casaos/zimaos
+  host''s web page port,finally, enjoy remote control'
+tagline: A third-party client for casaos and zimaOS, remote access management interface,
+  remote access to installed applications.
 category: network-and-dns
 developer:
   name: iotserv
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Gateway-go/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Gateway-go/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Gateway-go/screenshot-2.png
 arch:
 - amd64
 - arm

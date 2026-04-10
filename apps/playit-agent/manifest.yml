@@ -2,12 +2,12 @@ name: Playit Agent
 slug: playit-agent
 type: docker
 description: Host game servers without port forwarding
-tagline: Gaming tunnel service
+tagline: A free reverse proxy for tunneling services (not self-hosted).
 category: tools
 developer:
-  name: mafen
+  name: Patrick Lorio
   website: ''
-icon: icon.png
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/playit-agent/icon.png
 screenshots: []
 arch:
 - amd64

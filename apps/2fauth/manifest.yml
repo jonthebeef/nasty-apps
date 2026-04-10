@@ -1,14 +1,19 @@
 name: 2FAuth
 slug: 2fauth
 type: docker
-description: Manage your 2FA tokens in a self-hosted web app
-tagline: Two-factor authentication code manager
+description: 2FAuth is a web based self-hosted alternative to One Time Passcode (OTP)
+  generators like Google Authenticator, designed for both mobile and desktop.
+tagline: A web app to manage your Two-Factor Authentication (2FA) accounts and generate
+  their security codes
 category: tools
 developer:
-  name: 2FAuth Project
+  name: Bubka
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/2FAuth/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/2FAuth/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/2FAuth/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/2FAuth/screenshot-3.png
 arch:
 - amd64
 - '386'

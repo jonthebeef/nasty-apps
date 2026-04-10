@@ -1,14 +1,22 @@
 name: Embystat
 slug: embystat
 type: docker
-description: Visualise your media library with charts and insights
-tagline: Statistics for your Emby server
+description: EmbyStat is a personal web server that can calculate all kinds of statistics
+  from your (local) Emby or Jellyfin server. Just install this on your server and
+  let him calculate all kinds of fun stuff. This project is still in Alpha phase,
+  but feel free to pull in on your computer and test it out yourself. When the time
+  is right I will host a full informational website/release for common platforms and
+  Wiki pages.
+tagline: Calculate all kinds of statistics from your (local) Emby or Jellyfin server
 category: media
 developer:
-  name: Embystat Project
+  name: Embystart Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Embystat/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Embystat/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Embystat/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Embystat/screenshot-3.png
 arch:
 - amd64
 - arm64

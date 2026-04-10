@@ -1,14 +1,23 @@
 name: Sickchill
 slug: sickchill
 type: docker
-description: Automatically search and download TV episodes
-tagline: TV show download automation
+description: 'SickChill is an automatic Video Library Manager for TV Shows. It watches
+  for new episodes of your favorite shows, and when they are posted it does its magic:
+  automatic torrent/nzb searching, downloading, and processing at the qualities you
+  want.'
+tagline: Automatic video library manager for TV Shows
 category: media
 developer:
-  name: Sickchill Project
+  name: Sickchill Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-5.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-6.png
 arch:
 - amd64
 - arm64

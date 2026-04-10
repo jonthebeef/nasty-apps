@@ -5,10 +5,12 @@ description: Keep folders in sync across all your devices
 tagline: Continuous file synchronisation
 category: tools
 developer:
-  name: Syncthing Project
+  name: Syncthing
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Syncthing/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Syncthing/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Syncthing/screenshot-2.png
 arch:
 - amd64
 - arm64

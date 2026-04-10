@@ -1,14 +1,20 @@
 name: Overseerr
 slug: overseerr
 type: docker
-description: Request and discover movies and TV shows for Plex
-tagline: Media request and discovery
+description: Overseerr is a free and open source software application for managing
+  requests for your media library. It integrates with your existing services, such
+  as Sonarr, Radarr, and Plex!
+tagline: Overseerr is a request management and media discovery tool built to work
+  with your existing Plex ecosystem.
 category: media
 developer:
-  name: WisdomSky
+  name: LinuxServer.io
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Overseerr/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Overseerr/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Overseerr/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Overseerr/screenshot-3.png
 arch:
 - amd64
 - arm64

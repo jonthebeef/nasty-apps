@@ -1,14 +1,16 @@
 name: DuckDNS
 slug: duckdns
 type: docker
-description: Point a free subdomain to your changing home IP
-tagline: Free dynamic DNS service
+description: duckdns is a DDNS (Dynamic DNS) application that dynamically binds IP
+  addresses to domain names, supporting both IPv4 and IPv6.
+tagline: Dynamic DNS for your domain, supporting both IPv4 and IPv6
 category: tools
 developer:
   name: DuckDNS Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/DuckDNS/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/DuckDNS/screenshot-1.png
 arch:
 - amd64
 - arm64

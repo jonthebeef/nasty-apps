@@ -1,14 +1,17 @@
 name: Glances
 slug: glances
 type: docker
-description: Real-time overview of CPU, memory, disk, and network
-tagline: System monitoring dashboard
+description: Glances is an open-source system cross-platform monitoring tool. It allows
+  real-time monitoring of various aspects of your system such as CPU, memory, disk,
+  network usage etc.
+tagline: Cross-platform monitoring tool.
 category: tools
 developer:
-  name: joaobosconff
+  name: Nicolas Hennion
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Glances/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Glances/screenshot-1.png
 arch:
 - amd64
 - arm64

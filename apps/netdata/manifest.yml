@@ -1,14 +1,18 @@
 name: Netdata
 slug: netdata
 type: docker
-description: Monitor servers, containers, and applications with zero config
-tagline: Real-time infrastructure monitoring
+description: Netdata is a real-time performance and health monitoring solution that
+  helps you visualize and understand the behavior of your systems.
+tagline: Real-time Performance Monitoring
 category: tools
 developer:
   name: f4bio
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Netdata/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Netdata/screenshot-1.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Netdata/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Netdata/screenshot-3.png
 arch:
 - amd64
 - arm64

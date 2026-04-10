@@ -1,13 +1,15 @@
 name: MineOS
 slug: mineos
 type: docker
-description: Create and manage multiple Minecraft servers
-tagline: Minecraft server management
+description: MineOS is a server front-end to ease managing Minecraft administrative
+  tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based),
+  by leveraging the event-triggering, asyncronous model of Node.JS and websockets.
+tagline: Free and easy to use Minecraft server management tool.
 category: tools
 developer:
-  name: Chàra Rose
+  name: hexparrot
   website: ''
-icon: icon.png
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MineOS/icon.png
 screenshots: []
 arch:
 - amd64

@@ -1,14 +1,20 @@
 name: Ombi
 slug: ombi
 type: docker
-description: Let users request movies and TV shows for Plex or Emby
-tagline: Media request manager
+description: Ombi is a self-hosted web application that automatically gives your shared
+  Plex or Emby users the ability to request content by themselves! Ombi can be linked
+  to multiple TV Show and Movie DVR tools to create a seamless end-to-end experience
+  for your users.
+tagline: Friendly media request tool, automatically syncs with your media servers!
 category: media
 developer:
-  name: Ombi Project
+  name: Sabnzbd Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ombi/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ombi/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ombi/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ombi/screenshot-3.png
 arch:
 - amd64
 - arm64

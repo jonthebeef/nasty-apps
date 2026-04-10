@@ -1,14 +1,18 @@
 name: ChatGPT Next Web
 slug: chatgpt-next-web
 type: docker
-description: Self-hosted ChatGPT interface with conversation history
-tagline: ChatGPT web client
+description: An intelligent chat application based on ChatGPT, supports fast deployment,
+  Markdown, beautiful UI, fluid response, privacy and security, and allows customization
+  of preset roles for quick creation, sharing, and debugging of personalized conversations.
+tagline: A well-designed cross-platform ChatGPT UI.
 category: tools
 developer:
-  name: CorrectRoadH,Cp0204
+  name: Yidadaa
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatGPT-Next-Web/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatGPT-Next-Web/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatGPT-Next-Web/screenshot-2.png
 arch:
 - amd64
 - arm64

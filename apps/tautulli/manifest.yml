@@ -1,14 +1,19 @@
 name: Tautulli
 slug: tautulli
 type: docker
-description: Track what's being played on your Plex server
-tagline: Plex monitoring dashboard
+description: Tautulli is a 3rd party application that you can run alongside your Plex
+  Media Server to monitor activity and track various statistics.
+tagline: Monitor your Plex Media Server and much more.
 category: media
 developer:
-  name: Triskae
+  name: Tautulli Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Tautulli/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Tautulli/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Tautulli/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Tautulli/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Tautulli/screenshot-4.png
 arch:
 - amd64
 - arm64

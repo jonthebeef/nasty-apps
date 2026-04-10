@@ -1,14 +1,20 @@
 name: Bazarr
 slug: bazarr
 type: docker
-description: Automatically download and manage subtitles for your media
-tagline: Subtitle management for Sonarr and Radarr
+description: Bazarr is a companion application to Sonarr and Radarr. It can manage
+  and download subtitles based on your requirements. You define your preferences by
+  TV show or movie and Bazarr takes care of everything for you.
+tagline: Letter generators for Sonarr and Radarr
 category: media
 developer:
-  name: Bazarr Project
+  name: Sabnzbd Team
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/screenshot-4.png
 arch:
 - amd64
 - arm

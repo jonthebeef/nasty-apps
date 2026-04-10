@@ -1,14 +1,19 @@
 name: Lucky
 slug: lucky
 type: docker
-description: Route traffic and manage certificates for your services
-tagline: Reverse proxy and SSL manager
+description: A powerful tool for port forwarding, reverse proxy, dynamic DNS, wake-on-LAN,
+  IPv4 NAT traversal, webdav services, task scheduling, and automatic certificate
+  management.
+tagline: Powerful networking tool
 category: network-and-dns
 developer:
-  name: IceWhaleTech
+  name: gdy666
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lucky/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lucky/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lucky/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lucky/screenshot-3.png
 arch:
 - amd64
 - arm

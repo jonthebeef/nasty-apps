@@ -1,14 +1,17 @@
 name: Databag
 slug: databag
 type: docker
-description: Self-hosted messaging with end-to-end encryption
-tagline: Decentralised messaging app
+description: Databag is a federated chat app for self-hosting that focuses on user
+  privacy and security; the service includes clients for iOS, Android, and browser.
+tagline: Messenger for the Decentralized Web
 category: tools
 developer:
-  name: Pierre Balzack
+  name: balzack
   website: ''
-icon: icon.png
-screenshots: []
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Databag/icon.png
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Databag/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Databag/screenshot-2.png
 arch:
 - amd64
 - arm64
